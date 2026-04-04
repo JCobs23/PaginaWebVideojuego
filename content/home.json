@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "title": "Fallen Souls",
+    "subtitle": "Roguelike FPS — Dark fantasy psicológico",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "poster": "/assets/hero/hero_poster_1920.webp"
+  },
+  "summary": "Fallen Souls es un videojuego indie de acción rápida que combina elementos de roguelike, FPS y dark fantasy. Sumérgete en un mundo de bajo poly al estilo PS2 con atmósfera gótica, donde cada muerte te acerca más a descubrir los secretos del reino caído.",
+  "characters": [
+    {
+      "name": "El Peregrino",
+      "role": "Protagonista",
+      "bio": "Un guerrero marcado por la maldición del reino. Lucha contra las almas perdidas en busca de redención.",
+      "image": "/assets/characters/char_prince_silhouette_512.webp"
+    },
+    {
+      "name": "Guardiana de las Almas",
+      "role": "Aliada Mística",
+      "bio": "Una entidad etérea que guía al peregrino a través de los reinos oscuros del más allá.",
+      "image": "/assets/characters/char_guardian_512.webp"
+    },
+    {
+      "name": "El Soberano Oscuro",
+      "role": "Antagonista Principal",
+      "bio": "Señor supremo de las almas caídas, protector de los secretos que nadie debe conocer.",
+      "image": "/assets/characters/char_sovereign_512.webp"
+    }
+  ],
+  "mechanics": [
+    {
+      "title": "Roguelike Progression",
+      "icon": "??",
+      "description": "Cada corrida es única con mapas generados proceduralmente y enemigos aleatorios que desafían tu estrategia."
+    },
+    {
+      "title": "Fast-Paced Shooting",
+      "icon": "??",
+      "description": "Combate dinámico inspirado en clásicos del FPS con mecánicas de movimiento fluidas y satisfacción física."
+    },
+    {
+      "title": "Soul Powers",
+      "icon": "?",
+      "description": "Domina habilidades especiales basadas en almas capturadas que modifican tu estrategia de combate."
+    },
+    {
+      "title": "Permadeath & Progression",
+      "icon": "??",
+      "description": "Cada derrota te deja más fuerte: desbloquea armas, habilidades y modificadores permanentes para futuras corridas."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+.card {
+  background: var(--color-primary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-glow);
+  background: var(--color-primary-light);
+}
+
+.header {
+  margin-bottom: var(--spacing-md);
+}
+
+.header h3 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+  font-size: 1.125rem;
+}
+
+.role {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent2));
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.bio {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .header h3 {
+    font-size: 1rem;
+  }
+}

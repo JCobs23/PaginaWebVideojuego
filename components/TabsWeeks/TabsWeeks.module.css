@@ -1,0 +1,103 @@
+.container {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tabList {
+  display: flex;
+  gap: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--spacing-2xl);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: var(--spacing-md);
+}
+
+.tab {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.weekNumber {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.weekTitle {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.tab:hover {
+  color: var(--color-accent);
+  border-color: var(--color-border);
+}
+
+.tab.active {
+  color: var(--color-text-primary);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -4px;
+}
+
+.panels {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.panel {
+  display: none;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.panel p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .tabList {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.8rem;
+  }
+
+  .weekNumber {
+    font-size: 0.7rem;
+  }
+
+  .weekTitle {
+    font-size: 0.75rem;
+  }
+}

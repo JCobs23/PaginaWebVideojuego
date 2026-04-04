@@ -1,0 +1,76 @@
+.heroSection {
+  background: linear-gradient(135deg, rgba(74, 107, 214, 0.15) 0%, rgba(107, 74, 214, 0.15) 100%);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.heroSection h1 {
+  margin-bottom: var(--spacing-md);
+}
+
+.heroSection p {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.videosSection {
+  background: linear-gradient(
+    135deg,
+    rgba(43, 43, 47, 0.5) 0%,
+    rgba(61, 61, 66, 0.5) 100%
+  );
+  padding: var(--spacing-2xl) 0;
+  margin-top: var(--spacing-2xl);
+}
+
+.videosSection h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.videoCard {
+  background: var(--color-primary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.videoCard:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.videoCard iframe {
+  display: block;
+  width: 100%;
+}
+
+.videoCard h3 {
+  padding: var(--spacing-md);
+  margin: 0;
+  background: var(--color-primary-light);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}

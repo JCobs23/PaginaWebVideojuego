@@ -1,0 +1,22 @@
+.heroSection {
+  background: linear-gradient(135deg, rgba(74, 107, 214, 0.15) 0%, rgba(107, 74, 214, 0.15) 100%);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.heroSection h1 {
+  margin-bottom: var(--spacing-md);
+}
+
+.heroSection p {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}

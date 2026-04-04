@@ -1,0 +1,83 @@
+import type { Metadata, Viewport } from 'next';
+import { ReactNode } from 'react';
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Fallen Souls - Roguelike FPS Dark Fantasy',
+    template: '%s | Fallen Souls',
+  },
+  description:
+    'Fallen Souls es un videojuego indie roguelike FPS con estética dark fantasy low poly PS2. Sumérgete en un mundo gótico lleno de almas perdidas.',
+  keywords: [
+    'videojuego',
+    'indie game',
+    'FPS',
+    'roguelike',
+    'dark fantasy',
+    'PS2',
+    'horror',
+    'acción',
+  ],
+  authors: [{ name: 'Fallen Souls Dev Team' }],
+  creator: 'Fallen Souls Dev Team',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    url: 'https://fallensoulsgame.com',
+    title: 'Fallen Souls - Roguelike FPS Dark Fantasy',
+    description:
+      'Videojuego indie de acción roguelike con estética PS2 gótica. Combate rápido, poderes especiales y permadeath.',
+    images: [
+      {
+        url: 'https://fallensoulsgame.com/assets/hero/hero_poster_1920.webp',
+        width: 1920,
+        height: 1080,
+        alt: 'Fallen Souls',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fallen Souls',
+    description: 'Roguelike FPS Dark Fantasy',
+    images: ['https://fallensoulsgame.com/assets/hero/hero_poster_1920.webp'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#2b2b2f',
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <html lang="es">
+      <head>
+        <link rel="alternate" hrefLang="en" href="https://fallensoulsgame.com/en" />
+        <link rel="canonical" href="https://fallensoulsgame.com" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta property="og:type" content="website" />
+      </head>
+      <body>
+        <a href="#main-content" className="skip-to-content">
+          Ir al contenido principal
+        </a>
+        {children}
+      </body>
+    </html>
+  );
+}
