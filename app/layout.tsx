@@ -6,22 +6,22 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Fallen Souls - Roguelike FPS Dark Fantasy',
-    template: '%s | Fallen Souls',
-  },
-  description:
-    'Fallen Souls es un videojuego indie roguelike FPS con estética dark fantasy low poly PS2. Sumérgete en un mundo gótico lleno de almas perdidas.',
-  keywords: [
-    'videojuego',
-    'indie game',
-    'FPS',
-    'roguelike',
-    'dark fantasy',
-    'PS2',
-    'horror',
-    'acción',
-  ],
+title: {
+  default: 'Fallen Souls - Roguelike FPS Dark Fantasy',
+  template: '%s | Fallen Souls',
+},
+description:
+  'Fallen Souls es un videojuego indie roguelike FPS con estÃ©tica dark fantasy low poly PS2. Sumergete en un mundo gÃ³tico lleno de almas perdidas.',
+keywords: [
+  'videojuego',
+  'indie game',
+  'FPS',
+  'roguelike',
+  'dark fantasy',
+  'PS2',
+  'horror',
+  'accion',
+],
   authors: [{ name: 'Fallen Souls Dev Team' }],
   creator: 'Fallen Souls Dev Team',
   icons: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: 'https://fallensoulsgame.com',
     title: 'Fallen Souls - Roguelike FPS Dark Fantasy',
     description:
-      'Videojuego indie de acción roguelike con estética PS2 gótica. Combate rápido, poderes especiales y permadeath.',
+      'Videojuego indie de accion roguelike con estÃ©tica PS2 gÃ³tica. Combate rÃ¡pido, poderes especiales y permadeath.',
     images: [
       {
         url: 'https://fallensoulsgame.com/assets/hero/hero_poster_1920.webp',

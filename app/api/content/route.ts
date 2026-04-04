@@ -13,7 +13,7 @@ export async function GET(request: Request): Promise<NextResponse<ContentData>> 
   const content: { [key: string]: ContentData } = {
     home: {
       title: 'Fallen Souls',
-      message: 'Roguelike FPS Dark Fantasy - Experiencia indie de acción y horror psicológico',
+      message: 'Roguelike FPS Dark Fantasy - Experiencia indie de accion y horror psicologico',
       endpoint: '/api/content?type=home',
     },
     desarrollo: {
@@ -23,7 +23,7 @@ export async function GET(request: Request): Promise<NextResponse<ContentData>> 
     },
     media: {
       title: 'Media Gallery',
-      message: 'Galería de imágenes y videos',
+      message: 'Galeria de imagenes y videos',
       endpoint: '/api/content?type=media',
     },
   };
