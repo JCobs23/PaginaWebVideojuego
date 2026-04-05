@@ -1,0 +1,122 @@
+/* =============================================
+   FALLEN SOULS — DESCARGAS CSS
+   ============================================= */
+
+.descargas-hero {
+  padding: 4rem 2.5rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(106,74,214,0.2);
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+.download-card {
+  background: linear-gradient(135deg, rgba(35,35,45,0.9), rgba(25,25,35,0.9));
+  border: 1px solid rgba(106,74,214,0.2);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.download-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-oxidized), var(--red-intense));
+}
+.download-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(176,122,42,0.4);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.dl-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.dl-type {
+  margin-bottom: 0.5rem;
+}
+.dl-name {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-oxidized);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.dl-desc {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+.dl-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.73rem;
+  color: var(--white-dim);
+}
+.dl-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.dl-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--gold-oxidized);
+  color: var(--gold-oxidized);
+  font-family: var(--font-title);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition);
+  width: 100%;
+  justify-content: center;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+.dl-btn:hover {
+  background: var(--gold-oxidized);
+  color: #0d0d14;
+}
+.dl-btn svg { width: 14px; height: 14px; }
+.dl-btn.unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--white-dim);
+  color: var(--white-dim);
+}
+.dl-btn.unavailable:hover { background: transparent; color: var(--white-dim); }
+
+.dl-badge-new {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: var(--red-intense);
+  color: var(--white-ink);
+  font-family: var(--font-title);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .downloads-grid { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
+}

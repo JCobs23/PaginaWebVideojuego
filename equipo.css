@@ -1,0 +1,158 @@
+/* =============================================
+   FALLEN SOULS — EQUIPO CSS
+   ============================================= */
+
+.equipo-hero {
+  padding: 4rem 2.5rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(106,74,214,0.2);
+}
+
+.team-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  background: linear-gradient(145deg, rgba(35,28,50,0.95), rgba(22,18,35,0.95));
+  border: 1px solid rgba(176,122,42,0.2);
+  border-radius: 6px;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-oxidized), var(--purple-neon));
+}
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(176,122,42,0.5);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 24px rgba(176,122,42,0.08);
+}
+.team-card.lead { border-color: rgba(176,122,42,0.4); }
+.team-card.lead::before {
+  background: linear-gradient(90deg, var(--gold-oxidized), var(--red-intense), var(--gold-oxidized));
+}
+
+.card-avatar {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white-ink);
+  border: 2px solid rgba(176,122,42,0.4);
+  position: relative;
+}
+.lead .card-avatar {
+  width: 96px; height: 96px;
+  border-color: var(--gold-oxidized);
+  border-width: 2px;
+}
+.card-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.lead-crown {
+  position: absolute;
+  top: -14px;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 6px rgba(176,122,42,0.8));
+}
+
+.card-name {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-oxidized);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.lead .card-name { font-size: 1.1rem; }
+
+.card-role {
+  font-size: 0.75rem;
+  color: var(--purple-neon);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+  margin-bottom: 0.6rem;
+}
+
+.card-bio {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.skill-tag {
+  background: rgba(106,74,214,0.1);
+  border: 1px solid rgba(106,74,214,0.25);
+  color: var(--blue-elec);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+.lead .skill-tag { background: rgba(176,122,42,0.1); border-color: rgba(176,122,42,0.25); color: var(--gold-oxidized); }
+
+/* ── Acknowledgments ─────────────────────── */
+.credits-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem 4rem;
+}
+.credits-box {
+  background: linear-gradient(135deg, rgba(20,18,28,0.9), rgba(15,14,22,0.9));
+  border: 1px solid rgba(106,74,214,0.2);
+  border-radius: 4px;
+  padding: 2.5rem;
+  text-align: center;
+}
+.credits-box h3 {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold-oxidized);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.credits-box p {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .team-section, .credits-section { padding: 2rem 1.25rem; }
+}

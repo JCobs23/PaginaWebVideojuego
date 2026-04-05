@@ -1,0 +1,288 @@
+/* =============================================
+   FALLEN SOULS — DESARROLLO CSS
+   ============================================= */
+
+.desarrollo-hero {
+  padding: 4rem 2.5rem 3rem;
+  background: linear-gradient(180deg, rgba(13,13,18,0.8), transparent);
+  text-align: center;
+  border-bottom: 1px solid rgba(106,74,214,0.2);
+}
+.desarrollo-hero .section-title { font-size: clamp(2rem, 5vw, 3.2rem); }
+
+/* ── Week Tabs Header ──────────────────────── */
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.tabs-header {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.4rem;
+  padding: 2rem 0 0;
+  border-bottom: 2px solid rgba(106,74,214,0.2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple-neon) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.tabs-header::-webkit-scrollbar { height: 3px; }
+.tabs-header::-webkit-scrollbar-thumb { background: var(--purple-neon); border-radius: 2px; }
+
+.week-tab {
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(106,74,214,0.2);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  color: var(--white-dim);
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+.week-tab:hover { color: var(--gold-bright); border-color: rgba(176,122,42,0.3); }
+.week-tab.active {
+  background: rgba(106,74,214,0.15);
+  border-color: rgba(106,74,214,0.5);
+  color: var(--gold-bright);
+  border-bottom: 2px solid var(--purple-neon);
+}
+.week-tab.has-content::after {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  background: var(--gold-oxidized);
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ── Week Panel ────────────────────────────── */
+.tab-panels { padding: 2.5rem 0 4rem; }
+
+.week-panel {
+  display: none;
+  animation: panel-in 0.4s ease;
+}
+.week-panel.active { display: block; }
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.week-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.week-meta {}
+.week-number {
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--purple-neon);
+  margin-bottom: 0.4rem;
+}
+.week-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--gold-oxidized);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.week-date {
+  font-size: 0.78rem;
+  color: var(--white-dim);
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 3px;
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.status-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-done     { background: rgba(74,214,74,0.12); border: 1px solid rgba(74,214,74,0.25); color: #4ad64a; }
+.status-progress { background: rgba(74,107,214,0.12); border: 1px solid rgba(74,107,214,0.3); color: var(--blue-elec); }
+.status-pending  { background: rgba(176,122,42,0.12); border: 1px solid rgba(176,122,42,0.25); color: var(--gold-oxidized); }
+
+/* ── Week Content Grid ─────────────────────── */
+.week-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.week-col {}
+
+.week-block {
+  background: linear-gradient(135deg, rgba(35,35,45,0.8), rgba(25,25,35,0.8));
+  border: 1px solid rgba(106,74,214,0.2);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color var(--transition);
+}
+.week-block:hover { border-color: rgba(106,74,214,0.4); }
+
+.block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-title);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-oxidized);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(176,122,42,0.2);
+}
+.block-title .block-icon {
+  font-size: 1rem;
+}
+
+.week-block p {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+.week-block p:last-child { margin-bottom: 0; }
+
+.week-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.5;
+}
+.check-item .check-icon {
+  width: 16px; height: 16px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.check-done   .check-icon { background: rgba(74,214,74,0.15); color: #4ad64a; border: 1px solid rgba(74,214,74,0.3); }
+.check-todo   .check-icon { background: rgba(106,74,214,0.1); color: var(--purple-neon); border: 1px solid rgba(106,74,214,0.3); }
+.check-issue  .check-icon { background: rgba(198,40,40,0.1); color: var(--red-intense); border: 1px solid rgba(198,40,40,0.3); }
+
+/* Image placeholder in week */
+.week-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.week-img-slot {
+  aspect-ratio: 4/3;
+  background: rgba(20,20,30,0.8);
+  border: 1px dashed rgba(106,74,214,0.3);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.6rem;
+  color: var(--white-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+}
+.week-img-slot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.week-img-slot.empty::before { content: '📷'; font-size: 1.5rem; }
+
+/* Empty week state */
+.empty-week {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--white-dim);
+}
+.empty-week .empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+.empty-week p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Progress bar */
+.progress-section {
+  background: rgba(13,13,18,0.6);
+  border-top: 1px solid rgba(106,74,214,0.15);
+  border-bottom: 1px solid rgba(106,74,214,0.15);
+  padding: 2rem 2.5rem;
+  margin-bottom: 0;
+}
+.progress-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 0.6rem;
+}
+.progress-bar {
+  height: 6px;
+  background: rgba(106,74,214,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple-neon), var(--blue-elec));
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+@media (max-width: 768px) {
+  .week-content { grid-template-columns: 1fr; }
+  .tabs-container { padding: 0 1.25rem; }
+}

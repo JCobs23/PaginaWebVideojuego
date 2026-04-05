@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollo — Fallen Souls</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="desarrollo.css" />
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="home.html" class="navbar-logo">
+    <span class="logo-title">Fallen Souls</span>
+    <span class="logo-sub">Proyecto Final • 2026</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="navbar-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="desarrollo.html" class="active">Desarrollo</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="descargas.html">Descargas</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- Hero -->
+  <div class="desarrollo-hero">
+    <p class="section-subtitle" style="text-align:center;">Diario del Proyecto</p>
+    <h1 class="section-title" style="text-align:center;">Desarrollo Semana a Semana</h1>
+    <div class="section-divider" style="margin: 0.75rem auto 1.5rem;"></div>
+    <p style="font-size:0.88rem; color: var(--white-dim); max-width:600px; margin: 0 auto;">
+      Registro detallado del avance de <em>Fallen Souls</em> desde la semana 5 hasta la entrega final en la semana 17.
+    </p>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-section">
+    <div class="progress-inner">
+      <div class="progress-label">
+        <span>Progreso General</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs-container">
+    <div class="tabs-header" id="tabsHeader">
+      <button class="week-tab active has-content" data-week="5">Sem. 5</button>
+      <button class="week-tab has-content" data-week="6">Sem. 6</button>
+      <button class="week-tab has-content" data-week="7">Sem. 7</button>
+      <button class="week-tab has-content" data-week="8">Sem. 8</button>
+      <button class="week-tab" data-week="9">Sem. 9</button>
+      <button class="week-tab" data-week="10">Sem. 10</button>
+      <button class="week-tab" data-week="11">Sem. 11</button>
+      <button class="week-tab" data-week="12">Sem. 12</button>
+      <button class="week-tab" data-week="13">Sem. 13</button>
+      <button class="week-tab" data-week="14">Sem. 14</button>
+      <button class="week-tab" data-week="15">Sem. 15</button>
+      <button class="week-tab" data-week="16">Sem. 16</button>
+      <button class="week-tab" data-week="17">Sem. 17</button>
+    </div>
+
+    <div class="tab-panels">
+
+      <!-- SEMANA 5 -->
+      <div class="week-panel active" data-panel="5">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 05 / 17</div>
+            <div class="week-title">Conceptualización y Propuesta</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">📋</span> Descripción del Avance</div>
+              <p>Definición del concepto central del juego: un roguelike FPS ambientado en la mente de un joven en coma que simboliza las etapas del duelo.</p>
+              <p>Desarrollo de la premisa narrativa, el perfil de usuario objetivo y la clasificación ESRB. Análisis inicial de la competencia (Ultrakill, Doom, Balatro).</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Concepto y título definidos: Fallen Souls</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Género confirmado: FPS Roguelike + Action RPG</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Plataformas objetivo seleccionadas</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Perfil de usuario creado (Joseph Zamora, 20 años)</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Clasificación ESRB: Mature 17+ justificada</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Documento de propuesta entregado</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">📸</span> Capturas / Referencias</div>
+              <div class="week-images">
+                <div class="week-img-slot empty"><span>Perfil de usuario</span></div>
+                <div class="week-img-slot empty"><span>Moodboard</span></div>
+              </div>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>Definir el balance entre la narrativa simbólica y la jugabilidad roguelike fue el mayor desafío. Se optó por integrar ambas sin sacrificar ninguna.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Profundizar en el diseño de personajes y definir las mecánicas core del sistema de combate y progresión.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEMANA 6 -->
+      <div class="week-panel" data-panel="6">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 06 / 17</div>
+            <div class="week-title">Diseño de Personajes y Mundo</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">👥</span> Personajes Diseñados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Príncipe — Protagonista jugable</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Verdugo — Tutorial y mercader</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Jardinero Real — Jefe I (Negación)</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Capitán de la Guardia — Jefe II (Ira)</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Tesorero Real — Jefe III (Negociación)</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Dama de las Cámaras — Jefe IV (Depresión)</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Príncipe (Jefe Final) — Aceptación</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🏰</span> Mundo Definido</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>5 niveles del castillo diseñados</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Paleta de colores establecida</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Estética Low Poly + Bloodborne confirmada</span></div>
+              </div>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>El diseño del jefe final como reflejo del jugador requirió iteraciones para definir cómo cambiar mecánicamente según las decisiones previas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEMANA 7 -->
+      <div class="week-panel" data-panel="7">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 07 / 17</div>
+            <div class="week-title">Sistemas de Juego y Mecánicas</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚔️</span> Mecánicas Definidas</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Sistema de combate FPS: dash, parry, esquiva</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Forja de armas con extremidades enemigas</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Implantación de órganos para perks</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Sistema Aceptar / Negar con consecuencias</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Meta-progresión con armas legendarias</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">📊</span> Flujo de Juego</div>
+              <p>Documentación del bucle principal: 4 oleadas de enemigos + 1 jefe por nivel. Sistema de recompensas bifurcado. Estructura roguelike con reinicio parcial.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Prototipado del sistema de combate en motor. Pruebas de movilidad y sistema de parry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEMANAS 8-17: Template vacío -->
+      <div class="week-panel" data-panel="8">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 08 / 17</div>
+            <div class="week-title">Prototipado — Motor y Entorno</div>
+            <div class="week-date">Fecha: Por definir</div>
+          </div>
+          <span class="status-badge status-progress">En Progreso</span>
+        </div>
+        <div class="empty-week">
+          <div class="empty-icon">🔧</div>
+          <p>Esta semana está en desarrollo. El contenido se actualizará cuando se complete el avance.</p>
+        </div>
+      </div>
+
+      <!-- Generate empty weeks 9-17 -->
+      <div class="week-panel" data-panel="9"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 09 / 17</div><div class="week-title">Modelado 3D — Personajes</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🎨</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="10"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 10 / 17</div><div class="week-title">Diseño de Niveles</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🏰</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="11"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 11 / 17</div><div class="week-title">Sistema de Combate — Alpha</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">⚔️</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="12"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 12 / 17</div><div class="week-title">Sistema de Enemigos e IA</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🤖</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="13"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 13 / 17</div><div class="week-title">Jefes y Mecánicas Especiales</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">💀</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="14"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 14 / 17</div><div class="week-title">UI / HUD e Interfaz</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🖥️</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="15"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 15 / 17</div><div class="week-title">Audio y Efectos Visuales</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🎵</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="16"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 16 / 17</div><div class="week-title">Testing y Balanceo</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🧪</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+
+      <div class="week-panel" data-panel="17"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 17 / 17</div><div class="week-title">Entrega Final — Build Completa</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🏆</div><p>Entrega final del proyecto. Contenido en curso.</p></div></div>
+
+    </div><!-- /tab-panels -->
+  </div><!-- /tabs-container -->
+</div><!-- /page-wrapper -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-title">Fallen Souls</div>
+      <p>Proyecto Final de Videojuegos 2026.<br/>Un roguelike sobre el duelo y la aceptación.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="desarrollo.html">Desarrollo</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Semanas</h4>
+      <ul>
+        <li><a href="#" data-jump="5">Semana 5 — Conceptualización</a></li>
+        <li><a href="#" data-jump="6">Semana 6 — Personajes</a></li>
+        <li><a href="#" data-jump="7">Semana 7 — Mecánicas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Juan David Silva Colorado — Proyecto Final de Videojuegos</span>
+    <div class="esrb"><span class="esrb-badge">M 17+</span>Mature 17+</div>
+  </div>
+</footer>
+
+<script src="js/desarrollo.js"></script>
+</body>
+</html>

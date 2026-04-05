@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media — Fallen Souls</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="navbar">
+  <a href="home.html" class="navbar-logo">
+    <span class="logo-title">Fallen Souls</span>
+    <span class="logo-sub">Proyecto Final • 2026</span>
+  </a>
+  <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  <ul class="navbar-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="desarrollo.html">Desarrollo</a></li>
+    <li><a href="media.html" class="active">Media</a></li>
+    <li><a href="descargas.html">Descargas</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrapper">
+  <div class="media-hero">
+    <p class="section-subtitle" style="text-align:center;">Galería</p>
+    <h1 class="section-title" style="text-align:center;">Media del Proyecto</h1>
+    <div class="section-divider" style="margin: 0.75rem auto 1rem;"></div>
+    <p style="font-size:0.88rem; color: var(--white-dim); max-width:560px; margin: 0 auto;">
+      Capturas de arte conceptual, renders de personajes, bocetos de niveles y vídeos de gameplay de <em>Fallen Souls</em>.
+    </p>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">Todo</button>
+    <button class="filter-btn" data-filter="concept">Concept Art</button>
+    <button class="filter-btn" data-filter="character">Personajes</button>
+    <button class="filter-btn" data-filter="level">Niveles</button>
+    <button class="filter-btn" data-filter="ui">Interfaz</button>
+    <button class="filter-btn" data-filter="video">Vídeos</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery" id="gallery">
+
+    <div class="gallery-item fade-in" data-cat="concept" data-caption="Moodboard Estético — Dark Fantasy">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a1228, #0d0814);">
+        <span>🏰</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Moodboard</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag">Concept</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Moodboard Estético</div>
+          <div class="gallery-cat">Dark Fantasy · Low Poly</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="El Príncipe — Protagonista">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1c1030, #0f0a1e);">
+        <span>👑</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Personaje</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag">Personaje</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">El Príncipe</div>
+          <div class="gallery-cat">Protagonista · Jugable</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="El Verdugo — Tutorial y Mercader">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a1010, #0d0808);">
+        <span>🪓</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Personaje</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag">Personaje</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">El Verdugo</div>
+          <div class="gallery-cat">Tutorial · Mercader</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="El Jardinero Real — Jefe: Negación">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #0a1a0a, #081208);">
+        <span>🌿</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Jefe I</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Jefe</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">El Jardinero Real</div>
+          <div class="gallery-cat">Negación · Nivel 1</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="Capitán de la Guardia — Jefe: Ira">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a0808, #100505);">
+        <span>⚔️</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Jefe II</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Jefe</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Capitán de la Guardia</div>
+          <div class="gallery-cat">Ira · Nivel 2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="Tesorero Real — Jefe: Negociación">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a1408, #100e05);">
+        <span>💰</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Jefe III</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Jefe</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Tesorero Real</div>
+          <div class="gallery-cat">Negociación · Nivel 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="character" data-caption="Dama de las Cámaras — Jefe: Depresión">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #0a0a1a, #060610);">
+        <span>💧</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Jefe IV</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Jefe</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Dama de las Cámaras</div>
+          <div class="gallery-cat">Depresión · Nivel 4</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="level" data-caption="Jardines Exteriores — Nivel 1">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #0a150a, #060d06);">
+        <span>🌑</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Nivel 1</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag gold">Nivel</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Jardines Exteriores</div>
+          <div class="gallery-cat">Negación · Etapa I</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="level" data-caption="Sala del Trono — Jefe Final">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a0a0a, #100606);">
+        <span>🏛️</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Nivel 5</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Jefe Final</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Sala del Trono</div>
+          <div class="gallery-cat">Aceptación · Nivel 5</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="ui" data-caption="HUD del Juego — Inspirado en Ultrakill">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #0d0d1a, #0a0a14);">
+        <span>🖥️</span>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">HUD</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag">UI</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">HUD Minimalista</div>
+          <div class="gallery-cat">Interfaz · Ultrakill Style</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item video-item fade-in" data-cat="video" data-caption="Gameplay — Prototipo Alpha">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, #1a0808, #0d0505);">
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase; margin-top: 2.5rem;">Gameplay Alpha</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag red">Vídeo</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Gameplay — Alpha</div>
+          <div class="gallery-cat">Video · Prototipo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item fade-in" data-cat="concept" data-caption="Paleta de Color del Mundo">
+      <div class="item-placeholder" style="background: linear-gradient(135deg, var(--gray-deep), var(--gray-darker));">
+        <div style="display:flex; gap: 6px; margin-bottom: 6px;">
+          <div style="width:24px;height:24px;border-radius:3px;background:#2b2b2f;border:1px solid #444;"></div>
+          <div style="width:24px;height:24px;border-radius:3px;background:#4a6bd6;"></div>
+          <div style="width:24px;height:24px;border-radius:3px;background:#6b4ad6;"></div>
+          <div style="width:24px;height:24px;border-radius:3px;background:#c62828;"></div>
+          <div style="width:24px;height:24px;border-radius:3px;background:#b07a2a;"></div>
+        </div>
+        <span style="font-size:0.7rem; color: var(--white-dim); letter-spacing:0.2em; text-transform:uppercase;">Paleta</span>
+      </div>
+      <div class="gallery-type-badge"><span class="tag">Concepto</span></div>
+      <div class="gallery-overlay">
+        <div class="gallery-info">
+          <div class="gallery-label">Paleta de Colores</div>
+          <div class="gallery-cat">Diseño Visual</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /gallery -->
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+      <div id="lightboxBody" style="text-align:center;">
+        <!-- Dynamic content -->
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <div style="height: 4rem;"></div>
+</div><!-- /page-wrapper -->
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-title">Fallen Souls</div>
+      <p>Proyecto Final de Videojuegos 2026.<br/>Un roguelike sobre el duelo y la aceptación.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="desarrollo.html">Desarrollo</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Filtros</h4>
+      <ul>
+        <li><a href="#">Concept Art</a></li>
+        <li><a href="#">Personajes</a></li>
+        <li><a href="#">Niveles</a></li>
+        <li><a href="#">Vídeos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Juan David Silva Colorado — Proyecto Final de Videojuegos</span>
+    <div class="esrb"><span class="esrb-badge">M 17+</span>Mature 17+</div>
+  </div>
+</footer>
+
+<script src="js/media.js"></script>
+</body>
+</html>
