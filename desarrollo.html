@@ -62,9 +62,9 @@
       <button class="week-tab has-content" data-week="6">Sem. 6</button>
       <button class="week-tab has-content" data-week="7">Sem. 7</button>
       <button class="week-tab has-content" data-week="8">Sem. 8</button>
-      <button class="week-tab" data-week="9">Sem. 9</button>
-      <button class="week-tab" data-week="10">Sem. 10</button>
-      <button class="week-tab" data-week="11">Sem. 11</button>
+      <button class="week-tab has-content" data-week="9">Sem. 9</button>
+      <button class="week-tab has-content" data-week="10">Sem. 10</button>
+      <button class="week-tab has-content" data-week="11">Sem. 11</button>
       <button class="week-tab" data-week="12">Sem. 12</button>
       <button class="week-tab" data-week="13">Sem. 13</button>
       <button class="week-tab" data-week="14">Sem. 14</button>
@@ -171,7 +171,7 @@
         <div class="week-header">
           <div class="week-meta">
             <div class="week-number">Semana 07 / 17</div>
-            <div class="week-title">Sistemas de Juego y Mecánicas</div>
+            <div class="week-title">Prototipo de Movimiento del Jugador</div>
             <div class="week-date">Fecha: Marzo 2026</div>
           </div>
           <span class="status-badge status-done">✓ Completado</span>
@@ -179,51 +179,209 @@
         <div class="week-content">
           <div class="week-col">
             <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚔️</span> Mecánicas Definidas</div>
+              <div class="block-title"><span class="block-icon">🚀</span> Descripción del Avance</div>
+              <p>Durante esta semana se trabajó en la base jugable del personaje principal, enfocándonos en la implementación del script de movimiento del jugador. El objetivo era establecer una movilidad inicial sólida que sirviera como punto de partida para futuras mecánicas de combate, desplazamiento y pruebas dentro del entorno de juego.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
               <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Sistema de combate FPS: dash, parry, esquiva</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Forja de armas con extremidades enemigas</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Implantación de órganos para perks</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Sistema Aceptar / Negar con consecuencias</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Meta-progresión con armas legendarias</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó el script de movimiento del jugador</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se ajustó la movilidad base del personaje</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se dejó preparada una estructura inicial para conectar luego el combate y otras mecánicas</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizaron pruebas básicas de control dentro del escenario</span></div>
               </div>
             </div>
           </div>
           <div class="week-col">
             <div class="week-block">
-              <div class="block-title"><span class="block-icon">📊</span> Flujo de Juego</div>
-              <p>Documentación del bucle principal: 4 oleadas de enemigos + 1 jefe por nivel. Sistema de recompensas bifurcado. Estructura roguelike con reinicio parcial.</p>
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>Uno de los principales retos fue lograr que el movimiento no solo funcionara técnicamente, sino que también se sintiera fluido y cómodo al jugar. Fue necesario hacer varias pruebas para encontrar un balance entre control, respuesta y naturalidad.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
+              <p>Este avance se relaciona directamente con la propuesta del juego, ya que desde el documento se plantea una experiencia de combate en primera persona con movilidad activa y un enfoque en ejecución mecánica. Por eso, definir primero el desplazamiento del jugador era una base necesaria antes de implementar sistemas más complejos.</p>
             </div>
             <div class="week-block">
               <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Prototipado del sistema de combate en motor. Pruebas de movilidad y sistema de parry.</p>
+              <p>Comenzar la implementación del enemigo base y preparar un entorno de prueba donde se puedan validar interacciones reales entre jugador y enemigo.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SEMANAS 8-17: Template vacío -->
+      <!-- SEMANA 8 -->
       <div class="week-panel" data-panel="8">
         <div class="week-header">
           <div class="week-meta">
             <div class="week-number">Semana 08 / 17</div>
-            <div class="week-title">Prototipado — Motor y Entorno</div>
-            <div class="week-date">Fecha: Por definir</div>
+            <div class="week-title">Programación Base del Enemigo</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
           </div>
-          <span class="status-badge status-progress">En Progreso</span>
+          <span class="status-badge status-done">✓ Completado</span>
         </div>
-        <div class="empty-week">
-          <div class="empty-icon">🔧</div>
-          <p>Esta semana está en desarrollo. El contenido se actualizará cuando se complete el avance.</p>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🤖</span> Descripción del Avance</div>
+              <p>En esta semana se avanzó en el desarrollo técnico del enemigo, centrándonos en el funcionamiento del script enemigo y en su programación general dentro de la escena. La intención fue dejar una primera versión funcional que permitiera comenzar a probar comportamientos básicos.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se desarrolló el script base del enemigo</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se programó su comportamiento inicial</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se validó su funcionamiento dentro del escenario de prueba</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se dejó lista una base para futuras ampliaciones, como ataques y estados</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>La dificultad principal no estuvo solo en hacer que el enemigo apareciera o se moviera, sino en organizar su lógica de forma que más adelante permitiera crecer el sistema sin tener que rehacerlo por completo.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
+              <p>En la propuesta se define un sistema de avance basado en oleadas de enemigos, jefes y patrones de combate diferenciados, así que este paso era fundamental para pasar del planteamiento conceptual a una implementación real dentro del motor.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Agregar las primeras acciones ofensivas del enemigo y comenzar a probar interacciones de combate más claras.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Generate empty weeks 9-17 -->
-      <div class="week-panel" data-panel="9"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 09 / 17</div><div class="week-title">Modelado 3D — Personajes</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🎨</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+      <!-- SEMANA 9 -->
+      <div class="week-panel" data-panel="9">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 09 / 17</div>
+            <div class="week-title">Primeras Mecánicas de Ataque del Enemigo</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚔️</span> Descripción del Avance</div>
+              <p>Durante esta semana se implementaron las primeras acciones ofensivas del enemigo con el fin de construir una base de combate más dinámica. Se desarrollaron tres scripts de ataque que permiten empezar a diferenciar comportamientos y generar variedad en los enfrentamientos.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de ataque horizontal</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de ataque vertical</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de lanzamiento de hacha</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se hicieron pruebas iniciales entre ataques cercanos y ataques a distancia</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se avanzó en una base de combate más variada</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>El reto principal fue conseguir que cada ataque se sintiera distinto y tuviera una función clara dentro del combate. No se trataba solamente de programar tres acciones diferentes, sino de empezar a construir un sistema con lógica y posibilidades de expansión.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
+              <p>Este avance tiene mucho sentido dentro del documento, especialmente porque uno de los personajes planteados, El Verdugo, ya estaba definido con ataques telegráficos y lanzamiento de hacha. Además, la propuesta general del juego gira alrededor de combates técnicos, agresivos y con lectura de patrones.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Probar estos ataques en un entorno más controlado y empezar a trabajar en sistemas complementarios que afecten al enemigo durante el combate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div class="week-panel" data-panel="10"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 10 / 17</div><div class="week-title">Diseño de Niveles</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🏰</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+      <!-- SEMANA 10 -->
+      <div class="week-panel" data-panel="10">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 10 / 17</div>
+            <div class="week-title">Sistema de Pruebas y Efectos de Estado del Enemigo</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🧪</span> Descripción del Avance</div>
+              <p>En esta fase se construyó un campo de pruebas para validar de manera más ordenada los sistemas ya desarrollados. Además, se avanzó en uno de los componentes técnicos más importantes hasta el momento: permitir que el enemigo almacenara efectos de estado, como envenenamiento y corrosión.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó un campo de pruebas para testear mecánicas</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó un sistema para almacenar efectos de estado en el enemigo</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizaron pruebas con estados como envenenamiento y corrosión</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se organizó mejor la lógica del enemigo para soportar nuevas interacciones</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>Esta fue una de las partes más complejas del proceso, porque requería que el enemigo pudiera guardar, actualizar y mantener varios efectos sin que la lógica se volviera desordenada. Fue un trabajo más estructural que visual, pero muy importante para el avance técnico del proyecto.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
+              <p>Dentro de la propuesta ya se contemplaban sistemas relacionados con veneno, corrosión, reducción de armadura y distintas interacciones entre perks, hazards y enemigos. Por eso, desarrollar esta lógica no solo aporta al prototipo actual, sino que también deja preparada la base para futuras mecánicas estratégicas del juego.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Conectar estos efectos con armas, ataques y futuras interacciones del sistema de combate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div class="week-panel" data-panel="11"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 11 / 17</div><div class="week-title">Sistema de Combate — Alpha</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">⚔️</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
+      <!-- SEMANA 11 -->
+      <div class="week-panel" data-panel="11">
+        <div class="week-header">
+          <div class="week-meta">
+            <div class="week-number">Semana 11 / 17</div>
+            <div class="week-title">Integración Visual del Prototipo y Armas Cuerpo a Cuerpo</div>
+            <div class="week-date">Fecha: Marzo 2026</div>
+          </div>
+          <span class="status-badge status-done">✓ Completado</span>
+        </div>
+        <div class="week-content">
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎨</span> Descripción del Avance</div>
+              <p>Durante esta semana se trabajó en la integración entre la parte técnica y la parte visual del proyecto. Se avanzó tanto en el sistema de armas cuerpo a cuerpo como en varios modelos esenciales del juego, permitiendo que el prototipo empezara a verse más cercano a una versión temprana del producto final.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
+              <div class="week-checklist">
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó el script de las armas cuerpo a cuerpo</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizó el modelo de las armas cuerpo a cuerpo</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se hicieron los modelos del enemigo y del hacha</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se avanzó en el modelo del personaje principal y de los jefes</span></div>
+                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se integraron mejor los componentes jugables con la identidad visual del proyecto</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-col">
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
+              <p>La parte visual presentó varias dificultades, especialmente en modelado. Más allá de lo técnico, fue necesario tomar decisiones creativas para que los diseños mantuvieran coherencia con la estética general del juego y no se sintieran desconectados del tono planteado.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
+              <p>Este avance se alinea directamente con el documento, donde se define una estética 3D low poly con texturas pintadas a mano, así como personajes y jefes con una fuerte carga visual. También encaja con la importancia de las armas, los jefes y el protagonista dentro de la identidad del proyecto.</p>
+            </div>
+            <div class="week-block">
+              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
+              <p>Continuar integrando sistemas jugables con los elementos visuales, mejorar la sensación del combate y seguir consolidando el prototipo general.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="week-panel" data-panel="12"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 12 / 17</div><div class="week-title">Sistema de Enemigos e IA</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🤖</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
 
