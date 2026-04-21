@@ -1,437 +1,825 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desarrollo — Fallen Souls</title>
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="desarrollo.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desarrollo — Fallen Souls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="desarrollo.css" />
 </head>
 <body>
 
-<div class="scroll-progress" id="scrollProgress"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <a href="home.html" class="navbar-logo">
-    <span class="logo-title">Fallen Souls</span>
-    <span class="logo-sub">Proyecto Final • 2026</span>
-  </a>
-  <button class="nav-toggle" id="navToggle" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="navbar-links" id="navLinks">
-    <li><a href="home.html">Inicio</a></li>
-    <li><a href="desarrollo.html" class="active">Desarrollo</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="descargas.html">Descargas</a></li>
-    <li><a href="equipo.html">Equipo</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="home.html" class="navbar-logo">
+            <span class="logo-title">Fallen Souls</span>
+            <span class="logo-sub">Proyecto Final • 2026</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-links" id="navLinks">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="desarrollo.html" class="active">Desarrollo</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="descargas.html">Descargas</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-<div class="page-wrapper">
+    <div class="page-wrapper">
 
-  <!-- Hero -->
-  <div class="desarrollo-hero">
-    <p class="section-subtitle" style="text-align:center;">Diario del Proyecto</p>
-    <h1 class="section-title" style="text-align:center;">Desarrollo Semana a Semana</h1>
-    <div class="section-divider" style="margin: 0.75rem auto 1.5rem;"></div>
-    <p style="font-size:0.88rem; color: var(--white-dim); max-width:600px; margin: 0 auto;">
-      Registro detallado del avance de <em>Fallen Souls</em> desde la semana 5 hasta la entrega final en la semana 17.
-    </p>
-  </div>
+        <!-- ═══════════════ HERO ═══════════════════ -->
+        <section class="desarrollo-hero">
+            <div class="hero-ghost-text">DEVLOG</div>
 
-  <!-- Progress Bar -->
-  <div class="progress-section">
-    <div class="progress-inner">
-      <div class="progress-label">
-        <span>Progreso General</span>
-        <span id="progressPct">0%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
-      </div>
-    </div>
-  </div>
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <div class="hero-eyebrow">
+                        <span></span>
+                        Diario del Proyecto
+                    </div>
+                    <h1 class="hero-title">
+                        Desarrollo<br>
+                        <em>Semana a Semana</em>
+                    </h1>
+                    <p class="hero-desc">
+                        Registro detallado del avance de <em>Fallen Souls</em> desde la semana 5
+                        hasta la entrega final en la semana 17. Cada entrada documenta objetivos,
+                        obstáculos y decisiones técnicas del equipo.
+                    </p>
+                </div>
 
-  <!-- Tabs -->
-  <div class="tabs-container">
-    <div class="tabs-header" id="tabsHeader">
-      <button class="week-tab active has-content" data-week="5">Sem. 5</button>
-      <button class="week-tab has-content" data-week="6">Sem. 6</button>
-      <button class="week-tab has-content" data-week="7">Sem. 7</button>
-      <button class="week-tab has-content" data-week="8">Sem. 8</button>
-      <button class="week-tab has-content" data-week="9">Sem. 9</button>
-      <button class="week-tab has-content" data-week="10">Sem. 10</button>
-      <button class="week-tab has-content" data-week="11">Sem. 11</button>
-      <button class="week-tab" data-week="12">Sem. 12</button>
-      <button class="week-tab" data-week="13">Sem. 13</button>
-      <button class="week-tab" data-week="14">Sem. 14</button>
-      <button class="week-tab" data-week="15">Sem. 15</button>
-      <button class="week-tab" data-week="16">Sem. 16</button>
-      <button class="week-tab" data-week="17">Sem. 17</button>
-    </div>
+                <div class="hero-right">
+                    <div class="devlog-stats">
+                        <div class="dstat">
+                            <div class="dstat-label">Semanas Activas</div>
+                            <div class="dstat-val dstat-val--green">07</div>
+                            <div class="dstat-sub">de 13 totales</div>
+                        </div>
+                        <div class="dstat">
+                            <div class="dstat-label">Completadas</div>
+                            <div class="dstat-val dstat-val--red" id="statCompleted">07</div>
+                            <div class="dstat-sub">con registro</div>
+                        </div>
+                        <div class="dstat">
+                            <div class="dstat-label">Entrega Final</div>
+                            <div class="dstat-val">Sem. 17</div>
+                            <div class="dstat-sub">Junio 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="tab-panels">
-
-      <!-- SEMANA 5 -->
-      <div class="week-panel active" data-panel="5">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 05 / 17</div>
-            <div class="week-title">Conceptualización y Propuesta</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
+        <!-- ═══════════════ PROGRESS ═══════════════ -->
+        <div class="progress-section">
+            <div class="progress-inner">
+                <div class="progress-eyebrow">Progreso General del Proyecto</div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-pct" id="progressPct">0%</div>
+            </div>
         </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">📋</span> Descripción del Avance</div>
-              <p>Definición del concepto central del juego: un roguelike FPS ambientado en la mente de un joven en coma que simboliza las etapas del duelo.</p>
-              <p>Desarrollo de la premisa narrativa, el perfil de usuario objetivo y la clasificación ESRB. Análisis inicial de la competencia (Ultrakill, Doom, Balatro).</p>
+
+        <!-- ═══════════════ TABS ════════════════════ -->
+        <div class="tabs-wrapper" id="tabsWrapper">
+            <div class="tabs-inner">
+                <div class="tabs-scroll" id="tabsScroll">
+                    <button class="week-tab active has-content" data-week="5">
+                        Sem. 5
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="6">
+                        Sem. 6
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="7">
+                        Sem. 7
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="8">
+                        Sem. 8
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="9">
+                        Sem. 9
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="10">
+                        Sem. 10
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab has-content" data-week="11">
+                        Sem. 11
+                        <span class="tab-dot"></span>
+                    </button>
+                    <button class="week-tab" data-week="12">Sem. 12</button>
+                    <button class="week-tab" data-week="13">Sem. 13</button>
+                    <button class="week-tab" data-week="14">Sem. 14</button>
+                    <button class="week-tab" data-week="15">Sem. 15</button>
+                    <button class="week-tab" data-week="16">Sem. 16</button>
+                    <button class="week-tab" data-week="17">Sem. 17</button>
+                </div>
             </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Concepto y título definidos: Fallen Souls</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Género confirmado: FPS Roguelike + Action RPG</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Plataformas objetivo seleccionadas</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Perfil de usuario creado (Joseph Zamora, 20 años)</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Clasificación ESRB: Mature 17+ justificada</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Documento de propuesta entregado</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">📸</span> Capturas / Referencias</div>
-              <div class="week-images">
-                <div class="week-img-slot empty"><span>Perfil de usuario</span></div>
-                <div class="week-img-slot empty"><span>Moodboard</span></div>
-              </div>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>Definir el balance entre la narrativa simbólica y la jugabilidad roguelike fue el mayor desafío. Se optó por integrar ambas sin sacrificar ninguna.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Profundizar en el diseño de personajes y definir las mecánicas core del sistema de combate y progresión.</p>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <!-- SEMANA 6 -->
-      <div class="week-panel" data-panel="6">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 06 / 17</div>
-            <div class="week-title">Diseño de Personajes y Mundo</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
+        <!-- ═══════════════ PANELS ══════════════════ -->
+        <div class="tab-panels-area">
+
+            <!-- ─────────────── SEMANA 5 ─────────────── -->
+            <div class="week-panel active" data-panel="5">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">05</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">05</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">05 / 17 — Conceptualización</span>
+                        <h2 class="panel-title">Conceptualización y Propuesta</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            </div>
+                            <span class="block-title">Descripción del Avance</span>
+                        </div>
+                        <div class="block-body">
+                            <p>Definición del concepto central: un roguelike FPS ambientado en la mente de un joven en coma, con las etapas del duelo como estructura narrativa y ludológica.</p>
+                            <p>Desarrollo de la premisa, el perfil de usuario objetivo y la clasificación ESRB. Análisis inicial de la competencia con referencias en Ultrakill, Doom y Balatro.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+                            </div>
+                            <span class="block-title">Objetivos Alcanzados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Concepto y título definidos: Fallen Souls</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Género confirmado: FPS Roguelike + Action RPG</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Plataformas objetivo seleccionadas (PC, PS5, XSX, Switch)</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Perfil de usuario creado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Clasificación ESRB: Mature 17+ justificada</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Documento de propuesta entregado</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                            </div>
+                            <span class="block-title">Complicaciones</span>
+                        </div>
+                        <div class="block-body">
+                            <p>Definir el balance entre narrativa simbólica y jugabilidad roguelike fue el mayor desafío conceptual. Se optó por integrar ambas dimensiones sin sacrificar ninguna.</p>
+                            <div class="callout">
+                                <div class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg></div>
+                                <p>La metáfora psicológica debía mantenerse coherente sin volverse didáctica ni forzada. Decisión: los elementos narrativos emergen del diseño de niveles, no del diálogo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+                            </div>
+                            <span class="block-title">Próximos Pasos</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Profundizar diseño de personajes</span></div>
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Definir mecánicas core del combate</span></div>
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Establecer sistema de progresión roguelike</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 6 ─────────────── -->
+            <div class="week-panel" data-panel="6">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">06</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">06</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">06 / 17 — Diseño</span>
+                        <h2 class="panel-title">Diseño de Personajes y Mundo</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                            </div>
+                            <span class="block-title">Personajes Diseñados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>El Príncipe — Protagonista jugable, 13 años, ropa de hospital</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>El Verdugo — Tutorial NPC convertido en mercader</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>El Jardinero Real — Jefe I · Negación</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Capitán de la Guardia — Jefe II · Ira</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Tesorero Real — Jefe III · Negociación</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Dama de las Cámaras — Jefe IV · Depresión</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>El Príncipe (Jefe Final) — Reflejo del jugador · Aceptación</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                            </div>
+                            <span class="block-title">Mundo Definido</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>5 niveles del castillo diseñados y mapeados</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Paleta de colores establecida — inspirada en Bloodborne</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Estética Low Poly + Ink Machine confirmada</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Moodboard estético finalizado</span></div>
+                            </div>
+                            <div class="callout">
+                                <div class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg></div>
+                                <p>El diseño del jefe final como espejo del jugador requirió múltiples iteraciones para definir cómo sus mecánicas se adaptan a las decisiones acumuladas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 7 ─────────────── -->
+            <div class="week-panel" data-panel="7">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">07</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">07</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">07 / 17 — Programación</span>
+                        <h2 class="panel-title">Prototipo de Movimiento del Jugador</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                            </div>
+                            <span class="block-title">Descripción del Avance</span>
+                        </div>
+                        <div class="block-body">
+                            <p>Implementación del script base de movimiento del jugador. El objetivo fue establecer una movilidad inicial sólida que sirva como fundamento para las mecánicas de combate y desplazamiento.</p>
+                            <p>Se priorizó la fluidez y la respuesta del control antes de añadir capas de complejidad mecánica.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+                            </div>
+                            <span class="block-title">Objetivos Alcanzados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Script de movimiento del jugador implementado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Movilidad base ajustada y refinada</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Estructura lista para integrar combate y mecánicas futuras</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Pruebas básicas de control dentro del escenario</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                            </div>
+                            <span class="block-title">Complicaciones</span>
+                        </div>
+                        <div class="block-body">
+                            <p>El reto principal no fue el funcionamiento técnico sino la sensación. El movimiento debía sentirse fluido y natural, no solo funcionar en papel. Múltiples iteraciones de valores de velocidad, aceleración y fricción.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" /></svg>
+                            </div>
+                            <span class="block-title">Coherencia con la Propuesta</span>
+                        </div>
+                        <div class="block-body">
+                            <p>La propuesta plantea un FPS de alta movilidad con dash y reposicionamiento activo. Establecer el movimiento base antes que cualquier otro sistema fue una decisión arquitectural deliberada.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block content-block--full">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                            </div>
+                            <span class="block-title">Capturas del Prototipo</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="img-grid">
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Movimiento en escena</span>
+                                </div>
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Vista FPS base</span>
+                                </div>
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Inspector Unity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 8 ─────────────── -->
+            <div class="week-panel" data-panel="8">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">08</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">08</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">08 / 17 — Programación</span>
+                        <h2 class="panel-title">Programación Base del Enemigo</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                            </div>
+                            <span class="block-title">Descripción del Avance</span>
+                        </div>
+                        <div class="block-body">
+                            <p>Desarrollo del script base del enemigo con enfoque en lógica escalable. Se priorizó una arquitectura que pudiera soportar ataques, estados y fases sin reescritura futura.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+                            </div>
+                            <span class="block-title">Objetivos Alcanzados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Script base del enemigo desarrollado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Comportamiento inicial programado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Funcionamiento validado en escenario de prueba</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Base lista para ataques y estados futuros</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                            </div>
+                            <span class="block-title">Complicaciones</span>
+                        </div>
+                        <div class="block-body">
+                            <p>La dificultad no estuvo en hacer que el enemigo apareciera, sino en organizar su lógica de forma que el sistema pudiera crecer sin deuda técnica. Se tomaron decisiones de arquitectura que afectan a todo el pipeline de enemigos.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /></svg>
+                            </div>
+                            <span class="block-title">Próximos Pasos</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Agregar acciones ofensivas al enemigo</span></div>
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Probar interacciones de combate reales</span></div>
+                            <div class="milestone-row"><div class="milestone-dot milestone-dot--done"></div><span>Refinar detección de colisiones y hitboxes</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 9 ─────────────── -->
+            <div class="week-panel" data-panel="9">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">09</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">09</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">09 / 17 — Combate</span>
+                        <h2 class="panel-title">Primeras Mecánicas de Ataque del Enemigo</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" /><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" /><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" /><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" /><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z" /></svg>
+                            </div>
+                            <span class="block-title">Scripts de Ataque Implementados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Ataque horizontal — barrido lateral cuerpo a cuerpo</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Ataque vertical — golpe descendente telegráfico</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Lanzamiento de hacha — proyectil con trayectoria simple</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Pruebas de combinación entre ataques cercanos y a distancia</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                            </div>
+                            <span class="block-title">Complicaciones y Coherencia</span>
+                        </div>
+                        <div class="block-body">
+                            <p>El reto fue que cada ataque tuviera función clara dentro del combate, no solo ser técnicamente distintos. Se trabajó en dar a cada patrón una intención de diseño concreta.</p>
+                            <div class="callout">
+                                <div class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /></svg></div>
+                                <p>El Verdugo ya estaba definido en la propuesta con ataques telegráficos y hacha. Esta semana alineó la programación con el diseño de personaje existente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 10 ─────────────── -->
+            <div class="week-panel" data-panel="10">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">10</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">10</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">10 / 17 — Sistemas</span>
+                        <h2 class="panel-title">Sistema de Pruebas y Efectos de Estado</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" /></svg>
+                            </div>
+                            <span class="block-title">Campo de Pruebas</span>
+                        </div>
+                        <div class="block-body">
+                            <p>Se construyó un escenario de pruebas dedicado para validar mecánicas de forma ordenada y reproducible, permitiendo iterar sobre sistemas sin afectar el proyecto principal.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                            </div>
+                            <span class="block-title">Efectos de Estado Implementados</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Sistema de almacenamiento de estados en enemigo</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Envenenamiento — daño progresivo por tick</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Corrosión — reducción de armadura acumulable</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Lógica del enemigo reorganizada para soportar múltiples estados</span></div>
+                            </div>
+                            <div class="callout">
+                                <div class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /></svg></div>
+                                <p>Una de las semanas técnicamente más complejas. El trabajo fue estructural, no visual, pero sienta las bases del sistema de perks y hazards de la propuesta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── SEMANA 11 ─────────────── -->
+            <div class="week-panel" data-panel="11">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">11</div>
+                    <div class="panel-num-block">
+                        <span class="panel-num-label">Semana</span>
+                        <span class="panel-num">11</span>
+                    </div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">11 / 17 — Arte & Código</span>
+                        <h2 class="panel-title">Integración Visual y Armas Cuerpo a Cuerpo</h2>
+                        <span class="panel-date">Marzo 2026</span>
+                    </div>
+                    <div class="panel-status-area">
+                        <span class="status-badge status-done">Completado</span>
+                    </div>
+                </div>
+
+                <div class="panel-content">
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" /><circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></svg>
+                            </div>
+                            <span class="block-title">Arte y Modelado 3D</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Modelo de armas cuerpo a cuerpo completado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Modelo del enemigo base (El Verdugo) listo</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Modelo del hacha como proyectil integrado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Avance en modelos del protagonista y jefes</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+                            </div>
+                            <span class="block-title">Programación</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="checklist">
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Script de armas cuerpo a cuerpo implementado</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Integración de modelos con lógica de hitbox</span></div>
+                                <div class="check-item check-done"><div class="check-box">✓</div><span>Feedback visual en impactos básico funcionando</span></div>
+                            </div>
+                            <div class="callout">
+                                <div class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg></div>
+                                <p>Semana de alta carga en modelado. La coherencia visual con la estética low poly exigió decisiones creativas sobre proporciones y lectura de siluetas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block content-block--full">
+                        <div class="block-head">
+                            <div class="block-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                            </div>
+                            <span class="block-title">Capturas — Modelos y Prototipo</span>
+                        </div>
+                        <div class="block-body">
+                            <div class="img-grid">
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Arma CaC — Blender</span>
+                                </div>
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">El Verdugo — mesh</span>
+                                </div>
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Hacha — proyectil</span>
+                                </div>
+                                <div class="img-slot">
+                                    <svg class="img-slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+                                    <span class="img-slot-label">Vista FPS ingame</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ─────── SEMANAS PENDIENTES (12 → 17) ─── -->
+
+            <div class="week-panel" data-panel="12">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">12</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">12</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">12 / 17 — Enemigos</span>
+                        <h2 class="panel-title">Sistema de Enemigos e IA</h2>
+                        <span class="panel-date">Por definir</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                    </div>
+                    <h3>Contenido Pendiente</h3>
+                    <p>Este registro se publicará al completar el avance de la semana 12.</p>
+                </div>
+            </div>
+
+            <div class="week-panel" data-panel="13">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">13</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">13</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">13 / 17 — Jefes</span>
+                        <h2 class="panel-title">Jefes y Mecánicas Especiales</h2>
+                        <span class="panel-date">Por definir</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                    </div>
+                    <h3>Contenido Pendiente</h3>
+                    <p>Diseño e implementación de las fases y patrones de los jefes principales.</p>
+                </div>
+            </div>
+
+            <div class="week-panel" data-panel="14">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">14</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">14</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">14 / 17 — UI / HUD</span>
+                        <h2 class="panel-title">UI / HUD e Interfaz</h2>
+                        <span class="panel-date">Por definir</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                    </div>
+                    <h3>Contenido Pendiente</h3>
+                    <p>Diseño minimalista del HUD inspirado en Ultrakill y los menús del sistema de tienda.</p>
+                </div>
+            </div>
+
+            <div class="week-panel" data-panel="15">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">15</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">15</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">15 / 17 — Audio</span>
+                        <h2 class="panel-title">Audio y Efectos Visuales</h2>
+                        <span class="panel-date">Por definir</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
+                    </div>
+                    <h3>Contenido Pendiente</h3>
+                    <p>Integración de SFX, música ambiente y efectos visuales de partículas e impacto.</p>
+                </div>
+            </div>
+
+            <div class="week-panel" data-panel="16">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">16</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">16</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">16 / 17 — QA</span>
+                        <h2 class="panel-title">Testing y Balanceo</h2>
+                        <span class="panel-date">Por definir</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" /></svg>
+                    </div>
+                    <h3>Contenido Pendiente</h3>
+                    <p>Rondas de playtesting, corrección de bugs y ajuste de curvas de dificultad.</p>
+                </div>
+            </div>
+
+            <div class="week-panel" data-panel="17">
+                <div class="panel-header">
+                    <div class="panel-ghost-num">17</div>
+                    <div class="panel-num-block"><span class="panel-num-label">Semana</span><span class="panel-num">17</span></div>
+                    <div class="panel-meta">
+                        <span class="panel-week-tag">17 / 17 — Entrega Final</span>
+                        <h2 class="panel-title">Build Completa — Entrega Final</h2>
+                        <span class="panel-date">Junio 2026</span>
+                    </div>
+                    <div class="panel-status-area"><span class="status-badge status-pending">Pendiente</span></div>
+                </div>
+                <div class="empty-week">
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2z" /></svg>
+                    </div>
+                    <h3>Entrega Final — En Curso</h3>
+                    <p>Build completa de Fallen Souls. Presentación ante el jurado de la UAO.</p>
+                </div>
+            </div>
+
+        </div><!-- /tab-panels-area -->
+
+    </div><!-- /page-wrapper -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-title">Fallen Souls</span>
+                <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptación.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="desarrollo.html">Desarrollo</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Semanas</h4>
+                <ul>
+                    <li><a href="#" data-jump="5">Sem. 5 — Conceptualización</a></li>
+                    <li><a href="#" data-jump="6">Sem. 6 — Personajes</a></li>
+                    <li><a href="#" data-jump="7">Sem. 7 — Movimiento</a></li>
+                    <li><a href="#" data-jump="8">Sem. 8 — Enemigo Base</a></li>
+                    <li><a href="#" data-jump="9">Sem. 9 — Ataques</a></li>
+                    <li><a href="#" data-jump="10">Sem. 10 — Estados</a></li>
+                    <li><a href="#" data-jump="11">Sem. 11 — Arte + Armas</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">👥</span> Personajes Diseñados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Príncipe — Protagonista jugable</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Verdugo — Tutorial y mercader</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Jardinero Real — Jefe I (Negación)</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Capitán de la Guardia — Jefe II (Ira)</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Tesorero Real — Jefe III (Negociación)</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Dama de las Cámaras — Jefe IV (Depresión)</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>El Príncipe (Jefe Final) — Aceptación</span></div>
-              </div>
+        <div class="footer-bottom">
+            <span>Proyecto Final de Videojuegos 2026-01 · UAO</span>
+            <div class="esrb">
+                <span class="esrb-badge">M</span>
+                MATURE 17+ — Violencia, Temáticas Oscuras
             </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🏰</span> Mundo Definido</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>5 niveles del castillo diseñados</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Paleta de colores establecida</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Estética Low Poly + Bloodborne confirmada</span></div>
-              </div>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>El diseño del jefe final como reflejo del jugador requirió iteraciones para definir cómo cambiar mecánicamente según las decisiones previas.</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </footer>
 
-      <!-- SEMANA 7 -->
-      <div class="week-panel" data-panel="7">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 07 / 17</div>
-            <div class="week-title">Prototipo de Movimiento del Jugador</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
-        </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🚀</span> Descripción del Avance</div>
-              <p>Durante esta semana se trabajó en la base jugable del personaje principal, enfocándonos en la implementación del script de movimiento del jugador. El objetivo era establecer una movilidad inicial sólida que sirviera como punto de partida para futuras mecánicas de combate, desplazamiento y pruebas dentro del entorno de juego.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó el script de movimiento del jugador</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se ajustó la movilidad base del personaje</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se dejó preparada una estructura inicial para conectar luego el combate y otras mecánicas</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizaron pruebas básicas de control dentro del escenario</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>Uno de los principales retos fue lograr que el movimiento no solo funcionara técnicamente, sino que también se sintiera fluido y cómodo al jugar. Fue necesario hacer varias pruebas para encontrar un balance entre control, respuesta y naturalidad.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
-              <p>Este avance se relaciona directamente con la propuesta del juego, ya que desde el documento se plantea una experiencia de combate en primera persona con movilidad activa y un enfoque en ejecución mecánica. Por eso, definir primero el desplazamiento del jugador era una base necesaria antes de implementar sistemas más complejos.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Comenzar la implementación del enemigo base y preparar un entorno de prueba donde se puedan validar interacciones reales entre jugador y enemigo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <script src="js/desarrollo.js"></script>
 
-      <!-- SEMANA 8 -->
-      <div class="week-panel" data-panel="8">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 08 / 17</div>
-            <div class="week-title">Programación Base del Enemigo</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
-        </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🤖</span> Descripción del Avance</div>
-              <p>En esta semana se avanzó en el desarrollo técnico del enemigo, centrándonos en el funcionamiento del script enemigo y en su programación general dentro de la escena. La intención fue dejar una primera versión funcional que permitiera comenzar a probar comportamientos básicos.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se desarrolló el script base del enemigo</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se programó su comportamiento inicial</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se validó su funcionamiento dentro del escenario de prueba</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se dejó lista una base para futuras ampliaciones, como ataques y estados</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>La dificultad principal no estuvo solo en hacer que el enemigo apareciera o se moviera, sino en organizar su lógica de forma que más adelante permitiera crecer el sistema sin tener que rehacerlo por completo.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
-              <p>En la propuesta se define un sistema de avance basado en oleadas de enemigos, jefes y patrones de combate diferenciados, así que este paso era fundamental para pasar del planteamiento conceptual a una implementación real dentro del motor.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Agregar las primeras acciones ofensivas del enemigo y comenzar a probar interacciones de combate más claras.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEMANA 9 -->
-      <div class="week-panel" data-panel="9">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 09 / 17</div>
-            <div class="week-title">Primeras Mecánicas de Ataque del Enemigo</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
-        </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚔️</span> Descripción del Avance</div>
-              <p>Durante esta semana se implementaron las primeras acciones ofensivas del enemigo con el fin de construir una base de combate más dinámica. Se desarrollaron tres scripts de ataque que permiten empezar a diferenciar comportamientos y generar variedad en los enfrentamientos.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de ataque horizontal</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de ataque vertical</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó el script de lanzamiento de hacha</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se hicieron pruebas iniciales entre ataques cercanos y ataques a distancia</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se avanzó en una base de combate más variada</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>El reto principal fue conseguir que cada ataque se sintiera distinto y tuviera una función clara dentro del combate. No se trataba solamente de programar tres acciones diferentes, sino de empezar a construir un sistema con lógica y posibilidades de expansión.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
-              <p>Este avance tiene mucho sentido dentro del documento, especialmente porque uno de los personajes planteados, El Verdugo, ya estaba definido con ataques telegráficos y lanzamiento de hacha. Además, la propuesta general del juego gira alrededor de combates técnicos, agresivos y con lectura de patrones.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Probar estos ataques en un entorno más controlado y empezar a trabajar en sistemas complementarios que afecten al enemigo durante el combate.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEMANA 10 -->
-      <div class="week-panel" data-panel="10">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 10 / 17</div>
-            <div class="week-title">Sistema de Pruebas y Efectos de Estado del Enemigo</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
-        </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🧪</span> Descripción del Avance</div>
-              <p>En esta fase se construyó un campo de pruebas para validar de manera más ordenada los sistemas ya desarrollados. Además, se avanzó en uno de los componentes técnicos más importantes hasta el momento: permitir que el enemigo almacenara efectos de estado, como envenenamiento y corrosión.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se creó un campo de pruebas para testear mecánicas</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó un sistema para almacenar efectos de estado en el enemigo</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizaron pruebas con estados como envenenamiento y corrosión</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se organizó mejor la lógica del enemigo para soportar nuevas interacciones</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>Esta fue una de las partes más complejas del proceso, porque requería que el enemigo pudiera guardar, actualizar y mantener varios efectos sin que la lógica se volviera desordenada. Fue un trabajo más estructural que visual, pero muy importante para el avance técnico del proyecto.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
-              <p>Dentro de la propuesta ya se contemplaban sistemas relacionados con veneno, corrosión, reducción de armadura y distintas interacciones entre perks, hazards y enemigos. Por eso, desarrollar esta lógica no solo aporta al prototipo actual, sino que también deja preparada la base para futuras mecánicas estratégicas del juego.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Conectar estos efectos con armas, ataques y futuras interacciones del sistema de combate.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEMANA 11 -->
-      <div class="week-panel" data-panel="11">
-        <div class="week-header">
-          <div class="week-meta">
-            <div class="week-number">Semana 11 / 17</div>
-            <div class="week-title">Integración Visual del Prototipo y Armas Cuerpo a Cuerpo</div>
-            <div class="week-date">Fecha: Marzo 2026</div>
-          </div>
-          <span class="status-badge status-done">✓ Completado</span>
-        </div>
-        <div class="week-content">
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎨</span> Descripción del Avance</div>
-              <p>Durante esta semana se trabajó en la integración entre la parte técnica y la parte visual del proyecto. Se avanzó tanto en el sistema de armas cuerpo a cuerpo como en varios modelos esenciales del juego, permitiendo que el prototipo empezara a verse más cercano a una versión temprana del producto final.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🎯</span> Objetivos Alcanzados</div>
-              <div class="week-checklist">
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se implementó el script de las armas cuerpo a cuerpo</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se realizó el modelo de las armas cuerpo a cuerpo</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se hicieron los modelos del enemigo y del hacha</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se avanzó en el modelo del personaje principal y de los jefes</span></div>
-                <div class="check-item check-done"><div class="check-icon">✓</div><span>Se integraron mejor los componentes jugables con la identidad visual del proyecto</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="week-col">
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">⚠️</span> Complicaciones</div>
-              <p>La parte visual presentó varias dificultades, especialmente en modelado. Más allá de lo técnico, fue necesario tomar decisiones creativas para que los diseños mantuvieran coherencia con la estética general del juego y no se sintieran desconectados del tono planteado.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔗</span> Coherencia con la Propuesta</div>
-              <p>Este avance se alinea directamente con el documento, donde se define una estética 3D low poly con texturas pintadas a mano, así como personajes y jefes con una fuerte carga visual. También encaja con la importancia de las armas, los jefes y el protagonista dentro de la identidad del proyecto.</p>
-            </div>
-            <div class="week-block">
-              <div class="block-title"><span class="block-icon">🔜</span> Próximos Pasos</div>
-              <p>Continuar integrando sistemas jugables con los elementos visuales, mejorar la sensación del combate y seguir consolidando el prototipo general.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="week-panel" data-panel="12"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 12 / 17</div><div class="week-title">Sistema de Enemigos e IA</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🤖</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
-
-      <div class="week-panel" data-panel="13"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 13 / 17</div><div class="week-title">Jefes y Mecánicas Especiales</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">💀</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
-
-      <div class="week-panel" data-panel="14"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 14 / 17</div><div class="week-title">UI / HUD e Interfaz</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🖥️</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
-
-      <div class="week-panel" data-panel="15"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 15 / 17</div><div class="week-title">Audio y Efectos Visuales</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🎵</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
-
-      <div class="week-panel" data-panel="16"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 16 / 17</div><div class="week-title">Testing y Balanceo</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🧪</div><p>Contenido pendiente. Se publicará al completar el avance.</p></div></div>
-
-      <div class="week-panel" data-panel="17"><div class="week-header"><div class="week-meta"><div class="week-number">Semana 17 / 17</div><div class="week-title">Entrega Final — Build Completa</div><div class="week-date">Por definir</div></div><span class="status-badge status-pending">Pendiente</span></div><div class="empty-week"><div class="empty-icon">🏆</div><p>Entrega final del proyecto. Contenido en curso.</p></div></div>
-
-    </div><!-- /tab-panels -->
-  </div><!-- /tabs-container -->
-</div><!-- /page-wrapper -->
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="logo-title">Fallen Souls</div>
-      <p>Proyecto Final de Videojuegos 2026.<br/>Un roguelike sobre el duelo y la aceptación.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html">Desarrollo</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="descargas.html">Descargas</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Semanas</h4>
-      <ul>
-        <li><a href="#" data-jump="5">Semana 5 — Conceptualización</a></li>
-        <li><a href="#" data-jump="6">Semana 6 — Personajes</a></li>
-        <li><a href="#" data-jump="7">Semana 7 — Mecánicas</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>Proyecto Final de Videojuegos 2026-01</span>
-    <div class="esrb"><span class="esrb-badge">M 17+</span>Mature 17+</div>
-  </div>
-</footer>
-
-<script src="js/desarrollo.js"></script>
 </body>
 </html>

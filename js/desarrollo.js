@@ -1,5 +1,5 @@
 // =============================================
-// FALLEN SOULS — DESARROLLO JS
+// FALLEN SOULS — DESARROLLO JS v2
 // =============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,24 +19,47 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  // ── Progress Bar ─────────────────────────
+  const completedWeeks = [5, 6, 7, 8, 9, 10, 11];
+  const totalWeeks = 13;
+  const pct = Math.round((completedWeeks.length / totalWeeks) * 100);
+
+  const fill   = document.getElementById('progressFill');
+  const pctEl  = document.getElementById('progressPct');
+
+  if (fill) {
+    setTimeout(() => {
+      fill.style.width = pct + '%';
+    }, 400);
+  }
+
+  // Animated counter for percentage
+  if (pctEl) {
+    let current = 0;
+    const target = pct;
+    const step = target / 40;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      pctEl.textContent = Math.round(current) + '%';
+      if (current >= target) clearInterval(timer);
+    }, 30);
+    setTimeout(() => {
+      clearInterval(timer);
+      pctEl.textContent = pct + '%';
+    }, 1800);
   }
 
   // ── Tabs ──────────────────────────────────
   const tabButtons = document.querySelectorAll('.week-tab');
   const panels     = document.querySelectorAll('.week-panel');
-
-  // Progress bar based on completed weeks
-  const completedWeeks = [5, 6, 7]; // Mark these as done
-  const totalWeeks = 13; // weeks 5-17
-  const pct = Math.round((completedWeeks.length / totalWeeks) * 100);
-  const fill = document.getElementById('progressFill');
-  const pctLabel = document.getElementById('progressPct');
-  if (fill) {
-    setTimeout(() => {
-      fill.style.width = pct + '%';
-      if (pctLabel) pctLabel.textContent = pct + '%';
-    }, 500);
-  }
 
   function activateTab(weekNum) {
     // Update buttons
@@ -58,23 +81,37 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => activateTab(btn.dataset.week));
   });
 
-  // Footer jump links
+  // ── Footer jump links ─────────────────────
   document.querySelectorAll('[data-jump]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       activateTab(a.dataset.jump);
-      const tabsEl = document.getElementById('tabsHeader');
+      const tabsEl = document.getElementById('tabsWrapper');
       if (tabsEl) {
-        const offset = 68 + 56;
-        window.scrollTo({ top: tabsEl.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+        const offset = 68 + 10;
+        const top = tabsEl.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
 
-  // Check URL hash for direct week access
+  // ── URL hash direct week ──────────────────
   const hash = window.location.hash;
   if (hash && hash.startsWith('#week')) {
-    const w = hash.replace('#week', '');
-    activateTab(w);
+    activateTab(hash.replace('#week', ''));
   }
+
+  // ── Intersection-based panel animation ───
+  // Re-trigger animation when switching tabs
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach(m => {
+      if (m.target.classList.contains('active')) {
+        m.target.style.animation = 'none';
+        m.target.offsetHeight; // reflow
+        m.target.style.animation = '';
+      }
+    });
+  });
+  panels.forEach(p => observer.observe(p, { attributes: true, attributeFilter: ['class'] }));
+
 });
