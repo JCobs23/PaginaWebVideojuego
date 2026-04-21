@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\desarrollo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:desarrollo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:equipo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contacto.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\js\\contacto.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\contacto.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\descargas.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:descargas.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\media.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:media.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +38,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "contacto.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
+              "RelativeDocumentMoniker": "contacto.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
+              "RelativeToolTip": "contacto.html",
+              "ViewState": "AgIAAJMAAAAAAAAAAMBdwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:07:57.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "equipo.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
+              "RelativeDocumentMoniker": "equipo.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
+              "RelativeToolTip": "equipo.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwLYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:07:41.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "desarrollo.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\desarrollo.html",
+              "RelativeDocumentMoniker": "desarrollo.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\desarrollo.html",
+              "RelativeToolTip": "desarrollo.html",
+              "ViewState": "AgIAAKIBAAAAAAAAAADgvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T18:17:04.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "home.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\home.html",
+              "RelativeDocumentMoniker": "home.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\home.html",
+              "RelativeToolTip": "home.html",
+              "ViewState": "AgIAAL4BAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:09:52.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "media.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\media.html",
+              "RelativeDocumentMoniker": "media.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\media.html",
+              "RelativeToolTip": "media.html",
+              "ViewState": "AgIAAAYBAAAAAAAAAGBnwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:09:43.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "descargas.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\descargas.html",
+              "RelativeDocumentMoniker": "descargas.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\descargas.html",
+              "RelativeToolTip": "descargas.html",
+              "ViewState": "AgIAAKAAAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:09:13.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "contacto.js",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\js\\contacto.js",
+              "RelativeDocumentMoniker": "js\\contacto.js",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\js\\contacto.js",
+              "RelativeToolTip": "js\\contacto.js",
+              "ViewState": "AgIAAEEAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-20T19:08:21.342Z"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
