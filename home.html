@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fallen Souls — Proyecto Final de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="home.css" />
 </head>
@@ -31,119 +34,168 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <!-- Replace with actual video: <video class="hero-video" src="images/hero/hero.mp4" autoplay loop muted playsinline></video> -->
+    <!-- ═══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-grid-lines"></div>
         <div class="hero-particles" id="heroParticles"></div>
-        <div class="hero-ink"></div>
+        <div class="hero-vignette"></div>
+
+        <!-- Blood smear accents -->
+        <div class="hero-accent hero-accent--tl"></div>
+        <div class="hero-accent hero-accent--br"></div>
 
         <div class="hero-content" id="heroContent">
-            <p class="hero-eyebrow">Propuesta Proyecto Final de Videojuegos</p>
+            <div class="hero-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="eyebrow-text">Propuesta Proyecto Final de Videojuegos</span>
+                <span class="eyebrow-line"></span>
+            </div>
+
             <h1 class="hero-title">
-                <span class="line1">Fallen</span>
-                <span class="line2">Souls</span>
+                <span class="hero-title__line1">Fallen</span>
+                <span class="hero-title__line2">Souls</span>
             </h1>
+
             <p class="hero-tagline">
-                Un roguelike de acción en primera persona donde un castillo en ruinas simboliza la mente de un joven atrapado entre el duelo y la aceptación.
+                Un roguelike de acción en primera persona donde un castillo en ruinas<br>
+                simboliza la mente de un joven atrapado entre el duelo y la aceptación.
             </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-label">Género</span>
+                    <span class="stat-value">FPS Roguelike</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-label">Plataformas</span>
+                    <span class="stat-value">PC · PS5 · XSX · Switch</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-label">Rating</span>
+                    <span class="stat-value stat-value--red">ESRB M 17+</span>
+                </div>
+            </div>
+
             <div class="hero-actions">
-                <a href="descargas.html" class="btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                <a href="descargas.html" class="btn-hero-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                     Descargar Proyecto
                 </a>
-                <a href="desarrollo.html" class="btn-secondary">Ver Desarrollo</a>
+                <a href="desarrollo.html" class="btn-hero-ghost">Ver Desarrollo →</a>
             </div>
         </div>
 
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 10l5 5 5-5" /></svg>
+        <div class="hero-scroll-cue">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
         </div>
+
+        <div class="hero-diagonal-cut"></div>
     </section>
 
-    <!-- PLATFORMS -->
-    <div class="platforms-strip fade-in">
-        <div class="platforms-inner">
+    <!-- ═══════════════════════════════════════
+         PLATFORMS BAR
+    ══════════════════════════════════════════ -->
+    <div class="platforms-bar">
+        <div class="platforms-bar__inner">
             <div class="platform-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" /></svg>
-                Xbox Series X|S
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.098 2.011L0 12l4.098 9.989L12 17.639 19.902 22 24 12 19.902 2.011 12 6.361z" /></svg>
+                <span>Xbox Series X|S</span>
             </div>
+            <span class="platform-sep">◆</span>
             <div class="platform-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" /></svg>
-                PlayStation 5
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.984 2.596c0 0-.664 0-1.982.199C5.035 3.195 2.6 4.67 1.12 7.03.36 8.274 0 9.83 0 12s.359 3.726 1.12 4.97c1.48 2.36 3.915 3.835 5.882 4.235 1.318.199 1.982.199 1.982.199s.664 0 1.982-.199c1.967-.4 4.402-1.875 5.882-4.235C17.641 15.726 18 14.17 18 12s-.359-3.726-1.12-4.97c-1.48-2.36-3.915-3.835-5.882-4.235C9.648 2.596 8.984 2.596 8.984 2.596zM9 6.5l5 5.5-5 5.5V6.5z" /></svg>
+                <span>PlayStation 5</span>
             </div>
+            <span class="platform-sep">◆</span>
             <div class="platform-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" /></svg>
-                Nintendo Switch
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" /></svg>
+                <span>Nintendo Switch</span>
             </div>
+            <span class="platform-sep">◆</span>
             <div class="platform-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" /></svg>
-                PC — Steam
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" /><line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" /></svg>
+                <span>PC — Steam</span>
             </div>
-            <div class="platform-item" style="color: var(--red-intense);">
-                <svg viewBox="0 0 24 24" fill="currentColor"><text y="18" font-size="14" font-weight="bold">M</text></svg>
-                ESRB: Mature 17+
+            <span class="platform-sep">◆</span>
+            <div class="platform-item platform-item--esrb">
+                <span class="esrb-badge">M</span>
+                <span>MATURE 17+</span>
             </div>
         </div>
     </div>
 
-    <!-- SYNOPSIS -->
-    <section class="section" id="historia">
-        <div class="section-inner">
-            <p class="section-subtitle fade-in">Narrativa</p>
-            <h2 class="section-title fade-in">Historia del Juego</h2>
-            <div class="section-divider fade-in"></div>
-            <div class="synopsis-grid">
-                <div class="synopsis-text fade-in-left">
-                    <p>
-                        Tras un accidente en el que pierde a sus padres, un <strong>joven cae en coma</strong>. Dentro de su mente surge un reino en crisis: los reyes han muerto y el príncipe heredero se niega a asumir el trono.
-                    </p>
-                    <p>
-                        A lo largo de <strong>cinco etapas que representan el duelo</strong>, el jugador enfrenta a trabajadores y figuras del castillo que reflejan distintas respuestas ante la pérdida.
-                    </p>
-                    <p>
-                        Al derrotar al príncipe, el jugador puede <strong>aceptar la realidad o aferrarse a la negación</strong>. La historia concluye mostrando que no se puede cambiar la muerte, pero sí decidir cómo vivir después de ella.
-                    </p>
-                    <div class="synopsis-meta">
+    <!-- ═══════════════════════════════════════
+         SYNOPSIS / HISTORIA
+    ══════════════════════════════════════════ -->
+    <section class="section s-historia" id="historia">
+        <div class="section__bg-ghost" aria-hidden="true">HISTORIA</div>
+        <div class="section__inner">
+
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>01 — Narrativa</span>
+            </div>
+
+            <div class="historia-grid">
+                <div class="historia-left">
+                    <h2 class="section-heading">Historia<br><em>del Juego</em></h2>
+
+                    <div class="historia-body">
+                        <p>Tras un accidente en el que pierde a sus padres, un <strong>joven cae en coma</strong>. Dentro de su mente surge un reino en crisis: los reyes han muerto y el príncipe heredero se niega a asumir el trono.</p>
+                        <p>A lo largo de <strong>cinco etapas que representan el duelo</strong>, el jugador enfrenta a trabajadores y figuras del castillo que reflejan distintas respuestas ante la pérdida.</p>
+                        <p>Al derrotar al príncipe, el jugador puede <strong>aceptar la realidad o aferrarse a la negación</strong>. Dos finales. Dos verdades.</p>
+                    </div>
+
+                    <div class="meta-table">
                         <div class="meta-row">
-                            <span class="meta-label">Género</span>
-                            <span class="meta-value">FPS Roguelike · Action RPG · Roguelite</span>
+                            <span class="meta-key">GÉNERO</span>
+                            <span class="meta-val">FPS Roguelike · Action RPG · Roguelite</span>
                         </div>
                         <div class="meta-row">
-                            <span class="meta-label">Estética</span>
-                            <span class="meta-value">Dark Fantasy Psicológico · Low Poly</span>
+                            <span class="meta-key">ESTÉTICA</span>
+                            <span class="meta-val">Dark Fantasy Psicológico · Low Poly</span>
                         </div>
                         <div class="meta-row">
-                            <span class="meta-label">Clasificación</span>
-                            <span class="meta-value" style="color: var(--red-intense);">Mature 17+</span>
+                            <span class="meta-key">RATING</span>
+                            <span class="meta-val meta-val--red">Mature 17+</span>
                         </div>
                         <div class="meta-row">
-                            <span class="meta-label">Plataformas</span>
-                            <span class="meta-value">Xbox · PS5 · Switch · PC</span>
+                            <span class="meta-key">PLATAFORMAS</span>
+                            <span class="meta-val">Xbox · PS5 · Switch · PC (Steam)</span>
                         </div>
                     </div>
                 </div>
-                <div class="fade-in-right">
-                    <div class="story-card">
-                        <div class="story-card-img">
-                            <span>Ilustración — Castillo</span>
+
+                <div class="historia-right">
+                    <div class="phases-card">
+                        <div class="phases-card__header">
+                            <span class="phases-card__tag">ARC NARRATIVO</span>
                         </div>
-                        <div class="story-card-body">
-                            <div class="story-phases">
-                                <div class="story-phase">
-                                    <div class="phase-name">Inicio</div>
-                                    <p>El joven cae en coma tras la muerte de sus padres. El reino colapsa sin monarcas.</p>
-                                </div>
-                                <div class="story-phase">
-                                    <div class="phase-name">Nudo</div>
-                                    <p>Cinco etapas del duelo como niveles: Negación, Ira, Negociación, Depresión y Aceptación.</p>
-                                </div>
-                                <div class="story-phase">
-                                    <div class="phase-name">Desenlace</div>
-                                    <p>Acepta y despierta al dolor, o niega y el reino colapsa. Dos finales. Dos verdades.</p>
-                                </div>
+                        <div class="phase-block">
+                            <div class="phase-num">01</div>
+                            <div class="phase-content">
+                                <div class="phase-title">INICIO — El Coma</div>
+                                <p>El joven cae en coma tras la muerte de sus padres. El reino colapsa sin monarcas. El castillo — su mente — comienza a desmoronarse.</p>
+                            </div>
+                        </div>
+                        <div class="phase-block">
+                            <div class="phase-num">02</div>
+                            <div class="phase-content">
+                                <div class="phase-title">NUDO — Cinco Etapas</div>
+                                <p>Negación, Ira, Negociación, Depresión, Aceptación. Cada nivel es una etapa del duelo encarnada en los habitantes del castillo.</p>
+                            </div>
+                        </div>
+                        <div class="phase-block phase-block--last">
+                            <div class="phase-num phase-num--red">03</div>
+                            <div class="phase-content">
+                                <div class="phase-title">DESENLACE — Dos Finales</div>
+                                <p>Acepta y despierta al dolor real. Niega y el reino colapsa para siempre. La muerte no cambia. La decisión de vivir, sí.</p>
                             </div>
                         </div>
                     </div>
@@ -152,137 +204,187 @@
         </div>
     </section>
 
-    <!-- CHARACTERS -->
-    <section class="section characters-section" id="personajes">
-        <div class="section-inner">
-            <p class="section-subtitle fade-in">Diseño</p>
-            <h2 class="section-title fade-in">Personajes</h2>
-            <div class="section-divider fade-in"></div>
-            <div class="characters-grid">
+    <!-- ═══════════════════════════════════════
+         CHARACTERS
+    ══════════════════════════════════════════ -->
+    <section class="section s-personajes" id="personajes">
+        <div class="section__bg-ghost" aria-hidden="true">CHARS</div>
+        <div class="section__inner">
+
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>02 — Diseño de Personajes</span>
+            </div>
+
+            <h2 class="section-heading">Personajes</h2>
+
+            <div class="chars-grid">
 
                 <!-- El Príncipe -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">👑</span>
-                        <div class="char-type"><span class="tag">Protagonista</span></div>
+                <div class="char-card char-card--protagonist">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--blue">PROTAGONISTA</span>
+                        <span class="char-num">00</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner">
+                            <span class="char-icon">👑</span>
+                        </div>
+                        <div class="char-portrait-label">PLAYABLE</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">El Príncipe</div>
-                        <div class="char-role">Personaje Jugable</div>
-                        <p class="char-desc">Joven de 13 años, heredero del reino. Viste ropa de hospital con una corona demasiado grande colgando del cuello. Su cuerpo cambia según las decisiones del jugador.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Dash</span>
-                            <span class="ability-tag">Parry</span>
-                            <span class="ability-tag">Implantes</span>
-                            <span class="ability-tag">Forja</span>
+                        <div class="char-role">// Personaje Jugable</div>
+                        <p class="char-desc">Joven de 13 años, heredero del reino. Ropa de hospital, una corona demasiado grande. Su cuerpo cambia según las decisiones del jugador.</p>
+                        <div class="char-skills">
+                            <span class="cs">DASH</span>
+                            <span class="cs">PARRY</span>
+                            <span class="cs">IMPLANTES</span>
+                            <span class="cs">FORJA</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- El Verdugo -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">🪓</span>
-                        <div class="char-type"><span class="tag gold">Mercader</span></div>
+                <div class="char-card">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--gold">MERCADER</span>
+                        <span class="char-num">01</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner char-portrait-inner--dark">
+                            <span class="char-icon">🪓</span>
+                        </div>
+                        <div class="char-portrait-label">TUTORIAL NPC</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">El Verdugo</div>
-                        <div class="char-role">Tutorial · Mercader</div>
-                        <p class="char-desc">Antiguo ejecutor real con máscara y delantal de cuero. Tras ser derrotado, abandona el castigo y se convierte en guía y vendedor permanente.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Ataques Telegráficos</span>
-                            <span class="ability-tag">Hacha</span>
-                            <span class="ability-tag">Tutorial</span>
+                        <div class="char-role">// Tutorial · Mercader</div>
+                        <p class="char-desc">Antiguo ejecutor real. Tras ser derrotado abandona el castigo y se convierte en guía y vendedor permanente.</p>
+                        <div class="char-skills">
+                            <span class="cs">HACHA</span>
+                            <span class="cs">TELEGRÁFICO</span>
+                            <span class="cs">MERCHANT</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- El Jardinero -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">🌿</span>
-                        <div class="char-type"><span class="tag red">Jefe I</span></div>
+                <!-- Jardinero -->
+                <div class="char-card char-card--boss">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--red">JEFE I</span>
+                        <span class="char-num">02</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner char-portrait-inner--green">
+                            <span class="char-icon">🌿</span>
+                        </div>
+                        <div class="char-portrait-label">NEGACIÓN</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">El Jardinero Real</div>
-                        <div class="char-role">Etapa: Negación</div>
-                        <p class="char-desc">Delgado, anclado al suelo con raíces. Sus brazos son lianas entrelazadas a tijeras de jardinería. Continúa cuidando las plantas como si los reyes vivieran.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Fijo al mapa</span>
-                            <span class="ability-tag">Regeneración</span>
-                            <span class="ability-tag">Espinas</span>
+                        <div class="char-role">// Etapa: Negación</div>
+                        <p class="char-desc">Anclado al suelo con raíces. Sus brazos son lianas entrelazadas a tijeras de jardinería. Continúa su trabajo como si los reyes vivieran.</p>
+                        <div class="char-skills">
+                            <span class="cs">FIJO</span>
+                            <span class="cs">REGEN</span>
+                            <span class="cs">ESPINAS</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Capitán -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">⚔️</span>
-                        <div class="char-type"><span class="tag red">Jefe II</span></div>
+                <div class="char-card char-card--boss">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--red">JEFE II</span>
+                        <span class="char-num">03</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner char-portrait-inner--crimson">
+                            <span class="char-icon">⚔️</span>
+                        </div>
+                        <div class="char-portrait-label">IRA</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">Capitán de la Guardia</div>
-                        <div class="char-role">Etapa: Ira</div>
-                        <p class="char-desc">Uniforme militar victoriano rojo. Múltiples heridas de combate. Culpa al príncipe por la muerte de los reyes y exige que gobierne.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Ataques Rápidos</span>
-                            <span class="ability-tag">Mosquete</span>
-                            <span class="ability-tag">Enrage</span>
+                        <div class="char-role">// Etapa: Ira</div>
+                        <p class="char-desc">Uniforme victoriano rojo, múltiples heridas. Culpa al príncipe por la muerte de los reyes y exige que gobierne.</p>
+                        <div class="char-skills">
+                            <span class="cs">RÁPIDO</span>
+                            <span class="cs">MOSQUETE</span>
+                            <span class="cs">ENRAGE</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tesorero -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">💰</span>
-                        <div class="char-type"><span class="tag red">Jefe III</span></div>
+                <div class="char-card char-card--boss">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--red">JEFE III</span>
+                        <span class="char-num">04</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner char-portrait-inner--gold">
+                            <span class="char-icon">💰</span>
+                        </div>
+                        <div class="char-portrait-label">NEGOCIACIÓN</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">Tesorero Real</div>
-                        <div class="char-role">Etapa: Negociación</div>
-                        <p class="char-desc">Traje victoriano elegante, máscara dorada. Sentado en su escritorio, intenta "hacer tratos" para evitar el colapso. Cree que puede arreglar todo.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Oro Fundido</span>
-                            <span class="ability-tag">Deshabilitar Armas</span>
-                            <span class="ability-tag">Buffs</span>
+                        <div class="char-role">// Etapa: Negociación</div>
+                        <p class="char-desc">Traje victoriano, máscara dorada. Sentado en su escritorio, intenta "hacer tratos" para evitar el colapso del reino.</p>
+                        <div class="char-skills">
+                            <span class="cs">ORO FUNDIDO</span>
+                            <span class="cs">DESHABILITAR</span>
+                            <span class="cs">BUFFS</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Dama -->
-                <div class="character-card fade-in">
-                    <div class="char-portrait">
-                        <span class="char-emoji">💧</span>
-                        <div class="char-type"><span class="tag red">Jefe IV</span></div>
+                <div class="char-card char-card--boss">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--red">JEFE IV</span>
+                        <span class="char-num">05</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait">
+                        <div class="char-portrait-inner char-portrait-inner--blue">
+                            <span class="char-icon">💧</span>
+                        </div>
+                        <div class="char-portrait-label">DEPRESIÓN</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">Dama de las Cámaras</div>
-                        <div class="char-role">Etapa: Depresión</div>
-                        <p class="char-desc">Traje de mucama victoriana mojado, cabello descuidado, postura encorvada. Ha perdido toda esperanza. El castillo se apaga con ella.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Drenaje de Vida</span>
-                            <span class="ability-tag">Reducir Stats</span>
-                            <span class="ability-tag">Charcos</span>
+                        <div class="char-role">// Etapa: Depresión</div>
+                        <p class="char-desc">Traje mojado, postura encorvada. Ha perdido toda esperanza. El castillo se apaga con ella. Sus lágrimas ralentizan al jugador.</p>
+                        <div class="char-skills">
+                            <span class="cs">DRENAJE</span>
+                            <span class="cs">REDUCIR STATS</span>
+                            <span class="cs">CHARCOS</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Príncipe jefe -->
-                <div class="character-card fade-in" style="border-color: rgba(198,40,40,0.3);">
-                    <div class="char-portrait" style="background: linear-gradient(135deg, #2a0a0a, #1a0808);">
-                        <span class="char-emoji">🔮</span>
-                        <div class="char-type"><span class="tag red">Jefe Final</span></div>
+                <div class="char-card char-card--final">
+                    <div class="char-card__header">
+                        <span class="char-tag char-tag--gold">JEFE FINAL</span>
+                        <span class="char-num">06</span>
                     </div>
-                    <div class="char-body">
+                    <div class="char-card__portrait char-card__portrait--wide">
+                        <div class="char-portrait-inner char-portrait-inner--shadow">
+                            <span class="char-icon">🔮</span>
+                        </div>
+                        <div class="char-portrait-label">ACEPTACIÓN</div>
+                    </div>
+                    <div class="char-card__body">
                         <div class="char-name">El Príncipe</div>
-                        <div class="char-role">Aceptación — Reflejo del Jugador</div>
+                        <div class="char-role">// Reflejo del Jugador</div>
                         <p class="char-desc">Refleja el aspecto del jugador. Su comportamiento cambia según las decisiones: más agresivo si predominó la negación, más defensivo si la aceptación.</p>
-                        <div class="char-abilities">
-                            <span class="ability-tag">Mecánicas Combinadas</span>
-                            <span class="ability-tag">Tus Armas</span>
-                            <span class="ability-tag">Múltiples Fases</span>
+                        <div class="char-skills">
+                            <span class="cs">MECÁNICAS COMBINADAS</span>
+                            <span class="cs">TUS ARMAS</span>
+                            <span class="cs">MULTI-FASE</span>
                         </div>
                     </div>
                 </div>
@@ -291,111 +393,168 @@
         </div>
     </section>
 
-    <!-- MECHANICS -->
-    <section class="section mechanics-section" id="mecanicas">
-        <div class="section-inner">
-            <p class="section-subtitle fade-in">Gameplay</p>
-            <h2 class="section-title fade-in">Mecánicas de Juego</h2>
-            <div class="section-divider fade-in"></div>
+    <!-- ═══════════════════════════════════════
+         MECHANICS
+    ══════════════════════════════════════════ -->
+    <section class="section s-mecanicas" id="mecanicas">
+        <div class="section__bg-ghost" aria-hidden="true">GAME</div>
+        <div class="section__inner">
+
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>03 — Gameplay</span>
+            </div>
+
+            <h2 class="section-heading">Mecánicas<br><em>de Juego</em></h2>
+
             <div class="mechanics-grid">
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">⚔️</div>
-                    <div class="mechanic-title">Combate FPS</div>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">01</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" /><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" /><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" /><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" /><path d="M15.5 9H17v1.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z" /><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z" /><path d="M8.5 15H7v-1.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /></svg>
+                    </div>
+                    <div class="mechanic-title">COMBATE FPS</div>
                     <p class="mechanic-desc">Combate frenético en primera persona con alta movilidad, dash, esquiva y sistema de parry para contraataques activos.</p>
                 </div>
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">🔩</div>
-                    <div class="mechanic-title">Forja de Armas</div>
-                    <p class="mechanic-desc">Obtén extremidades y partes de enemigos caídos para construir y mejorar armas con distintas rarezas.</p>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">02</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                    </div>
+                    <div class="mechanic-title">FORJA DE ARMAS</div>
+                    <p class="mechanic-desc">Obtén extremidades y partes de enemigos caídos para construir y mejorar armas con distintas rarezas y efectos.</p>
                 </div>
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">🫀</div>
-                    <div class="mechanic-title">Implantación de Órganos</div>
-                    <p class="mechanic-desc">Desbloquea y mejora perks mediante órganos. Modifica vida, defensa, daño, velocidad y crítico.</p>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">03</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                    </div>
+                    <div class="mechanic-title">IMPLANTACIÓN</div>
+                    <p class="mechanic-desc">Desbloquea y mejora perks mediante órganos. Modifica vida, defensa, daño, velocidad y crítico de tu personaje.</p>
                 </div>
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">💀</div>
-                    <div class="mechanic-title">Roguelike</div>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">04</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                    </div>
+                    <div class="mechanic-title">ROGUELIKE</div>
                     <p class="mechanic-desc">Al morir se reinicia la partida conservando únicamente almas y armas desbloqueadas en la tienda del Verdugo.</p>
                 </div>
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">🌀</div>
-                    <div class="mechanic-title">Aceptar / Negar</div>
-                    <p class="mechanic-desc">Cada jefe derrotado ofrece elegir entre Aceptar (almas) o Negar (partes físicas). Moldea el final y al Príncipe final.</p>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">05</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
+                    </div>
+                    <div class="mechanic-title">ACEPTAR / NEGAR</div>
+                    <p class="mechanic-desc">Cada jefe derrotado ofrece elegir entre Aceptar (almas) o Negar (partes físicas). Moldea el final y la forma del Príncipe.</p>
                 </div>
-                <div class="mechanic-card fade-in">
-                    <div class="mechanic-icon">🗡️</div>
-                    <div class="mechanic-title">Meta-Progresión</div>
-                    <p class="mechanic-desc">Desbloquea armas legendarias según el final obtenido. El modo continuación expone niveles aleatorios con dificultad progresiva.</p>
+                <div class="mechanic-card">
+                    <div class="mechanic-num">06</div>
+                    <div class="mechanic-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+                    </div>
+                    <div class="mechanic-title">META-PROGRESIÓN</div>
+                    <p class="mechanic-desc">Desbloquea armas legendarias según el final obtenido. Modo continuación con niveles aleatorios y dificultad progresiva.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LEVELS MAP -->
-    <section class="section levels-section" id="niveles">
-        <div class="section-inner">
-            <p class="section-subtitle fade-in">Mundo</p>
-            <h2 class="section-title fade-in">Mapa de Niveles</h2>
-            <div class="section-divider fade-in"></div>
-            <div class="levels-map">
+    <!-- ═══════════════════════════════════════
+         LEVELS
+    ══════════════════════════════════════════ -->
+    <section class="section s-niveles" id="niveles">
+        <div class="section__bg-ghost" aria-hidden="true">WORLD</div>
+        <div class="section__inner">
 
-                <div class="level-item fade-in">
-                    <div class="level-num">0</div>
-                    <div class="level-body">
-                        <div class="level-name">Celda Exterior</div>
-                        <div class="level-stage">Prólogo</div>
-                        <p class="level-desc">Celda pequeña y húmeda a las afueras del castillo. Muros de piedra desgastados, una reja oxidada. El punto de inicio y de reinicio. Tutorial con El Verdugo.</p>
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>04 — Mundo</span>
+            </div>
+
+            <h2 class="section-heading">Mapa<br><em>de Niveles</em></h2>
+
+            <div class="levels-timeline">
+
+                <div class="level-entry">
+                    <div class="level-entry__num">00</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot"></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage">PRÓLOGO</div>
+                        <div class="level-entry__name">Celda Exterior</div>
+                        <p class="level-entry__desc">Celda pequeña y húmeda a las afueras del castillo. Tutorial con El Verdugo. Punto de inicio y de reinicio tras cada muerte.</p>
                     </div>
                 </div>
 
-                <div class="level-item fade-in">
-                    <div class="level-num">1</div>
-                    <div class="level-body">
-                        <div class="level-name">Jardines Exteriores</div>
-                        <div class="level-stage">Negación</div>
-                        <p class="level-desc">Senderos cubiertos de raíces, estatuas de hiedra, fuentes secas. Naturaleza que ha reclamado el orden humano. Enemigos básicos y arbustos de hiedra venenosa.</p>
-                        <span class="level-boss">Jefe: El Jardinero Real</span>
+                <div class="level-entry">
+                    <div class="level-entry__num">01</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot"></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage">NEGACIÓN</div>
+                        <div class="level-entry__name">Jardines Exteriores</div>
+                        <p class="level-entry__desc">Senderos cubiertos de raíces, estatuas de hiedra, fuentes secas. Naturaleza que ha reclamado el orden humano.</p>
+                        <span class="level-boss-tag">⚔ El Jardinero Real</span>
                     </div>
                 </div>
 
-                <div class="level-item fade-in">
-                    <div class="level-num">2</div>
-                    <div class="level-body">
-                        <div class="level-name">Salón Principal</div>
-                        <div class="level-stage">Ira</div>
-                        <p class="level-desc">Gran salón central con dos escaleras laterales, banderas rasgadas y balcones. Tenso y solemne, como si aún intentara mantener el orden. Armaduras estáticas que atacan.</p>
-                        <span class="level-boss">Jefe: Capitán de la Guardia</span>
+                <div class="level-entry">
+                    <div class="level-entry__num">02</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot"></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage">IRA</div>
+                        <div class="level-entry__name">Salón Principal</div>
+                        <p class="level-entry__desc">Gran salón con banderas rasgadas, balcones y armaduras estáticas que atacan. Tenso y solemne.</p>
+                        <span class="level-boss-tag">⚔ Capitán de la Guardia</span>
                     </div>
                 </div>
 
-                <div class="level-item fade-in">
-                    <div class="level-num">3</div>
-                    <div class="level-body">
-                        <div class="level-name">Cámara del Tesoro</div>
-                        <div class="level-stage">Negociación</div>
-                        <p class="level-desc">Gran salón ornamentado con cofres abiertos, columnas decoradas y monedas esparcidas. Opulencia deteriorada. Enemigos rápidos y charcos de oro fundido.</p>
-                        <span class="level-boss">Jefe: El Tesorero Real</span>
+                <div class="level-entry">
+                    <div class="level-entry__num">03</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot"></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage">NEGOCIACIÓN</div>
+                        <div class="level-entry__name">Cámara del Tesoro</div>
+                        <p class="level-entry__desc">Gran salón ornamentado con cofres abiertos, columnas decoradas y monedas esparcidas. Opulencia deteriorada.</p>
+                        <span class="level-boss-tag">⚔ El Tesorero Real</span>
                     </div>
                 </div>
 
-                <div class="level-item fade-in">
-                    <div class="level-num">4</div>
-                    <div class="level-body">
-                        <div class="level-name">Salones Internos</div>
-                        <div class="level-stage">Depresión</div>
-                        <p class="level-desc">Corredores oscuros con vitrales rotos y antorchas débiles. Oscura y opresiva. Ráfagas de fuego y charcos de lágrimas que ralentizan al jugador.</p>
-                        <span class="level-boss">Jefe: Dama de las Cámaras</span>
+                <div class="level-entry">
+                    <div class="level-entry__num">04</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot"></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage">DEPRESIÓN</div>
+                        <div class="level-entry__name">Salones Internos</div>
+                        <p class="level-entry__desc">Corredores oscuros con vitrales rotos y antorchas débiles. Oscura y opresiva. Charcos de lágrimas ralentizan al jugador.</p>
+                        <span class="level-boss-tag">⚔ Dama de las Cámaras</span>
                     </div>
                 </div>
 
-                <div class="level-item fade-in" style="border-bottom: none;">
-                    <div class="level-num" style="background: linear-gradient(135deg, var(--red-intense), #8b1a1a);">5</div>
-                    <div class="level-body">
-                        <div class="level-name">Sala del Trono</div>
-                        <div class="level-stage" style="color: var(--gold-oxidized);">Aceptación</div>
-                        <p class="level-desc">Arena amplia y simétrica. Un trono elevado. Columnas altas y luz cenital dramática. El corazón simbólico del reino y el enfrentamiento final consigo mismo.</p>
-                        <span class="level-boss" style="color: var(--gold-oxidized);">Jefe Final: El Príncipe</span>
+                <div class="level-entry level-entry--final">
+                    <div class="level-entry__num level-entry__num--red">05</div>
+                    <div class="level-entry__connector">
+                        <div class="connector-dot connector-dot--red"></div>
+                    </div>
+                    <div class="level-entry__body">
+                        <div class="level-entry__stage level-entry__stage--gold">ACEPTACIÓN</div>
+                        <div class="level-entry__name">Sala del Trono</div>
+                        <p class="level-entry__desc">Arena amplia y simétrica. Un trono elevado. Columnas altas y luz cenital dramática. El corazón simbólico del reino y el enfrentamiento final consigo mismo.</p>
+                        <span class="level-boss-tag level-boss-tag--gold">⚔ El Príncipe — Jefe Final</span>
                     </div>
                 </div>
 
@@ -403,74 +562,95 @@
         </div>
     </section>
 
-    <!-- TEAM PREVIEW -->
-    <section class="section" id="equipo">
-        <div class="section-inner">
-            <p class="section-subtitle fade-in">Créditos</p>
-            <h2 class="section-title fade-in">Equipo</h2>
-            <div class="section-divider fade-in"></div>
-            <div class="team-preview-grid">
-                <div class="team-preview-card fade-in">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, var(--purple-neon), var(--blue-elec));">JD</div>
-                    <div class="team-name">Juan David Silva</div>
-                    <div class="team-role">Game Designer · Lead</div>
+    <!-- ═══════════════════════════════════════
+         TEAM PREVIEW
+    ══════════════════════════════════════════ -->
+    <section class="section s-equipo" id="equipo">
+        <div class="section__bg-ghost" aria-hidden="true">TEAM</div>
+        <div class="section__inner">
+
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span>05 — Créditos</span>
+            </div>
+
+            <h2 class="section-heading">Equipo</h2>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #6b4ad6, #4a3ab0);">JD</div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">Juan David Silva</div>
+                        <div class="team-card__role">// Game Designer · Lead</div>
+                    </div>
+                    <div class="team-card__arrow">→</div>
                 </div>
-                <div class="team-preview-card fade-in">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #4a6bd6, #3a5bb6);">JZ</div>
-                    <div class="team-name">Joseph Zamora Cortes</div>
-                    <div class="team-role">Programación y Pruebas</div>
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #1a3a8f, #0d2060);">JZ</div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">Joseph Zamora Cortes</div>
+                        <div class="team-card__role">// Programación y Pruebas</div>
+                    </div>
+                    <div class="team-card__arrow">→</div>
                 </div>
-                <div class="team-preview-card fade-in">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #b07a2a, #9a6a1a);">JA</div>
-                    <div class="team-name">Juan David Alvarez</div>
-                    <div class="team-role">Modelado 3D y Assets Visuales</div>
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #7a5010, #5a3a08);">JA</div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">Juan David Alvarez</div>
+                        <div class="team-card__role">// Modelado 3D y Assets</div>
+                    </div>
+                    <div class="team-card__arrow">→</div>
                 </div>
-                <div class="team-preview-card fade-in">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #6b4ad6, #5a3ab6);">JS</div>
-                    <div class="team-name">Johan Sebastian Cobo</div>
-                    <div class="team-role">Diseño 3D y Programación Web</div>
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #4a2a90, #2a1a60);">JS</div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">Johan Sebastian Cobo</div>
+                        <div class="team-card__role">// Diseño 3D · Web Dev</div>
+                    </div>
+                    <div class="team-card__arrow">→</div>
                 </div>
             </div>
-            <div style="margin-top: 1.5rem; text-align: center;">
-                <a href="equipo.html" class="btn-secondary">Ver Equipo Completo</a>
+
+            <div class="team-cta">
+                <a href="equipo.html" class="btn-ghost-full">Ver Equipo Completo →</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
     <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <div class="logo-title">Fallen Souls</div>
-                <p>Proyecto Final de Videojuegos 2026.<br />Un roguelike sobre el duelo y la aceptación.</p>
+        <div class="footer__top">
+            <div class="footer__brand">
+                <div class="footer__logo">FALLEN SOULS</div>
+                <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptación.</p>
             </div>
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="home.html">Inicio</a></li>
-                    <li><a href="desarrollo.html">Desarrollo</a></li>
-                    <li><a href="media.html">Media</a></li>
-                    <li><a href="descargas.html">Descargas</a></li>
-                    <li><a href="equipo.html">Equipo</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Proyecto</h4>
-                <ul>
-                    <li><a href="#historia">Historia</a></li>
-                    <li><a href="#personajes">Personajes</a></li>
-                    <li><a href="#mecanicas">Mecánicas</a></li>
-                    <li><a href="#niveles">Niveles</a></li>
-                    <li><a href="descargas.html">Descargar PDF</a></li>
-                </ul>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <div class="footer__col-head">Navegación</div>
+                    <a href="home.html">Inicio</a>
+                    <a href="desarrollo.html">Desarrollo</a>
+                    <a href="media.html">Media</a>
+                    <a href="descargas.html">Descargas</a>
+                    <a href="equipo.html">Equipo</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__col-head">Proyecto</div>
+                    <a href="#historia">Historia</a>
+                    <a href="#personajes">Personajes</a>
+                    <a href="#mecanicas">Mecánicas</a>
+                    <a href="#niveles">Niveles</a>
+                    <a href="descargas.html">Descargar PDF</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <span>Proyecto Final de Videojuegos 2026-01</span>
-            <div class="esrb">
-                <span class="esrb-badge">M 17+</span>
-                Mature — Contenido para mayores de 17 años
+        <div class="footer__bottom">
+            <span>© 2026 — Proyecto Final de Videojuegos · UAO</span>
+            <div class="footer__esrb">
+                <span class="esrb-badge esrb-badge--sm">M</span>
+                <span>MATURE 17+ — Violencia, Temáticas Oscuras</span>
             </div>
         </div>
     </footer>
