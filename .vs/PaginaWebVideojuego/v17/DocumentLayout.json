@@ -38,31 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "contacto.html",
-              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
-              "RelativeDocumentMoniker": "contacto.html",
-              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
-              "RelativeToolTip": "contacto.html",
-              "ViewState": "AgIAAJMAAAAAAAAAAMBdwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-20T19:07:57.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "equipo.html",
-              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
-              "RelativeDocumentMoniker": "equipo.html",
-              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
-              "RelativeToolTip": "equipo.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwLYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-20T19:07:41.241Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
@@ -72,10 +52,22 @@
               "RelativeDocumentMoniker": "desarrollo.html",
               "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\desarrollo.html",
               "RelativeToolTip": "desarrollo.html",
-              "ViewState": "AgIAAKIBAAAAAAAAAADgvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-04-20T18:17:04.198Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "contacto.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
+              "RelativeDocumentMoniker": "contacto.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\contacto.html",
+              "RelativeToolTip": "contacto.html",
+              "ViewState": "AgIAAH8AAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:07:57.684Z"
             },
             {
               "$type": "Document",
@@ -85,9 +77,21 @@
               "RelativeDocumentMoniker": "home.html",
               "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\home.html",
               "RelativeToolTip": "home.html",
-              "ViewState": "AgIAAL4BAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJEBAAAAAAAAAOBvwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-04-20T19:09:52.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "equipo.html",
+              "DocumentMoniker": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
+              "RelativeDocumentMoniker": "equipo.html",
+              "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\equipo.html",
+              "RelativeToolTip": "equipo.html",
+              "ViewState": "AgIAACYAAAAAAAAAAEBlwN0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-20T19:07:41.241Z"
             },
             {
               "$type": "Document",
@@ -97,7 +101,7 @@
               "RelativeDocumentMoniker": "media.html",
               "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\media.html",
               "RelativeToolTip": "media.html",
-              "ViewState": "AgIAAAYBAAAAAAAAAGBnwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsBAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-04-20T19:09:43.271Z"
             },
@@ -109,7 +113,7 @@
               "RelativeDocumentMoniker": "descargas.html",
               "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\descargas.html",
               "RelativeToolTip": "descargas.html",
-              "ViewState": "AgIAAKAAAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAABhwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-04-20T19:09:13.478Z"
             },
@@ -121,9 +125,17 @@
               "RelativeDocumentMoniker": "js\\contacto.js",
               "ToolTip": "C:\\Users\\coboj\\OneDrive\\Documentos\\GitHub\\PaginaWebVideojuego\\js\\contacto.js",
               "RelativeToolTip": "js\\contacto.js",
-              "ViewState": "AgIAAEEAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-04-20T19:08:21.342Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
