@@ -1,0 +1,177 @@
+/* =============================================
+   FALLEN SOULS — HEADER CSS
+   Reusable Header and Navigation Styles
+   ============================================= */
+
+/* ?? Scroll Progress ???????????????????????????????????? */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--clr-red, #C8102E);
+    box-shadow: 0 0 12px var(--clr-red-glow, #FF2040);
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
+/* ??????????????????????????????????????????????????????
+   NAVBAR
+   ?????????????????????????????????????????????????????? */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height, 68px);
+    background: rgba(8, 6, 8, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(200, 16, 46, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    z-index: 1000;
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.navbar-logo .logo-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    color: #E8E0D5;
+    text-shadow: none;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.navbar-logo .logo-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.5rem;
+    color: #7a7068;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.navbar-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7a7068;
+    padding: 0.5rem 0.9rem;
+    border-radius: 3px;
+    transition: color 0.3s ease, background 0.3s ease;
+    position: relative;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    right: 50%;
+    height: 1px;
+    background: #D4A03C;
+    transition: left 0.3s ease, right 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #D4A03C;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+    left: 0.9rem;
+    right: 0.9rem;
+}
+
+.navbar-links a.active {
+    color: #D4A03C;
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #D4A03C;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ?? PAGE WRAPPER ???????????????????????????? */
+.page-wrapper {
+    padding-top: var(--nav-height, 68px);
+    min-height: 100vh;
+}
+
+/* ?? Responsive ???????????????????????????????????????? */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1.25rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: var(--nav-height, 68px);
+        left: 0;
+        right: 0;
+        background: rgba(8, 6, 8, 0.98);
+        border-bottom: 1px solid rgba(200, 16, 46, 0.12);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem;
+    }
+}
