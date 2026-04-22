@@ -14,9 +14,7 @@
 </head>
 <body>
 
-    <!-- HEADER: See header.html for the structure -->
-    <!-- Include header.html content here using your build tool or SSI -->
-    <!-- SCROLL PROGRESS -->
+<!-- SCROLL PROGRESS -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- NAVBAR -->
@@ -30,7 +28,7 @@
     </button>
     <ul class="navbar-links" id="navLinks">
         <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html" class="active">Desarrollo</a></li>
+        <li><a href="desarrollo.html">Desarrollo</a></li>
         <li><a href="media.html">Media</a></li>
         <li><a href="descargas.html">Descargas</a></li>
         <li><a href="equipo.html">Equipo</a></li>
@@ -38,6 +36,22 @@
     </ul>
 </nav>
 
+<script>
+// Script para establecer el enlace activo automaticamente segun la pagina actual
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    const navLinks = document.querySelectorAll('#navLinks a');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+
+<!-- HEADER: See header.html for the structure -->
+    <!-- Include header.html content here using your build tool or SSI -->
     <div class="page-wrapper">
 
         <!-- ═══════════════ HERO ═══════════════════ -->

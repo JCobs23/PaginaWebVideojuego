@@ -32,9 +32,23 @@
         <li><a href="media.html">Media</a></li>
         <li><a href="descargas.html">Descargas</a></li>
         <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
     </ul>
 </nav>
+
+<script>
+// Script para establecer el enlace activo automaticamente segun la pagina actual
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    const navLinks = document.querySelectorAll('#navLinks a');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
 <div class="page-wrapper">
   <!-- Hero de Contacto -->
