@@ -1,0 +1,508 @@
+PROPUESTA PROYECTO FINAL DE VIDEOJUEGOS
+
+FALLEN SOULS
+
+Autor: JUAN DAVID SILVA COLORADO
+Fecha: 4/3/2026
+
+============================================================
+VERSIÓN TXT ESTRUCTURADA PARA IA
+============================================================
+
+NOTA:
+Este archivo conserva el contenido textual del PDF en formato plano (TXT), reorganizado con encabezados, listas y tablas convertidas a texto para que una IA pueda entender el proyecto sin necesidad de abrir el PDF.
+No se inventa información que no esté en el documento. Cuando en el PDF hay imágenes o referencias visuales sin texto descriptivo, aquí se marcan como:
+[Referencia visual en el PDF]
+
+============================================================
+1. INTRODUCCIÓN
+============================================================
+
+Plataformas posibles de despliegue:
+El juego está pensado para un lanzamiento multiplataforma en Xbox Series X and Series S, PlayStation 5, Nintendo Switch y en PC a través de Steam, permitiendo llegar tanto al público de consolas como a la comunidad fuerte de roguelikes en ordenador, maximizando alcance comercial y visibilidad dentro del mercado indie.
+
+Público objetivo:
+[Referencia visual en el PDF]
+
+Clasificación ESRB:
+Razones:
+- Violencia en combate cuerpo a cuerpo.
+- Uso de partes del cuerpo como mecánica (body horror implícito).
+- Temática fuerte: muerte, duelo, colapso psicológico.
+- Posibles imágenes perturbadoras (transformación, distorsiones).
+
+Aunque no haya gore explícito extremo, el tono psicológico oscuro y la manipulación de órganos probablemente lo colocan en categoría Mature.
+
+Género del juego:
+El juego pertenece al género Roguelike de acción en primera persona (FPS Roguelike), caracterizado por combate rápido, agresivo y técnico, con alta movilidad y enfoque en ejecución mecánica. Presenta niveles estructuralmente temáticos pero con distribución y encuentros aleatorios, reforzando la rejugabilidad propia del género. Incorpora elementos de Roguelite mediante meta-progresión persistente (desbloqueo de armas legendarias según el final obtenido) y un modo de continuación opcional tras derrotar al jefe final. Además, integra componentes de Action RPG a través de la personalización del personaje mediante órganos, la forja de armas y aumento de estadísticas, todo dentro de una estética dark fantasy psicológico que vincula el frenetismo del combate con la representación simbólica del duelo.
+
+============================================================
+2. DESCRIPCIÓN DEL JUEGO
+============================================================
+
+Sumario:
+El juego es un roguelike de acción en primera persona ambientado en un castillo que simboliza la mente de un joven en coma tras la muerte de sus padres. En este reino en crisis, los reyes han fallecido y el príncipe —representación del protagonista— se niega a asumir el trono. A través de cinco etapas que encarnan el duelo, el jugador enfrenta trabajadores y figuras del castillo que esperan que el príncipe gobierne, obteniendo partes y almas para forjar armas y modificar su cuerpo. Al derrotar al príncipe, podrá aceptar el desenlace o continuar luchando, desbloqueando distintas armas legendarias según sus decisiones. La experiencia combina combate frenético con una narrativa simbólica sobre la aceptación, la negación y la responsabilidad de seguir adelante.
+
+[Referencia visual en el PDF]
+
+Historia:
+
+Inicio:
+Tras un accidente en el que pierde a sus padres, un joven cae en coma. Dentro de su mente surge un reino en crisis: los reyes han muerto y el príncipe heredero se niega a asumir el trono. El castillo, símbolo de su conciencia, comienza a deteriorarse mientras sus habitantes esperan que alguien gobierne.
+
+Nudo:
+A lo largo de cinco etapas que representan el duelo, el jugador enfrenta a trabajadores y figuras del castillo que reflejan distintas respuestas ante la pérdida. En su avance, obtiene partes y almas que fortalecen su cuerpo y sus armas, pero cada decisión entre aceptar o negar la muerte de los reyes transforma tanto al reino como al propio príncipe. La tensión culmina cuando debe confrontar al heredero, encarnación de su conflicto interno.
+
+Desenlace:
+Tras derrotar al príncipe, el jugador puede aceptar la realidad o aferrarse a la negación. Si acepta, el protagonista despierta y enfrenta el dolor de la pérdida; si niega, el reino colapsa y su cuerpo en el mundo real no logra sostener la verdad. Así, la historia concluye mostrando que no se puede cambiar la muerte, pero sí decidir cómo vivir después de ella.
+
+============================================================
+3. FLUJO DE JUEGO
+============================================================
+
+Objetivos:
+- Avanzar por los cinco niveles del castillo que representan las etapas del duelo.
+- Derrotar a los subjefes de cada piso.
+- Vencer al jefe final (el Príncipe).
+- Decidir entre aceptar el desenlace o continuar luchando.
+- Construir una build eficiente mediante órganos, almas y armas forjadas.
+
+Reglas:
+- El jugador debe eliminar enemigos para progresar.
+- Cada nivel termina con un subjefe obligatorio.
+- Al derrotar jefes puede elegir entre Aceptar (obtener almas) o Negar (obtener partes físicas más poderosas).
+- Si el jugador muere, la partida termina (estructura roguelike), conservando únicamente las almas y las armas desbloqueadas (es decir la posibilidad de que le salgan en la tienda, mas no el arma como tal).
+- Los niveles mantienen su temática fija pero con distribución y encuentros aleatorios.
+- Tras derrotar al jefe final, puede elegir ver el final o continuar la run.
+
+Recompensas:
+- Partes físicas para crear o mejorar armas.
+- Almas para modificar estadísticas y alterar la tienda.
+- Builds especializadas según decisiones tomadas.
+- Órganos para desbloquear distintas perks.
+- Desbloqueo de armas legendarias distintas según el final alcanzado.
+- Mayor variedad estratégica en partidas futuras.
+
+============================================================
+4. PERSONAJES
+============================================================
+
+4.1. El Príncipe (Protagonista)
+
+Aspecto:
+- Joven de 13 años.
+- Cansado y ojeroso.
+- Delgado.
+- Ropa de hospital.
+- Una corona más grande que su cabeza que le cuelga del cuello.
+- Dependiendo de las decisiones que tome puede tener partes de los jefes en su cuerpo o partes de armadura.
+
+Descripción general:
+¿Quién es?
+Es un joven de 13 años, heredero del reino tras la muerte de los reyes. Representa al protagonista en coma, enfrentando el duelo por la pérdida de sus padres.
+
+¿Puedo seleccionarlo?
+No. Es el único personaje jugable y eje central de la historia.
+
+Breve historia:
+Tras la muerte de los reyes, el reino cae en crisis. El príncipe se niega a asumir el trono, manteniendo al castillo en un estado de estancamiento. A lo largo del juego, debe enfrentar las distintas manifestaciones del duelo hasta decidir si acepta la realidad o permanece atrapado en la negación.
+
+Principales habilidades:
+- Combate en primera persona con armas forjadas a partir de partes enemigas.
+- Movilidad avanzada (dash, esquiva rápida, reposicionamiento).
+- Parry (sistema de contraataque y defensa activa).
+- Implantación de órganos que modifican estadísticas (vida, resistencia, daño, velocidad).
+- Gestión de almas para mejorar habilidades o alterar la tienda.
+- Adaptación de build según decisiones emocionales (aceptación o negación).
+
+4.2. El Verdugo (Tutorial / Mercader)
+
+Aspecto:
+- Complexión robusta.
+- Máscara con un solo agujero que cubre todo su rostro y delantal de cuero.
+- Hacha desgastada.
+- Presencia imponente pero estática e inamovible.
+
+Descripción general:
+¿Quién es?
+Antiguo ejecutor real. Representa la culpa y el castigo.
+
+¿Puedo seleccionarlo?
+No. Es el jefe–tutorial y luego se convierte en mercader permanente.
+
+Breve historia:
+Antiguo ejecutor del reino, cumplió sentencias hasta la caída de los reyes. Tras ser derrotado por el protagonista, comprende que su función ya no es castigar, sino prepararlo para enfrentar lo inevitable, convirtiéndose en su guía y mercader.
+
+Tras ser vencido:
+- Aparece en cada nivel.
+- Vende mejoras, armas e ítems persistentes.
+- Ofrece comentarios crudos pero orientadores sobre el progreso del jugador.
+- Representa la muerte inminente e inevitable.
+
+Principales habilidades:
+- Ataques lentos y telegráficos (enseñan esquiva y lectura de patrones).
+- Golpe cargado que rompe guardia.
+- Lanzamiento de hacha con trayectoria simple.
+- Fase final donde aumenta la presión para introducir mecánicas avanzadas.
+
+4.3. El Jardinero Real (Jefe – Negación)
+
+Aspecto:
+- Complexión delgada.
+- Overol desgastado.
+- Anclado al piso con raíces.
+- Máscara de comedia teatral.
+- Sus brazos son lianas entrelazadas a las cuchillas de unas tijeras de jardinería.
+
+Descripción general:
+¿Quién es?
+Encargado de los jardines del castillo. Representa la Negación.
+
+¿Puedo seleccionarlo?
+No. Es el primer jefe, ubicado fuera del castillo.
+
+Breve historia:
+Continúa cuidando las plantas como si los reyes siguieran vivos, manteniendo una falsa normalidad y evitando aceptar su muerte.
+
+Principales habilidades:
+- Está fijo al mapa (no puede moverse de su sitio).
+- Regeneración constante mediante vegetación.
+- Invoca plantas que reaparecen.
+- Lanza espinas alrededor.
+- Realiza 3 cortes consecutivos con sus extremidades.
+
+4.4. Capitán de la Guardia (Jefe – Ira)
+
+Aspecto:
+- Uniforme militar victoriano rojo.
+- Sable militar.
+- Múltiples heridas de combate.
+- Máscara de comedia agresiva.
+- Mosquete antiguo junto con una bolsa de pólvora.
+- Postura erguida y complexión robusta.
+
+Descripción general:
+¿Quién es?
+Comandante militar del castillo. Representa la Ira.
+
+¿Puedo seleccionarlo?
+No. Es jefe del segundo nivel.
+
+Breve historia:
+Culpa al príncipe por la muerte de los reyes y exige que gobierne. Su rabia mantiene al reino en tensión constante.
+
+Principales habilidades:
+- Ataques rápidos y agresivos.
+- Carga hacia adelante con su sable.
+- Aumenta su poder cuando pierde vida.
+- Da un pisotón que stunea al jugador brevemente.
+- Dispara 3 tiros rectos con su mosquete.
+
+4.5. Tesorero Real (Jefe – Negociación)
+
+Aspecto:
+- Máscara de comedia teatral dorada.
+- Traje elegante victoriano.
+- Sentado en su escritorio escribiendo con pluma y tinta.
+
+Descripción general:
+¿Quién es?
+Administrador de los recursos del reino. Representa la Negociación.
+
+¿Puedo seleccionarlo?
+No. Es jefe del tercer nivel.
+
+Breve historia:
+Intenta “hacer tratos” para evitar el colapso del reino. Cree que aún puede arreglar la situación si sacrifica lo suficiente.
+
+Principales habilidades:
+- Está fijo al mapa (no puede moverse de su sitio).
+- Lanza sacos de dinero que al impactar dejan oro fundido en el suelo y aplican quemadura.
+- Puede inhabilitar tus armas temporalmente.
+- Lanza proyectiles hechos de tinta que ralentizan.
+- Potencia los enemigos que estén en el campo.
+
+4.6. Dama de las Cámaras (Jefe – Depresión)
+
+Aspecto:
+- Traje de mucama victoriana.
+- Ropa mojada.
+- Máscara de tragedia teatral.
+- Cabello descuidado.
+- Postura encorvada.
+- Complexión delgada.
+
+Descripción general:
+¿Quién es?
+Encargada de los aposentos reales. Representa la Depresión.
+
+¿Puedo seleccionarlo?
+No. Es jefe del cuarto nivel.
+
+Breve historia:
+Ha perdido toda esperanza. El castillo se apaga con ella. Cree que nada tiene sentido sin los reyes.
+
+Principales habilidades:
+- Drena parte de tu vida para regenerarse.
+- Puede reducir tus estadísticas por un corto periodo de tiempo.
+- Oscurece el entorno y limita la visibilidad.
+- Puede poner charcos de lágrimas a través de los que se puede mover libremente, además de ralentizar al jugador al contacto.
+
+4.7. El Príncipe (Jefe Final – Aceptación – reflejo del jugador)
+
+Aspecto:
+- Reflejo del aspecto del jugador.
+
+Descripción general:
+¿Quién es?
+Heredero del reino y manifestación final del conflicto interno.
+
+¿Puedo seleccionarlo?
+No. Es el jefe final.
+
+Breve historia:
+Se niega a asumir el trono tras la muerte de los reyes. Su derrota representa la confrontación definitiva con la pérdida.
+
+Principales habilidades:
+- Combina mecánicas de los jefes anteriores.
+- Cambia su estilo según las decisiones del jugador (más agresivo si predominó la negación, más defensivo si predominó la aceptación).
+- Fases múltiples que simbolizan el colapso o la integración emocional.
+- Puede usar las armas que el personaje tenga equipadas.
+
+============================================================
+5. MUNDO DE JUEGO
+============================================================
+
+Ambiente y descripción general del mundo:
+El juego se desarrolla en un reino–castillo en decadencia, aislado del exterior y detenido simbólicamente en el tiempo tras la caída de sus monarcas. No es solo un espacio físico, sino un escenario cargado de significado emocional: cada zona representa una etapa del deterioro del poder y de la mente.
+
+Sus principales características son:
+- Arquitectura monumental y opresiva: estructuras altas, techos amplios y salones gigantes que empequeñecen al jugador.
+- Escala exagerada: los entornos son grandes para permitir 4 oleadas de enemigos comunes antes del enfrentamiento con el jefe.
+- Jefes del doble del tamaño del jugador, reforzando jerarquía y amenaza.
+- Estética low poly con texturas pintadas a mano, de apariencia ilustrada, inspiradas en el estilo de Bendy and the Ink Machine, pero a color.
+- Sombras marcadas y contrastes fuertes, dando sensación de cuento oscuro ilustrado.
+- Naturaleza invasiva y deterioro visible, mostrando el paso del tiempo y el abandono.
+
+El mundo transmite:
+- Soledad.
+- Grandeza caída.
+- Melancolía.
+- Sensación de ciclo y repetición.
+
+Ambientes y zonas:
+
+5.1. Celda Exterior
+Ambiente:
+Un espacio frío y silencioso que transmite aislamiento y repetición. Es un lugar de pausa antes del intento, donde el jugador contempla la inmensidad del castillo que debe enfrentar.
+
+Descripción general:
+Una celda pequeña y húmeda ubicada a las afueras del castillo. Muros de piedra desgastados, una reja oxidada y una vista lejana de la fortaleza dominante en el horizonte.
+
+5.2. Jardines Exteriores
+Ambiente:
+Melancólica y decadente, con una naturaleza que ha reclamado el orden humano. Se siente abandono, pero también una extraña calma.
+
+Descripción general:
+Un área amplia con senderos cubiertos de raíces, estatuas invadidas por hiedra, fuentes secas y arbustos de hiedra venenosa que quitan vida de forma porcentual. El espacio abierto permite combates dinámicos antes del enfrentamiento final.
+
+5.3. Salón Principal
+Ambiente:
+Tenso y solemne, como si aún intentara mantener el orden en medio del colapso. Se percibe disciplina y autoridad.
+
+Descripción general:
+El salón central del castillo, de gran altura, con dos escaleras laterales que conducen a los pisos superiores. Banderas rasgadas cuelgan de los muros y balcones rodean la parte alta.
+
+5.4. Cámara del Tesoro
+Ambiente:
+Opulencia deteriorada. El brillo del oro contrasta con el polvo y la ruina, generando una sensación de riqueza inútil.
+
+Descripción general:
+Gran salón ornamentado con cofres abiertos, columnas decoradas y monedas esparcidas por el suelo. Espacio amplio con múltiples accesos para oleadas de enemigos.
+
+5.5. Salones Internos
+Ambiente:
+Oscura y opresiva, generando anticipación. Los ecos y la iluminación tenue aumentan la tensión antes de cada enfrentamiento.
+
+Descripción general:
+Corredores y salas intermedias con vitrales rotos, antorchas débiles y puertas pesadas. Espacios más cerrados que conectan las grandes arenas del castillo.
+
+5.6. Sala del Trono
+Ambiente:
+Majestuosa pero sombría. Es el corazón simbólico del reino y transmite peso histórico y final inminente.
+
+Descripción general:
+Una arena amplia y simétrica con un trono elevado al fondo. Columnas altas y luz cenital dramatizan el enfrentamiento contra el jefe.
+
+============================================================
+6. COMPONENTES PARA LA EXPERIENCIA DE JUEGO
+============================================================
+
+6.1. Hazards
+- Charcos de lágrimas: ralentizan al jugador.
+- Arbustos de hiedra venenosa: quitan vida de forma porcentual.
+- Charcos de oro fundido: aplican una quemadura al jugador que reduce la vida de forma plana y reduce las curaciones.
+- Armaduras estáticas que ocasionalmente atacan.
+- Antorchas que activan ráfagas de fuego.
+
+6.2. Power ups
+- Aumento de vida: aumenta tu vida máxima.
+- Aumento de defensa: aumenta tu defensa.
+- Aumento de velocidad: aumenta tu velocidad de movimiento.
+- Aumento de daño: aumenta tu daño base.
+- Aumento crítico: aumenta tu probabilidad de crítico.
+- Veneno real: duplica el daño a enemigos envenenados.
+- Óxido: tus ataques tienen la probabilidad de reducir la armadura enemiga.
+- Peste negra: aumenta tu daño con respecto a enemigos envenenados.
+- Maestro perforador: aumenta el daño entre más defensa tenga el enemigo.
+
+6.3. Coleccionables
+- Almas: permiten al jugador cambiar el catálogo de la tienda, subir sus estadísticas base y retirar power ups que ya no necesite.
+- Extremidades: le permiten al jugador comprar y mejorar distintas armas con distintas rarezas.
+- Órganos: le permiten al jugador desbloquear y mejorar distintos power ups.
+- Extremidades reales: le permiten al jugador mejorar sus armas a niveles superiores, o desbloquear armas de mayor calidad.
+- Almas reales: te permiten mejorar power ups a niveles superiores o desbloquear power ups de mayor calidad.
+- Alma del regente: se usa para desbloquear armas de grado legendario.
+
+============================================================
+7. NIVELES DEL JUEGO
+============================================================
+
+El juego está dividido en 5 niveles progresivos dentro del castillo, donde cada uno representa una zona específica del reino y culmina en el enfrentamiento contra un jefe.
+
+Cada nivel mantiene la estructura de:
+- 4 oleadas de enemigos comunes.
+- 1 oleada final con jefe.
+- Entorno amplio diseñado para combate dinámico.
+- Elementos de peligro (hazards), power ups y coleccionables.
+
+Los niveles se desbloquean de forma lineal a medida que el jugador avanza; al derrotar al jefe final y continuar, estos empezarán a aparecer de forma aleatoria con una dificultad progresiva.
+
+7.1. Jardines Exteriores
+- Enemigos básicos cuerpo a cuerpo.
+- Enemigos a distancia con proyectiles simples.
+- Arbustos de hiedra venenosa.
+- Power ups escondidos.
+- Jefe final: El Jardinero.
+
+[Referencia visual en el PDF]
+
+7.2. Salón Principal
+- Enemigos más resistentes.
+- Enemigos que cargan y empujan.
+- Oleadas que aparecen desde escaleras y balcones.
+- Armaduras estáticas que ocasionalmente atacan.
+- Jefe final: Capitán de la Guardia.
+
+7.3. Cámara del Tesoro
+- Enemigos rápidos y numerosos.
+- Enemigos que protegen a otros.
+- Charcos de oro fundido.
+- Power ups ocultos.
+- Jefe final: El Tesorero.
+
+7.4. Salones Internos
+- Enemigos cuerpo a cuerpo en espacios estrechos.
+- Enemigos a distancia ubicados en extremos de pasillos.
+- Antorchas que activan ráfagas de fuego.
+- Charcos de lágrimas que ralentizan al jugador.
+- Jefe final: Dama de las Cámaras.
+
+[Referencia visual en el PDF]
+
+7.5. Sala del Trono
+- Enemigos élite combinados.
+- Hazards activados durante oleadas finales.
+- Jefe final: Príncipe (según estructura final).
+
+============================================================
+8. ESTÉTICA
+============================================================
+
+8.1. Paleta de color
+Inspirada en la atmósfera lúgubre de Bloodborne, esta paleta elimina los blancos para sumergir el reino-castillo en una penumbra gótica y asfixiante. La iluminación principal se compone de azules eléctricos y morados neón desaturados que emanan de las almas recolectadas, proyectando sombras marcadas sobre muros de gris plomizo y piedra oxidada. Este entorno de tonos fríos está diseñado estratégicamente para que el rojo intenso de la sangre resalte con violencia visceral en cada ejecución, acentuando el contraste entre la melancolía del duelo y el frenetismo del combate.
+
+8.2. Estilo gráfico
+El juego presenta un estilo gráfico 3D con modelado low poly, combinado con texturas pintadas a mano que simulan trazos visibles, contornos marcados y sombras dibujadas. La inspiración estética se basa en el estilo ilustrado de Bendy and the Ink Machine, pero adaptado completamente a color.
+
+[Referencia visual en el PDF]
+
+8.3. Estética de los personajes
+La estética de los personajes se define como fantasía oscura estilizada en 3D, con modelado low poly, vestimenta victoriana y texturas pintadas a mano que simulan trazos de tinta y sombras dibujadas, inspiradas en el estilo de Bendy and the Ink Machine pero adaptadas a una paleta a color. Presentan siluetas claras y proporciones ligeramente exageradas, especialmente los jefes, que duplican el tamaño del jugador para reforzar su jerarquía. Más que realistas, los personajes parecen ilustraciones vivas dentro de un cuento oscuro, reflejando la decadencia y el simbolismo del mundo que habitan.
+
+8.4. Referencias de interfaz de usuario
+[Referencia visual en el PDF]
+
+La interfaz del juego toma inspiración en la claridad y minimalismo visual de Ultrakill, priorizando información legible, directa y enfocada en el combate sin sobrecargar la pantalla. La sección del mercader se basa en la estructura funcional del comerciante de 9 Kings, donde las mejoras se presentan de forma clara, organizada y estratégica. Por su parte, los menús están inspirados en la presentación dinámica y estilizada de Megabonk, buscando una navegación simple, coherente con la estética ilustrada del juego y visualmente impactante sin perder funcionalidad.
+
+[Referencia visual en el PDF]
+
+Interfaz gráfica:
+[Sección mencionada en el PDF]
+
+============================================================
+9. ANÁLISIS DE LA COMPETENCIA
+============================================================
+
+9.1. Ultrakill
+Similitud con el proyecto:
+Combate rápido, agresivo y centrado en la movilidad constante.
+
+Fortalezas:
+- Sistema de combate dinámico y fluido.
+- Recompensa la agresividad del jugador.
+- Claridad visual en enfrentamientos caóticos.
+
+Debilidades:
+- Curva de dificultad elevada.
+- Puede resultar abrumador para jugadores nuevos.
+
+Elemento replicable:
+- Combate basado en presión constante.
+- Sistema que premie jugar ofensivamente.
+- Enemigos con patrones claros pero exigentes.
+
+9.2. Doom
+Similitud con el proyecto:
+Enfrentamientos en arenas cerradas con oleadas de enemigos.
+
+Fortalezas:
+- Diseño de arenas amplias y estratégicas.
+- Ritmo intenso sin perder claridad.
+- Sistema de recompensas inmediatas en combate.
+
+Debilidades:
+- En algunos casos, repetición estructural.
+- Dependencia fuerte del combate continuo.
+
+Elemento replicable:
+- Estructura de combate por oleadas en arenas.
+- Diseño de espacios amplios que favorecen movilidad.
+- Uso de power ups temporales durante el combate.
+
+[Referencia visual en el PDF]
+
+9.3. Balatro
+Similitud con el proyecto:
+Sistema de mejoras y combinaciones estratégicas.
+
+Fortalezas:
+- Sistema de comodines (jokers) que modifica reglas del juego.
+- Alta rejugabilidad.
+- Sinergias entre perks.
+
+Debilidades:
+- Dependencia fuerte del azar.
+- Complejidad estratégica que puede no ser inmediata.
+
+Elemento replicable:
+- Sistema de perks acumulativos.
+- Modificadores que cambien la forma de jugar cada partida.
+- Sinergias entre mejoras que fomenten experimentación.
+
+9.4. Análisis breve del mercado
+El género de acción en arenas con elementos roguelite ha tenido un crecimiento sostenido en el mercado internacional, destacándose por ofrecer combate intenso, alta rejugabilidad y sistemas de progresión que incentivan múltiples intentos. Los jugadores valoran partidas dinámicas, dificultad justa, builds variadas y una identidad visual fuerte que diferencie el producto en un mercado competitivo. Esta información puede aprovecharse integrando un sistema de perks y mejoras acumulativas, diseño de arenas amplias para combate por oleadas y una estética 3D low poly con texturas ilustradas que refuercen la identidad del juego y aumenten su atractivo comercial.
+
+============================================================
+FIN DEL DOCUMENTO
+============================================================
