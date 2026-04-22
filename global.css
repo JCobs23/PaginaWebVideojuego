@@ -1,13 +1,13 @@
 /* =============================================
    FALLEN SOULS - GLOBAL CSS
-   Sistema de diseno compartido
+   Sistema de diseño compartido
    Paleta: La Ira del Capitan
    ============================================= */
 
 /* -- Fuentes -------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
-/* -- Tokens de diseno ----------------------------------- */
+/* -- Tokens de diseño ----------------------------------- */
 :root {
     /* Fondos */
     --clr-bg:          #080608;

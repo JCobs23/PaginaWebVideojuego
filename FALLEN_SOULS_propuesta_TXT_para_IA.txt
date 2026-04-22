@@ -71,7 +71,7 @@ Reglas:
 - El jugador debe eliminar enemigos para progresar.
 - Cada nivel termina con un subjefe obligatorio.
 - Al derrotar jefes puede elegir entre Aceptar (obtener almas) o Negar (obtener partes físicas más poderosas).
-- Si el jugador muere, la partida termina (estructura roguelike), conservando únicamente las almas y las armas desbloqueadas (es decir la posibilidad de que le salgan en la tienda, mas no el arma como tal).
+- Si el jugador muere, la partida termina (estructura roguelike), conservando únicamente las almas y las armas desbloqueadas (es decir la posibilidad de que le salgan en la tienda, más no el arma como tal).
 - Los niveles mantienen su temática fija pero con distribución y encuentros aleatorios.
 - Tras derrotar al jefe final, puede elegir ver el final o continuar la run.
 
