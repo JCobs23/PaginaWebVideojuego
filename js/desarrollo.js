@@ -1,39 +1,71 @@
-// =============================================
-// FALLEN SOULS — DESARROLLO JS v2
+﻿// =============================================
+// FALLEN SOULS - DESARROLLO JS v2
 // =============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadHeader();
+  initHeaderUi();
+  initDesarrolloUi();
+});
 
-  // ── Scroll Progress ──────────────────────
+async function loadHeader() {
+  const mount = document.getElementById('headerMount');
+  if (!mount) return;
+
+  try {
+    const response = await fetch('header.html', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error('No se pudo cargar header.html');
+    }
+    mount.innerHTML = await response.text();
+  } catch (error) {
+    console.error('Error cargando el header:', error);
+  }
+}
+
+function initHeaderUi() {
   const scrollProgress = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     if (scrollProgress) scrollProgress.style.width = pct + '%';
-  }, { passive: true });
+  }
 
-  // ── Nav Toggle ────────────────────────────
   const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
-    navLinks.querySelectorAll('a').forEach(a => {
+
+    navLinks.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
       });
     });
+
+    const currentPage = (window.location.pathname.split('/').pop() || 'home.html').toLowerCase();
+    navLinks.querySelectorAll('a').forEach((link) => {
+      const href = (link.getAttribute('href') || '').split('?')[0].toLowerCase();
+      link.classList.toggle('active', href === currentPage);
+    });
   }
 
-  // ── Progress Bar ─────────────────────────
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+}
+
+function initDesarrolloUi() {
+  // Progress bar
   const completedWeeks = [5, 6, 7, 8, 9, 10, 11];
   const totalWeeks = 13;
   const pct = Math.round((completedWeeks.length / totalWeeks) * 100);
 
-  const fill   = document.getElementById('progressFill');
-  const pctEl  = document.getElementById('progressPct');
+  const fill = document.getElementById('progressFill');
+  const pctEl = document.getElementById('progressPct');
 
   if (fill) {
     setTimeout(() => {
@@ -41,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 400);
   }
 
-  // Animated counter for percentage
   if (pctEl) {
     let current = 0;
     const target = pct;
@@ -57,33 +88,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1800);
   }
 
-  // ── Tabs ──────────────────────────────────
+  // Tabs
   const tabButtons = document.querySelectorAll('.week-tab');
-  const panels     = document.querySelectorAll('.week-panel');
+  const panels = document.querySelectorAll('.week-panel');
 
   function activateTab(weekNum) {
-    // Update buttons
-    tabButtons.forEach(btn => {
+    tabButtons.forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.week === String(weekNum));
     });
-    // Update panels
-    panels.forEach(panel => {
+
+    panels.forEach((panel) => {
       panel.classList.toggle('active', panel.dataset.panel === String(weekNum));
     });
-    // Scroll tab into view
+
     const activeBtn = document.querySelector(`.week-tab[data-week="${weekNum}"]`);
     if (activeBtn) {
       activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   }
 
-  tabButtons.forEach(btn => {
+  tabButtons.forEach((btn) => {
     btn.addEventListener('click', () => activateTab(btn.dataset.week));
   });
 
-  // ── Footer jump links ─────────────────────
-  document.querySelectorAll('[data-jump]').forEach(a => {
-    a.addEventListener('click', e => {
+  // Footer jump links
+  document.querySelectorAll('[data-jump]').forEach((a) => {
+    a.addEventListener('click', (e) => {
       e.preventDefault();
       activateTab(a.dataset.jump);
       const tabsEl = document.getElementById('tabsWrapper');
@@ -95,23 +125,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── URL hash direct week ──────────────────
+  // URL hash direct week
   const hash = window.location.hash;
   if (hash && hash.startsWith('#week')) {
     activateTab(hash.replace('#week', ''));
   }
 
-  // ── Intersection-based panel animation ───
   // Re-trigger animation when switching tabs
   const observer = new MutationObserver((mutations) => {
-    mutations.forEach(m => {
+    mutations.forEach((m) => {
       if (m.target.classList.contains('active')) {
         m.target.style.animation = 'none';
-        m.target.offsetHeight; // reflow
+        m.target.offsetHeight;
         m.target.style.animation = '';
       }
     });
   });
-  panels.forEach(p => observer.observe(p, { attributes: true, attributeFilter: ['class'] }));
 
-});
+  panels.forEach((p) => observer.observe(p, { attributes: true, attributeFilter: ['class'] }));
+}

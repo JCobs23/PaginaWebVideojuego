@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -14,42 +14,8 @@
 </head>
 <body>
 
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-    <a href="home.html" class="navbar-logo">
-        <span class="logo-title">Fallen Souls</span>
-        <span class="logo-sub">Proyecto Final • 2026</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-    </button>
-    <ul class="navbar-links" id="navLinks">
-        <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html">Desarrollo</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="descargas.html">Descargas</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-</nav>
-
-<script>
-// Script para establecer el enlace activo automaticamente segun la pagina actual
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
-    const navLinks = document.querySelectorAll('#navLinks a');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
-
+    <!-- Header loaded from header.html -->
+    <div id="headerMount"></div>
 <div class="page-wrapper">
   <!-- Hero de Media -->
   <header class="media-hero">
@@ -109,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boss Design">
       <div class="gallery-item__overlay">
         <div class="gallery-item__type">Concept Art</div>
-        <div class="gallery-item__title">Diseño del Verdugo</div>
+        <div class="gallery-item__title">DiseÃ±o del Verdugo</div>
       </div>
     </div>
 
@@ -172,49 +138,99 @@ document.addEventListener('DOMContentLoaded', () => {
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const sp = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-        if (sp) sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
-    }, {passive:true});
-    const nt = document.getElementById('navToggle');
-    const nl = document.getElementById('navLinks');
-    if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
-    const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } }), {threshold:0.1});
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-});
-// Filtros de Media
-document.addEventListener('DOMContentLoaded', () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+async function loadHeader() {
+  const mount = document.getElementById('headerMount');
+  if (!mount) return;
+  try {
+    const response = await fetch('header.html', { cache: 'no-store' });
+    if (!response.ok) throw new Error('No se pudo cargar header.html');
+    mount.innerHTML = await response.text();
+  } catch (error) {
+    console.error('Error cargando el header:', error);
+  }
+}
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active from all
-            filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active to clicked
-            btn.classList.add('active');
+function initHeaderUi() {
+  const sp = document.getElementById('scrollProgress');
+  function updateScrollProgress() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    if (sp) sp.style.width = pct + '%';
+  }
 
-            const filterValue = btn.textContent.trim().toLowerCase();
-
-            galleryItems.forEach(item => {
-                const itemType = item.querySelector('.gallery-item__type').textContent.toLowerCase();
-                
-                if (filterValue === 'todo') {
-                    item.style.display = 'block';
-                } else if (filterValue === 'screenshots' && itemType.includes('screenshot')) {
-                    item.style.display = 'block';
-                } else if (filterValue === 'concept art' && itemType.includes('concept art')) {
-                    item.style.display = 'block';
-                } else if (filterValue === 'videos' && itemType.includes('video')) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
+  const nt = document.getElementById('navToggle');
+  const nl = document.getElementById('navLinks');
+  if (nt && nl) {
+    nt.addEventListener('click', () => {
+      nt.classList.toggle('open');
+      nl.classList.toggle('open');
     });
+
+    nl.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        nt.classList.remove('open');
+        nl.classList.remove('open');
+      });
+    });
+
+    const currentPage = (window.location.pathname.split('/').pop() || 'home.html').toLowerCase();
+    nl.querySelectorAll('a').forEach((link) => {
+      const href = (link.getAttribute('href') || '').split('?')[0].toLowerCase();
+      link.classList.toggle('active', href === currentPage);
+    });
+  }
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+}
+
+function initMediaUi() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach((el) => obs.observe(el));
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.textContent.trim().toLowerCase();
+
+      galleryItems.forEach((item) => {
+        const typeEl = item.querySelector('.gallery-item__type');
+        const itemType = typeEl ? typeEl.textContent.toLowerCase() : '';
+
+        if (filterValue === 'todo') {
+          item.style.display = 'block';
+        } else if (filterValue === 'screenshots' && itemType.includes('screenshot')) {
+          item.style.display = 'block';
+        } else if (filterValue === 'concept art' && itemType.includes('concept art')) {
+          item.style.display = 'block';
+        } else if (filterValue === 'videos' && itemType.includes('video')) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadHeader();
+  initHeaderUi();
+  initMediaUi();
 });
 </script>
 </body>
 </html>
+

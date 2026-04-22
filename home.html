@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fallen Souls — Proyecto Final de Videojuegos</title>
+    <title>Fallen Souls â€” Proyecto Final de Videojuegos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,47 +14,11 @@
 </head>
 <body>
 
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-    <a href="home.html" class="navbar-logo">
-        <span class="logo-title">Fallen Souls</span>
-        <span class="logo-sub">Proyecto Final • 2026</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-    </button>
-    <ul class="navbar-links" id="navLinks">
-        <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html">Desarrollo</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="descargas.html">Descargas</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-</nav>
-
-<script>
-// Script para establecer el enlace activo automaticamente segun la pagina actual
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
-    const navLinks = document.querySelectorAll('#navLinks a');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
-
-<!-- HEADER: See header.html for the structure -->
-    <!-- Include header.html content here using your build tool or SSI -->
-    <!-- ═══════════════════════════════════════
+    <!-- Header loaded from header.html -->
+    <div id="headerMount"></div>
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          HERO
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="hero" id="hero">
         <div class="hero-noise"></div>
         <div class="hero-grid-lines"></div>
@@ -78,19 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
             </h1>
 
             <p class="hero-tagline">
-                Un roguelike de acción en primera persona donde un castillo en ruinas<br>
-                simboliza la mente de un joven atrapado entre el duelo y la aceptación.
+                Un roguelike de acciÃ³n en primera persona donde un castillo en ruinas<br>
+                simboliza la mente de un joven atrapado entre el duelo y la aceptaciÃ³n.
             </p>
 
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <span class="stat-label">Género</span>
+                    <span class="stat-label">GÃ©nero</span>
                     <span class="stat-value">FPS Roguelike</span>
                 </div>
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
                     <span class="stat-label">Plataformas</span>
-                    <span class="stat-value">PC · PS5 · XSX · Switch</span>
+                    <span class="stat-value">PC Â· PS5 Â· XSX Â· Switch</span>
                 </div>
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
@@ -104,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                     Descargar Proyecto
                 </a>
-                <a href="desarrollo.html" class="btn-hero-ghost">Ver Desarrollo →</a>
+                <a href="desarrollo.html" class="btn-hero-ghost">Ver Desarrollo â†’</a>
             </div>
         </div>
 
@@ -116,31 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="hero-diagonal-cut"></div>
     </section>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          PLATFORMS BAR
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <div class="platforms-bar">
         <div class="platforms-bar__inner">
             <div class="platform-item">
                 <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.098 2.011L0 12l4.098 9.989L12 17.639 19.902 22 24 12 19.902 2.011 12 6.361z" /></svg>
                 <span>Xbox Series X|S</span>
             </div>
-            <span class="platform-sep">◆</span>
+            <span class="platform-sep">â—†</span>
             <div class="platform-item">
                 <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.984 2.596c0 0-.664 0-1.982.199C5.035 3.195 2.6 4.67 1.12 7.03.36 8.274 0 9.83 0 12s.359 3.726 1.12 4.97c1.48 2.36 3.915 3.835 5.882 4.235 1.318.199 1.982.199 1.982.199s.664 0 1.982-.199c1.967-.4 4.402-1.875 5.882-4.235C17.641 15.726 18 14.17 18 12s-.359-3.726-1.12-4.97c-1.48-2.36-3.915-3.835-5.882-4.235C9.648 2.596 8.984 2.596 8.984 2.596zM9 6.5l5 5.5-5 5.5V6.5z" /></svg>
                 <span>PlayStation 5</span>
             </div>
-            <span class="platform-sep">◆</span>
+            <span class="platform-sep">â—†</span>
             <div class="platform-item">
                 <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" /></svg>
                 <span>Nintendo Switch</span>
             </div>
-            <span class="platform-sep">◆</span>
+            <span class="platform-sep">â—†</span>
             <div class="platform-item">
                 <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" /><line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" /></svg>
-                <span>PC — Steam</span>
+                <span>PC â€” Steam</span>
             </div>
-            <span class="platform-sep">◆</span>
+            <span class="platform-sep">â—†</span>
             <div class="platform-item platform-item--esrb">
                 <span class="esrb-badge">M</span>
                 <span>MATURE 17+</span>
@@ -148,16 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          SYNOPSIS / HISTORIA
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="section s-historia" id="historia">
         <div class="section__bg-ghost" aria-hidden="true">HISTORIA</div>
         <div class="section__inner">
 
             <div class="section-label">
                 <span class="label-line"></span>
-                <span>01 — Narrativa</span>
+                <span>01 â€” Narrativa</span>
             </div>
 
             <div class="historia-grid">
@@ -165,19 +129,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="section-heading">Historia<br><em>del Juego</em></h2>
 
                     <div class="historia-body">
-                        <p>Tras un accidente en el que pierde a sus padres, un <strong>joven cae en coma</strong>. Dentro de su mente surge un reino en crisis: los reyes han muerto y el príncipe heredero se niega a asumir el trono.</p>
-                        <p>A lo largo de <strong>cinco etapas que representan el duelo</strong>, el jugador enfrenta a trabajadores y figuras del castillo que reflejan distintas respuestas ante la pérdida.</p>
-                        <p>Al derrotar al príncipe, el jugador puede <strong>aceptar la realidad o aferrarse a la negación</strong>. Dos finales. Dos verdades.</p>
+                        <p>Tras un accidente en el que pierde a sus padres, un <strong>joven cae en coma</strong>. Dentro de su mente surge un reino en crisis: los reyes han muerto y el prÃ­ncipe heredero se niega a asumir el trono.</p>
+                        <p>A lo largo de <strong>cinco etapas que representan el duelo</strong>, el jugador enfrenta a trabajadores y figuras del castillo que reflejan distintas respuestas ante la pÃ©rdida.</p>
+                        <p>Al derrotar al prÃ­ncipe, el jugador puede <strong>aceptar la realidad o aferrarse a la negaciÃ³n</strong>. Dos finales. Dos verdades.</p>
                     </div>
 
                     <div class="meta-table">
                         <div class="meta-row">
-                            <span class="meta-key">GÉNERO</span>
-                            <span class="meta-val">FPS Roguelike · Action RPG · Roguelite</span>
+                            <span class="meta-key">GÃ‰NERO</span>
+                            <span class="meta-val">FPS Roguelike Â· Action RPG Â· Roguelite</span>
                         </div>
                         <div class="meta-row">
-                            <span class="meta-key">ESTÉTICA</span>
-                            <span class="meta-val">Dark Fantasy Psicológico · Low Poly</span>
+                            <span class="meta-key">ESTÃ‰TICA</span>
+                            <span class="meta-val">Dark Fantasy PsicolÃ³gico Â· Low Poly</span>
                         </div>
                         <div class="meta-row">
                             <span class="meta-key">RATING</span>
@@ -185,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="meta-row">
                             <span class="meta-key">PLATAFORMAS</span>
-                            <span class="meta-val">Xbox · PS5 · Switch · PC (Steam)</span>
+                            <span class="meta-val">Xbox Â· PS5 Â· Switch Â· PC (Steam)</span>
                         </div>
                     </div>
                 </div>
@@ -198,22 +162,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="phase-block">
                             <div class="phase-num">01</div>
                             <div class="phase-content">
-                                <div class="phase-title">INICIO — El Coma</div>
-                                <p>El joven cae en coma tras la muerte de sus padres. El reino colapsa sin monarcas. El castillo — su mente — comienza a desmoronarse.</p>
+                                <div class="phase-title">INICIO â€” El Coma</div>
+                                <p>El joven cae en coma tras la muerte de sus padres. El reino colapsa sin monarcas. El castillo â€” su mente â€” comienza a desmoronarse.</p>
                             </div>
                         </div>
                         <div class="phase-block">
                             <div class="phase-num">02</div>
                             <div class="phase-content">
-                                <div class="phase-title">NUDO — Cinco Etapas</div>
-                                <p>Negación, Ira, Negociación, Depresión, Aceptación. Cada nivel es una etapa del duelo encarnada en los habitantes del castillo.</p>
+                                <div class="phase-title">NUDO â€” Cinco Etapas</div>
+                                <p>NegaciÃ³n, Ira, NegociaciÃ³n, DepresiÃ³n, AceptaciÃ³n. Cada nivel es una etapa del duelo encarnada en los habitantes del castillo.</p>
                             </div>
                         </div>
                         <div class="phase-block phase-block--last">
                             <div class="phase-num phase-num--red">03</div>
                             <div class="phase-content">
-                                <div class="phase-title">DESENLACE — Dos Finales</div>
-                                <p>Acepta y despierta al dolor real. Niega y el reino colapsa para siempre. La muerte no cambia. La decisión de vivir, sí.</p>
+                                <div class="phase-title">DESENLACE â€” Dos Finales</div>
+                                <p>Acepta y despierta al dolor real. Niega y el reino colapsa para siempre. La muerte no cambia. La decisiÃ³n de vivir, sÃ­.</p>
                             </div>
                         </div>
                     </div>
@@ -222,23 +186,23 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          CHARACTERS
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="section s-personajes" id="personajes">
         <div class="section__bg-ghost" aria-hidden="true">CHARS</div>
         <div class="section__inner">
 
             <div class="section-label">
                 <span class="label-line"></span>
-                <span>02 — Diseño de Personajes</span>
+                <span>02 â€” DiseÃ±o de Personajes</span>
             </div>
 
             <h2 class="section-heading">Personajes</h2>
 
             <div class="chars-grid">
 
-                <!-- El Príncipe -->
+                <!-- El PrÃ­ncipe -->
                 <div class="char-card char-card--protagonist">
                     <div class="char-card__header">
                         <span class="char-tag char-tag--blue">PROTAGONISTA</span>
@@ -249,9 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="char-portrait-label">PLAYABLE</div>
                     </div>
                     <div class="char-card__body">
-                        <div class="char-name">El Príncipe</div>
+                        <div class="char-name">El PrÃ­ncipe</div>
                         <div class="char-role">// Personaje Jugable</div>
-                        <p class="char-desc">Joven de 13 años, heredero del reino. Ropa de hospital, una corona demasiado grande. Su cuerpo cambia según las decisiones del jugador.</p>
+                        <p class="char-desc">Joven de 13 aÃ±os, heredero del reino. Ropa de hospital, una corona demasiado grande. Su cuerpo cambia segÃºn las decisiones del jugador.</p>
                         <div class="char-skills">
                             <span class="cs">DASH</span>
                             <span class="cs">PARRY</span>
@@ -273,11 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="char-card__body">
                         <div class="char-name">El Verdugo</div>
-                        <div class="char-role">// Tutorial · Mercader</div>
-                        <p class="char-desc">Antiguo ejecutor real. Tras ser derrotado abandona el castigo y se convierte en guía y vendedor permanente.</p>
+                        <div class="char-role">// Tutorial Â· Mercader</div>
+                        <p class="char-desc">Antiguo ejecutor real. Tras ser derrotado abandona el castigo y se convierte en guÃ­a y vendedor permanente.</p>
                         <div class="char-skills">
                             <span class="cs">HACHA</span>
-                            <span class="cs">TELEGRÁFICO</span>
+                            <span class="cs">TELEGRÃFICO</span>
                             <span class="cs">MERCHANT</span>
                         </div>
                     </div>
@@ -291,12 +255,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="char-card__portrait">
                         <div class="char-portrait-inner char-portrait-inner--green"><svg class="char-icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(60,160,60,0.4)" stroke-width="1.2"><path d="M12 22V12M12 12s-5-2-7-7c3 0 6 2 7 7zM12 12s5-2 7-7c-3 0-6 2-7 7z"/></svg></div>
-                        <div class="char-portrait-label">NEGACIÓN</div>
+                        <div class="char-portrait-label">NEGACIÃ“N</div>
                     </div>
                     <div class="char-card__body">
                         <div class="char-name">El Jardinero Real</div>
-                        <div class="char-role">// Etapa: Negación</div>
-                        <p class="char-desc">Anclado al suelo con raíces. Sus brazos son lianas entrelazadas a tijeras de jardinería. Continúa su trabajo como si los reyes vivieran.</p>
+                        <div class="char-role">// Etapa: NegaciÃ³n</div>
+                        <p class="char-desc">Anclado al suelo con raÃ­ces. Sus brazos son lianas entrelazadas a tijeras de jardinerÃ­a. ContinÃºa su trabajo como si los reyes vivieran.</p>
                         <div class="char-skills">
                             <span class="cs">FIJO</span>
                             <span class="cs">REGEN</span>
@@ -305,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
 
-                <!-- Capitán -->
+                <!-- CapitÃ¡n -->
                 <div class="char-card char-card--boss">
                     <div class="char-card__header">
                         <span class="char-tag char-tag--red">JEFE II</span>
@@ -316,11 +280,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="char-portrait-label">IRA</div>
                     </div>
                     <div class="char-card__body">
-                        <div class="char-name">Capitán de la Guardia</div>
+                        <div class="char-name">CapitÃ¡n de la Guardia</div>
                         <div class="char-role">// Etapa: Ira</div>
-                        <p class="char-desc">Uniforme victoriano rojo, múltiples heridas. Culpa al príncipe por la muerte de los reyes y exige que gobierne.</p>
+                        <p class="char-desc">Uniforme victoriano rojo, mÃºltiples heridas. Culpa al prÃ­ncipe por la muerte de los reyes y exige que gobierne.</p>
                         <div class="char-skills">
-                            <span class="cs">RÁPIDO</span>
+                            <span class="cs">RÃPIDO</span>
                             <span class="cs">MOSQUETE</span>
                             <span class="cs">ENRAGE</span>
                         </div>
@@ -335,12 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="char-card__portrait">
                         <div class="char-portrait-inner char-portrait-inner--gold"><svg class="char-icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(200,168,100,0.5)" stroke-width="1.2"><rect x="2" y="8" width="20" height="13" rx="1"/><path d="M6 8V6a6 6 0 0 1 12 0v2"/><circle cx="12" cy="15" r="2"/></svg></div>
-                        <div class="char-portrait-label">NEGOCIACIÓN</div>
+                        <div class="char-portrait-label">NEGOCIACIÃ“N</div>
                     </div>
                     <div class="char-card__body">
                         <div class="char-name">Tesorero Real</div>
-                        <div class="char-role">// Etapa: Negociación</div>
-                        <p class="char-desc">Traje victoriano, máscara dorada. Sentado en su escritorio, intenta "hacer tratos" para evitar el colapso del reino.</p>
+                        <div class="char-role">// Etapa: NegociaciÃ³n</div>
+                        <p class="char-desc">Traje victoriano, mÃ¡scara dorada. Sentado en su escritorio, intenta "hacer tratos" para evitar el colapso del reino.</p>
                         <div class="char-skills">
                             <span class="cs">ORO FUNDIDO</span>
                             <span class="cs">DESHABILITAR</span>
@@ -357,12 +321,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="char-card__portrait">
                         <div class="char-portrait-inner char-portrait-inner--blue"><svg class="char-icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(60,120,200,0.5)" stroke-width="1.2"><path d="M12 3c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z"/></svg></div>
-                        <div class="char-portrait-label">DEPRESIÓN</div>
+                        <div class="char-portrait-label">DEPRESIÃ“N</div>
                     </div>
                     <div class="char-card__body">
-                        <div class="char-name">Dama de las Cámaras</div>
-                        <div class="char-role">// Etapa: Depresión</div>
-                        <p class="char-desc">Traje mojado, postura encorvada. Ha perdido toda esperanza. El castillo se apaga con ella. Sus lágrimas ralentizan al jugador.</p>
+                        <div class="char-name">Dama de las CÃ¡maras</div>
+                        <div class="char-role">// Etapa: DepresiÃ³n</div>
+                        <p class="char-desc">Traje mojado, postura encorvada. Ha perdido toda esperanza. El castillo se apaga con ella. Sus lÃ¡grimas ralentizan al jugador.</p>
                         <div class="char-skills">
                             <span class="cs">DRENAJE</span>
                             <span class="cs">REDUCIR STATS</span>
@@ -371,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
 
-                <!-- Príncipe jefe -->
+                <!-- PrÃ­ncipe jefe -->
                 <div class="char-card char-card--final">
                     <div class="char-card__header">
                         <span class="char-tag char-tag--gold">JEFE FINAL</span>
@@ -379,12 +343,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="char-card__portrait char-card__portrait--wide">
                         <div class="char-portrait-inner char-portrait-inner--shadow"><svg class="char-icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(140,60,180,0.5)" stroke-width="1.2"><path d="M12 2a10 10 0 1 0 0 20"/><path d="M12 2v20M12 7l-5 5 5 5"/></svg></div>
-                        <div class="char-portrait-label">ACEPTACIÓN</div>
+                        <div class="char-portrait-label">ACEPTACIÃ“N</div>
                     </div>
                     <div class="char-card__body">
-                        <div class="char-name">El Príncipe</div>
+                        <div class="char-name">El PrÃ­ncipe</div>
                         <div class="char-role">// Reflejo del Jugador</div>
-                        <p class="char-desc">Refleja el aspecto del jugador. Su comportamiento cambia según las decisiones: más agresivo si predominó la negación, más defensivo si la aceptación.</p>
+                        <p class="char-desc">Refleja el aspecto del jugador. Su comportamiento cambia segÃºn las decisiones: mÃ¡s agresivo si predominÃ³ la negaciÃ³n, mÃ¡s defensivo si la aceptaciÃ³n.</p>
                         <div class="char-skills">
                             <span class="cs">Mecanicas COMBINADAS</span>
                             <span class="cs">TUS ARMAS</span>
@@ -397,16 +361,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          MECHANICS
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="section s-Mecanicas">
         <div class="section__bg-ghost" aria-hidden="true">GAME</div>
         <div class="section__inner">
 
             <div class="section-label">
                 <span class="label-line"></span>
-                <span>03 — Gameplay</span>
+                <span>03 â€” Gameplay</span>
             </div>
 
             <h2 class="section-heading">Mecanicas<br><em>de Juego</em></h2>
@@ -418,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" /><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" /><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" /><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" /><path d="M15.5 9H17v1.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z" /><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z" /><path d="M8.5 15H7v-1.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /></svg>
                     </div>
                     <div class="mechanic-title">COMBATE FPS</div>
-                    <p class="mechanic-desc">Combate frenético en primera persona con alta movilidad, dash, esquiva y sistema de parry para contraataques activos.</p>
+                    <p class="mechanic-desc">Combate frenÃ©tico en primera persona con alta movilidad, dash, esquiva y sistema de parry para contraataques activos.</p>
                 </div>
                 <div class="mechanic-card">
                     <div class="mechanic-num">02</div>
@@ -426,15 +390,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
                     </div>
                     <div class="mechanic-title">FORJA DE ARMAS</div>
-                    <p class="mechanic-desc">Obtén extremidades y partes de enemigos caídos para construir y mejorar armas con distintas rarezas y efectos.</p>
+                    <p class="mechanic-desc">ObtÃ©n extremidades y partes de enemigos caÃ­dos para construir y mejorar armas con distintas rarezas y efectos.</p>
                 </div>
                 <div class="mechanic-card">
                     <div class="mechanic-num">03</div>
                     <div class="mechanic-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
                     </div>
-                    <div class="mechanic-title">IMPLANTACIÓN</div>
-                    <p class="mechanic-desc">Desbloquea y mejora perks mediante órganos. Modifica vida, defensa, daño, velocidad y crítico de tu personaje.</p>
+                    <div class="mechanic-title">IMPLANTACIÃ“N</div>
+                    <p class="mechanic-desc">Desbloquea y mejora perks mediante Ã³rganos. Modifica vida, defensa, daÃ±o, velocidad y crÃ­tico de tu personaje.</p>
                 </div>
                 <div class="mechanic-card">
                     <div class="mechanic-num">04</div>
@@ -442,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                     </div>
                     <div class="mechanic-title">ROGUELIKE</div>
-                    <p class="mechanic-desc">Al morir se reinicia la partida conservando únicamente almas y armas desbloqueadas en la tienda del Verdugo.</p>
+                    <p class="mechanic-desc">Al morir se reinicia la partida conservando Ãºnicamente almas y armas desbloqueadas en la tienda del Verdugo.</p>
                 </div>
                 <div class="mechanic-card">
                     <div class="mechanic-num">05</div>
@@ -450,30 +414,30 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
                     </div>
                     <div class="mechanic-title">ACEPTAR / NEGAR</div>
-                    <p class="mechanic-desc">Cada jefe derrotado ofrece elegir entre Aceptar (almas) o Negar (partes físicas). Moldea el final y la forma del Príncipe.</p>
+                    <p class="mechanic-desc">Cada jefe derrotado ofrece elegir entre Aceptar (almas) o Negar (partes fÃ­sicas). Moldea el final y la forma del PrÃ­ncipe.</p>
                 </div>
                 <div class="mechanic-card">
                     <div class="mechanic-num">06</div>
                     <div class="mechanic-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
                     </div>
-                    <div class="mechanic-title">META-PROGRESIÓN</div>
-                    <p class="mechanic-desc">Desbloquea armas legendarias según el final obtenido. Modo continuación con niveles aleatorios y dificultad progresiva.</p>
+                    <div class="mechanic-title">META-PROGRESIÃ“N</div>
+                    <p class="mechanic-desc">Desbloquea armas legendarias segÃºn el final obtenido. Modo continuaciÃ³n con niveles aleatorios y dificultad progresiva.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          LEVELS
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="section s-niveles" id="niveles">
         <div class="section__bg-ghost" aria-hidden="true">WORLD</div>
         <div class="section__inner">
 
             <div class="section-label">
                 <span class="label-line"></span>
-                <span>04 — Mundo</span>
+                <span>04 â€” Mundo</span>
             </div>
 
             <h2 class="section-heading">Mapa<br><em>de Niveles</em></h2>
@@ -487,9 +451,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="connector-line"></div>
                     </div>
                     <div class="level-entry__body">
-                        <div class="level-entry__stage">PRÓLOGO</div>
+                        <div class="level-entry__stage">PRÃ“LOGO</div>
                         <div class="level-entry__name">Celda Exterior</div>
-                        <p class="level-entry__desc">Celda pequeña y húmeda a las afueras del castillo. Tutorial con El Verdugo. Punto de inicio y de reinicio tras cada muerte.</p>
+                        <p class="level-entry__desc">Celda pequeÃ±a y hÃºmeda a las afueras del castillo. Tutorial con El Verdugo. Punto de inicio y de reinicio tras cada muerte.</p>
                     </div>
                 </div>
 
@@ -500,10 +464,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="connector-line"></div>
                     </div>
                     <div class="level-entry__body">
-                        <div class="level-entry__stage">NEGACIÓN</div>
+                        <div class="level-entry__stage">NEGACIÃ“N</div>
                         <div class="level-entry__name">Jardines Exteriores</div>
-                        <p class="level-entry__desc">Senderos cubiertos de raíces, estatuas de hiedra, fuentes secas. Naturaleza que ha reclamado el orden humano.</p>
-                        <span class="level-boss-tag">⚔ El Jardinero Real</span>
+                        <p class="level-entry__desc">Senderos cubiertos de raÃ­ces, estatuas de hiedra, fuentes secas. Naturaleza que ha reclamado el orden humano.</p>
+                        <span class="level-boss-tag">âš” El Jardinero Real</span>
                     </div>
                 </div>
 
@@ -515,9 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="level-entry__body">
                         <div class="level-entry__stage">IRA</div>
-                        <div class="level-entry__name">Salón Principal</div>
-                        <p class="level-entry__desc">Gran salón con banderas rasgadas, balcones y armaduras estáticas que atacan. Tenso y solemne.</p>
-                        <span class="level-boss-tag">⚔ Capitán de la Guardia</span>
+                        <div class="level-entry__name">SalÃ³n Principal</div>
+                        <p class="level-entry__desc">Gran salÃ³n con banderas rasgadas, balcones y armaduras estÃ¡ticas que atacan. Tenso y solemne.</p>
+                        <span class="level-boss-tag">âš” CapitÃ¡n de la Guardia</span>
                     </div>
                 </div>
 
@@ -528,10 +492,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="connector-line"></div>
                     </div>
                     <div class="level-entry__body">
-                        <div class="level-entry__stage">NEGOCIACIÓN</div>
-                        <div class="level-entry__name">Cámara del Tesoro</div>
-                        <p class="level-entry__desc">Gran salón ornamentado con cofres abiertos, columnas decoradas y monedas esparcidas. Opulencia deteriorada.</p>
-                        <span class="level-boss-tag">⚔ El Tesorero Real</span>
+                        <div class="level-entry__stage">NEGOCIACIÃ“N</div>
+                        <div class="level-entry__name">CÃ¡mara del Tesoro</div>
+                        <p class="level-entry__desc">Gran salÃ³n ornamentado con cofres abiertos, columnas decoradas y monedas esparcidas. Opulencia deteriorada.</p>
+                        <span class="level-boss-tag">âš” El Tesorero Real</span>
                     </div>
                 </div>
 
@@ -542,10 +506,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="connector-line"></div>
                     </div>
                     <div class="level-entry__body">
-                        <div class="level-entry__stage">DEPRESIÓN</div>
+                        <div class="level-entry__stage">DEPRESIÃ“N</div>
                         <div class="level-entry__name">Salones Internos</div>
-                        <p class="level-entry__desc">Corredores oscuros con vitrales rotos y antorchas débiles. Oscura y opresiva. Charcos de lágrimas ralentizan al jugador.</p>
-                        <span class="level-boss-tag">⚔ Dama de las Cámaras</span>
+                        <p class="level-entry__desc">Corredores oscuros con vitrales rotos y antorchas dÃ©biles. Oscura y opresiva. Charcos de lÃ¡grimas ralentizan al jugador.</p>
+                        <span class="level-boss-tag">âš” Dama de las CÃ¡maras</span>
                     </div>
                 </div>
 
@@ -555,10 +519,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="connector-dot connector-dot--red"></div>
                     </div>
                     <div class="level-entry__body">
-                        <div class="level-entry__stage level-entry__stage--gold">ACEPTACIÓN</div>
+                        <div class="level-entry__stage level-entry__stage--gold">ACEPTACIÃ“N</div>
                         <div class="level-entry__name">Sala del Trono</div>
-                        <p class="level-entry__desc">Arena amplia y simétrica. Un trono elevado. Columnas altas y luz cenital dramática. El corazón simbólico del reino y el enfrentamiento final consigo mismo.</p>
-                        <span class="level-boss-tag level-boss-tag--gold">⚔ El Príncipe — Jefe Final</span>
+                        <p class="level-entry__desc">Arena amplia y simÃ©trica. Un trono elevado. Columnas altas y luz cenital dramÃ¡tica. El corazÃ³n simbÃ³lico del reino y el enfrentamiento final consigo mismo.</p>
+                        <span class="level-boss-tag level-boss-tag--gold">âš” El PrÃ­ncipe â€” Jefe Final</span>
                     </div>
                 </div>
 
@@ -566,16 +530,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          TEAM PREVIEW
-    ══════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <section class="section s-equipo" id="equipo">
         <div class="section__bg-ghost" aria-hidden="true">TEAM</div>
         <div class="section__inner">
 
             <div class="section-label">
                 <span class="label-line"></span>
-                <span>05 — Créditos</span>
+                <span>05 â€” CrÃ©ditos</span>
             </div>
 
             <h2 class="section-heading">Equipo</h2>
@@ -585,17 +549,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="team-card__avatar" style="background: linear-gradient(135deg, #6b4ad6, #4a3ab0);">JD</div>
                     <div class="team-card__info">
                         <div class="team-card__name">Juan David Silva</div>
-                        <div class="team-card__role">// Game Designer · Lead</div>
+                        <div class="team-card__role">// Game Designer Â· Lead</div>
                     </div>
-                    <div class="team-card__arrow">→</div>
+                    <div class="team-card__arrow">â†’</div>
                 </div>
                 <div class="team-card">
                     <div class="team-card__avatar" style="background: linear-gradient(135deg, #1a3a8f, #0d2060);">JZ</div>
                     <div class="team-card__info">
                         <div class="team-card__name">Joseph Zamora Cortes</div>
-                        <div class="team-card__role">// Programación y Pruebas</div>
+                        <div class="team-card__role">// ProgramaciÃ³n y Pruebas</div>
                     </div>
-                    <div class="team-card__arrow">→</div>
+                    <div class="team-card__arrow">â†’</div>
                 </div>
                 <div class="team-card">
                     <div class="team-card__avatar" style="background: linear-gradient(135deg, #7a5010, #5a3a08);">JA</div>
@@ -603,20 +567,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="team-card__name">Juan David Alvarez</div>
                         <div class="team-card__role">// Modelado 3D y Assets</div>
                     </div>
-                    <div class="team-card__arrow">→</div>
+                    <div class="team-card__arrow">â†’</div>
                 </div>
                 <div class="team-card">
                     <div class="team-card__avatar" style="background: linear-gradient(135deg, #4a2a90, #2a1a60);">JS</div>
                     <div class="team-card__info">
                         <div class="team-card__name">Johan Sebastian Cobo</div>
-                        <div class="team-card__role">// Diseño 3D · Web Dev</div>
+                        <div class="team-card__role">// DiseÃ±o 3D Â· Web Dev</div>
                     </div>
-                    <div class="team-card__arrow">→</div>
+                    <div class="team-card__arrow">â†’</div>
                 </div>
             </div>
 
             <div class="team-cta">
-                <a href="equipo.html" class="btn-ghost-full">Ver Equipo Completo →</a>
+                <a href="equipo.html" class="btn-ghost-full">Ver Equipo Completo â†’</a>
             </div>
         </div>
     </section>
@@ -650,10 +614,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
         <div class="footer__bottom">
-            <span>© 2026 — Proyecto Final de Videojuegos · UAO</span>
+            <span>Â© 2026 â€” Proyecto Final de Videojuegos Â· UAO</span>
             <div class="footer__esrb">
                 <span class="esrb-badge esrb-badge--sm">M</span>
-                <span>MATURE 17+ — Violencia, Temáticas Oscuras</span>
+                <span>MATURE 17+ â€” Violencia, TemÃ¡ticas Oscuras</span>
             </div>
         </div>
     </footer>
@@ -661,3 +625,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <script src="js/home.js"></script>
 </body>
 </html>
+
+
+

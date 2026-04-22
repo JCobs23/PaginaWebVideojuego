@@ -1,221 +1,13 @@
-/* =============================================
-   FALLEN SOULS — DESARROLLO CSS v2
-   Dark Gothic · Game Devlog · AAA Aesthetic
-   ============================================= */
-
-/* ── Design Tokens (idénticos al home) ──────── */
-:root {
-    --clr-bg: #080608;
-    --clr-surface: #10080D;
-    --clr-surface2: #180c16;
-    --clr-surface3: #1f1020;
-    --clr-red: #C8102E;
-    --clr-red-glow: #FF2040;
-    --clr-red-bright: #FF3050;
-    --clr-red-ultra: #FF5070;
-    --clr-red-glow: #FF2040;
-    --clr-bronze: #8B7355;
-    --clr-bronze-lt: #B09070;
-    --clr-text: #E8E0D5;
-    --clr-muted: #7a7068;
-    --clr-muted-hi: rgba(200, 185, 175, 0.85);
-    --clr-muted-dim: rgba(180, 165, 155, 0.6);
-    --clr-muted-dim: rgba(180, 165, 155, 0.45);
-    --clr-border: rgba(200, 16, 46, 0.12);
-    --clr-border-hi: rgba(200, 16, 46, 0.35);
-    --clr-green: #4ad64a;
-    --clr-blue: #4a7adf;
-    --font-display: 'Cinzel', serif;
-    --font-body: 'DM Sans', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    --nav-height: 68px;
-    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* ── Reset & Base ───────────────────────────── */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: var(--clr-bg) !important;
-    color: var(--clr-text);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-    /* ── Noise overlay ──────────────────────────── */
-    body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.55;
-        mix-blend-mode: overlay;
-    }
-
-::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--clr-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--clr-red);
-}
-
-/* ══════════════════════════════════════════════
-   SCROLL PROGRESS
-══════════════════════════════════════════════ */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--clr-red), #ff8040);
-    box-shadow: 0 0 12px var(--clr-red-glow);
-    z-index: 9999;
-    transition: width 0.1s linear;
-    width: 0%;
-}
-
-/* ══════════════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════════════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-height);
-    background: rgba(8, 6, 8, 0.96);
-    border-bottom: 1px solid var(--clr-border);
-    backdrop-filter: blur(20px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2.5rem;
-    z-index: 1000;
-}
-
-.navbar-logo {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    text-decoration: none;
-}
-
-    .navbar-logo .logo-title {
-        font-family: var(--font-display);
-        font-size: 1.05rem;
-        font-weight: 900;
-        color: var(--clr-text);
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        line-height: 1;
-    }
-
-    .navbar-logo .logo-sub {
-        font-family: var(--font-mono);
-        font-size: 0.5rem;
-        color: var(--clr-muted-dim);
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-    }
-
-.navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    list-style: none;
-}
-
-    .navbar-links a {
-        font-family: var(--font-mono);
-        font-size: 0.62rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--clr-muted);
-        padding: 0.5rem 0.9rem;
-        transition: color 0.2s;
-        text-decoration: none;
-        position: relative;
-    }
-
-        .navbar-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            left: 50%;
-            right: 50%;
-            height: 1px;
-            background: var(--clr-red-bright);
-            transition: left 0.2s, right 0.2s;
-        }
-
-        .navbar-links a:hover {
-            color: var(--clr-text);
-        }
-
-            .navbar-links a:hover::after,
-            .navbar-links a.active::after {
-                left: 0.9rem;
-                right: 0.9rem;
-            }
-
-        .navbar-links a.active {
-            color: var(--clr-text);
-        }
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    padding: 4px;
-    cursor: pointer;
-}
-
-    .nav-toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: var(--clr-bronze-lt);
-        border-radius: 2px;
-        transition: transform 0.25s, opacity 0.25s;
-    }
-
-    .nav-toggle.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .nav-toggle.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-/* ══════════════════════════════════════════════
-   PAGE WRAPPER
-══════════════════════════════════════════════ */
+﻿/* PAGE WRAPPER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .page-wrapper {
     padding-top: var(--nav-height);
     min-height: 100vh;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DEVLOG HERO
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .desarrollo-hero {
     position: relative;
     padding: 5rem 2.5rem 4rem;
@@ -379,9 +171,9 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PROGRESS SECTION
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .progress-section {
     background: var(--clr-surface);
     border-bottom: 1px solid var(--clr-border);
@@ -442,9 +234,9 @@ body {
     text-align: right;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TABS CONTAINER
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .tabs-wrapper {
     background: var(--clr-bg);
     position: sticky;
@@ -532,9 +324,9 @@ body {
     display: block;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TAB PANELS AREA
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .tab-panels-area {
     max-width: 1200px;
     margin: 0 auto;
@@ -562,7 +354,7 @@ body {
     }
 }
 
-/* ── Panel Header ───────────────────────────── */
+/* â”€â”€ Panel Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .panel-header {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -574,7 +366,7 @@ body {
     position: relative;
 }
 
-/* Ghost número semana */
+/* Ghost nÃºmero semana */
 .panel-ghost-num {
     position: absolute;
     right: 0;
@@ -654,7 +446,7 @@ body {
     padding-top: 0.5rem;
 }
 
-/* ── Status Badges ──────────────────────────── */
+/* â”€â”€ Status Badges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .status-badge {
     display: inline-flex;
     align-items: center;
@@ -716,16 +508,16 @@ body {
         opacity: 0.4;
     }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PANEL CONTENT GRID
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .panel-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
-/* ── Content Block ──────────────────────────── */
+/* â”€â”€ Content Block â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .content-block {
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
@@ -810,7 +602,7 @@ body {
     grid-column: span 2;
 }
 
-/* ── Checklist ──────────────────────────────── */
+/* â”€â”€ Checklist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .checklist {
     display: flex;
     flex-direction: column;
@@ -861,7 +653,7 @@ body {
     color: var(--clr-red-bright);
 }
 
-/* ── Image Slots ────────────────────────────── */
+/* â”€â”€ Image Slots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .img-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -909,7 +701,7 @@ body {
     color: var(--clr-red-bright);
 }
 
-/* ── Nota / Callout ─────────────────────────── */
+/* â”€â”€ Nota / Callout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .callout {
     display: flex;
     gap: 0.75rem;
@@ -938,7 +730,7 @@ body {
     margin: 0 !important;
 }
 
-/* ── Milestone row ──────────────────────────── */
+/* â”€â”€ Milestone row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .milestone-row {
     display: flex;
     align-items: center;
@@ -968,9 +760,9 @@ body {
     border-color: var(--clr-green);
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EMPTY WEEK STATE
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .empty-week {
     padding: 5rem 2rem;
     text-align: center;
@@ -1014,9 +806,9 @@ body {
     opacity: 0.7;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FOOTER
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .footer {
     background: var(--clr-surface);
     border-top: 1px solid var(--clr-border);
@@ -1109,9 +901,9 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* ══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE
-══════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 900px) {
     .hero-inner {
         grid-template-columns: 1fr;
@@ -1157,36 +949,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0 1.25rem;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .navbar-links {
-        position: absolute;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        background: rgba(8,6,8,0.98);
-        border-bottom: 1px solid var(--clr-border);
-        flex-direction: column;
-        gap: 0;
-        padding: 1rem 0;
-        display: none;
-    }
-
-        .navbar-links.open {
-            display: flex;
-        }
-
-        .navbar-links a {
-            width: 100%;
-            text-align: center;
-            padding: 0.9rem;
-        }
 
     .desarrollo-hero {
         padding: 3rem 1.25rem 2.5rem;
@@ -1224,3 +986,4 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
