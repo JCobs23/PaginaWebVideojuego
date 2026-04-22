@@ -1,19 +1,18 @@
-/* =============================================
+﻿/* =============================================
    FALLEN SOULS - HEADER CSS
-   Variante: La Ira del Capitan
-   Dark Gothic Brutalism - Blood and Violence
+   Estilo compartido (Home)
    ============================================= */
 
-/* -- Scroll Progress Bar -------------------------------- */
+/* -- Scroll Progress ------------------------------------ */
 .scroll-progress {
     position: fixed;
     top: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, #D61C38, #FF3050, #D61C38);
+    background: linear-gradient(90deg, var(--clr-red), var(--clr-red-glow), var(--clr-red-bright));
     background-size: 200% 100%;
     animation: blood-flow 2s linear infinite;
-    box-shadow: 0 0 14px #D61C38, 0 0 30px rgba(214, 28, 56, 0.5);
+    box-shadow: 0 0 12px var(--clr-red-glow), 0 0 24px rgba(255, 48, 80, 0.4);
     z-index: 9999;
     transition: width 0.1s linear;
 }
@@ -23,20 +22,18 @@
     100% { background-position: 200% 0%; }
 }
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* -- NAVBAR -------------------------------------------- */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: var(--nav-height, 68px);
-    background: rgba(14, 15, 22, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 2px solid #D61C38;
-    box-shadow: 0 2px 0 rgba(214,28,56,0.15), 0 4px 32px rgba(0,0,0,0.8), 0 0 60px rgba(214,28,56,0.08);
+    background: rgba(8, 6, 8, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-border);
+    box-shadow: 0 0 0 1px rgba(255, 48, 80, 0.06), 0 4px 32px rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,48 +41,48 @@
     z-index: 1000;
 }
 
-.navbar::before {
+.navbar::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 1px;
-    background: rgba(214, 28, 56, 0.25);
+    background: linear-gradient(90deg, transparent, var(--clr-red-bright) 30%, var(--clr-red-glow) 50%, var(--clr-red-bright) 70%, transparent);
+    opacity: 0.6;
 }
 
-/* -- Logo ----------------------------------------------- */
 .navbar-logo {
     display: flex;
     flex-direction: column;
     gap: 0;
     text-decoration: none;
-    position: relative;
 }
 
 .navbar-logo .logo-title {
-    font-family: 'Cinzel', serif;
-    font-size: 1.08rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
     font-weight: 900;
     letter-spacing: 0.18em;
-    color: #D0D3D4;
+    color: var(--clr-text);
     text-transform: uppercase;
     line-height: 1;
-    text-shadow: 2px 2px 0px rgba(214,28,56,0.6), 0 0 20px rgba(214,28,56,0.2);
+    text-shadow: 0 0 20px rgba(200, 16, 46, 0.25);
     transition: text-shadow 0.3s ease;
 }
 
 .navbar-logo:hover .logo-title {
-    text-shadow: 2px 2px 0px rgba(214,28,56,0.9), 0 0 30px rgba(214,28,56,0.5);
+    text-shadow: 0 0 30px rgba(255, 48, 80, 0.55), 0 0 60px rgba(200, 16, 46, 0.25);
 }
 
 .navbar-logo .logo-sub {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.48rem;
-    color: #4A4A56;
+    color: var(--clr-muted);
     letter-spacing: 0.35em;
     text-transform: uppercase;
 }
 
-/* -- Nav Links ------------------------------------------ */
 .navbar-links {
     display: flex;
     align-items: center;
@@ -96,13 +93,12 @@
 }
 
 .navbar-links a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #6B6B78;
-    padding: 0.5rem 1rem;
+    color: var(--clr-muted);
+    padding: 0.5rem 0.9rem;
     text-decoration: none;
     position: relative;
     transition: color 0.25s ease;
@@ -111,23 +107,29 @@
 .navbar-links a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
+    bottom: 4px;
+    left: 50%;
+    right: 50%;
     height: 2px;
-    background: #D61C38;
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 8px rgba(214, 28, 56, 0.8);
+    background: var(--clr-red-bright);
+    box-shadow: 0 0 8px var(--clr-red-glow), 0 0 16px rgba(255, 48, 80, 0.5);
+    transition: left 0.3s ease, right 0.3s ease;
 }
 
-.navbar-links a:hover { color: #D0D3D4; }
-.navbar-links a:hover::after,
-.navbar-links a.active::after { transform: scaleX(1); }
-.navbar-links a.active { color: #D0D3D4; }
+.navbar-links a:hover {
+    color: var(--clr-text);
+}
 
-/* -- Hamburger ------------------------------------------ */
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+    left: 0.9rem;
+    right: 0.9rem;
+}
+
+.navbar-links a.active {
+    color: var(--clr-text);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -142,43 +144,48 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: #D61C38;
+    background: var(--clr-red-bright);
     border-radius: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 0 6px rgba(255, 48, 80, 0.5);
 }
 
 .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* -- Page Wrapper --------------------------------------- */
 .page-wrapper {
     padding-top: var(--nav-height, 68px);
     min-height: 100vh;
 }
 
-/* -- Responsive ----------------------------------------- */
+/* -- Responsive ---------------------------------------- */
 @media (max-width: 768px) {
     .navbar { padding: 0 1.25rem; }
     .nav-toggle { display: flex; }
+
     .navbar-links {
         position: absolute;
         top: var(--nav-height, 68px);
-        left: 0; right: 0;
-        background: rgba(14, 15, 22, 0.99);
-        border-bottom: 2px solid rgba(214, 28, 56, 0.5);
+        left: 0;
+        right: 0;
+        background: rgba(8, 6, 8, 0.99);
+        border-bottom: 2px solid rgba(200, 16, 46, 0.35);
         flex-direction: column;
         gap: 0;
         padding: 0.5rem 0;
         display: none;
     }
+
     .navbar-links.open { display: flex; }
+
     .navbar-links a {
         width: 100%;
         text-align: center;
         padding: 0.9rem;
-        border-bottom: 1px solid rgba(214, 28, 56, 0.1);
+        border-bottom: 1px solid var(--clr-border);
     }
+
     .navbar-links a:last-child { border-bottom: none; }
 }
 
