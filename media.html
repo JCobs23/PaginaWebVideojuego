@@ -14,22 +14,26 @@
 </head>
 <body>
 
+<!-- SCROLL PROGRESS -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<nav class="navbar">
-  <a href="home.html" class="navbar-logo">
-    <span class="logo-title">Fallen Souls</span>
-    <span class="logo-sub">Proyecto Final 2026</span>
-  </a>
-  <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-  <ul class="navbar-links" id="navLinks">
-    <li><a href="home.html">Inicio</a></li>
-    <li><a href="desarrollo.html">Desarrollo</a></li>
-    <li><a href="media.html" class="active">Media</a></li>
-    <li><a href="descargas.html">Descargas</a></li>
-    <li><a href="equipo.html">Equipo</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <a href="home.html" class="navbar-logo">
+        <span class="logo-title">Fallen Souls</span>
+        <span class="logo-sub">Proyecto Final • 2026</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-links" id="navLinks">
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="desarrollo.html">Desarrollo</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
 </nav>
 
 <div class="page-wrapper">
@@ -129,7 +133,7 @@
                 <div class="footer__col-head">Navegacion</div>
                 <a href="home.html">Inicio</a>
                 <a href="desarrollo.html">Desarrollo</a>
-                <a href="media.html">Media</a>
+                <a href="media.html" class="active">Media</a>
                 <a href="descargas.html">Descargas</a>
                 <a href="equipo.html">Equipo</a>
                 <a href="contacto.html">Contacto</a>
@@ -164,6 +168,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
     const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } }), {threshold:0.1});
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+});
+// Filtros de Media
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from all
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active to clicked
+            btn.classList.add('active');
+
+            const filterValue = btn.textContent.trim().toLowerCase();
+
+            galleryItems.forEach(item => {
+                const itemType = item.querySelector('.gallery-item__type').textContent.toLowerCase();
+                
+                if (filterValue === 'todo') {
+                    item.style.display = 'block';
+                } else if (filterValue === 'screenshots' && itemType.includes('screenshot')) {
+                    item.style.display = 'block';
+                } else if (filterValue === 'concept art' && itemType.includes('concept art')) {
+                    item.style.display = 'block';
+                } else if (filterValue === 'videos' && itemType.includes('video')) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 });
 </script>
 </body>
