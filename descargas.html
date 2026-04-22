@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Descargas — Fallen Souls</title>
+  <title>Descargas - Fallen Souls</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="footer.css" />
@@ -19,7 +19,7 @@
 <nav class="navbar">
   <a href="home.html" class="navbar-logo">
     <span class="logo-title">Fallen Souls</span>
-    <span class="logo-sub">Proyecto Final • 2026</span>
+    <span class="logo-sub">Proyecto Final 2026</span>
   </a>
   <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
   <ul class="navbar-links" id="navLinks">
@@ -33,172 +33,136 @@
 </nav>
 
 <div class="page-wrapper">
-  <div class="descargas-hero">
-    <p class="section-subtitle" style="text-align:center;">Recursos</p>
-    <h1 class="section-title" style="text-align:center;">Descargas</h1>
-    <div class="section-divider" style="margin: 0.75rem auto 1rem;"></div>
-    <p style="font-size:0.88rem; color: var(--white-dim); max-width:560px; margin: 0 auto;">
-      Documentos del proyecto, propuesta completa, referencias visuales y assets de <em>Fallen Souls</em>.
-    </p>
-  </div>
-
-  <div class="downloads-grid">
-
-    <!-- Game Design Document -->
-    <div class="download-card fade-in">
-      <span class="dl-badge-new">Disponible</span>
-      <div class="dl-icon">📋</div>
-      <div class="dl-type"><span class="tag gold">GDD</span></div>
-      <div class="dl-name">Game Design Document</div>
-      <p class="dl-desc">Documento de diseño completo del proyecto con todas las mecánicas, sistemas de combate, balance y especificaciones técnicas de <em>Fallen Souls</em>.</p>
-      <div class="dl-meta">
-        <span>📅 Disponible</span>
-        <span>📖 Propuesta del Proyecto</span>
+  <!-- Hero de Descargas -->
+  <header class="descargas-hero">
+    <div class="descargas-hero__inner">
+      <div class="descargas-hero__eyebrow">
+        <span class="descargas-hero__eyebrow-line"></span>
+        Acceso Anticipado
+        <span class="descargas-hero__eyebrow-line"></span>
       </div>
-      <a href="PROPUESTA_PROYECTO_FINAL_DE_VIDEOJUEGOS__1_.pdf" class="dl-btn" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Descargar PDF
-      </a>
+      <h1 class="descargas-hero__title"><span>Descargas</span></h1>
+      <p class="descargas-hero__subtitle">Descarga el Game Design Document (GDD) y mantente alerta para la primera build jugable del reino.</p>
     </div>
+  </header>
 
-    <!-- Pack de Concept Art -->
+  <!-- Tarjetas de Descarga -->
+  <div class="downloads-grid">
+    <!-- Documento PDF -->
     <div class="download-card fade-in">
-      <div class="dl-icon">🎨</div>
-      <div class="dl-type"><span class="tag">Assets</span></div>
-      <div class="dl-name">Pack de Concept Art</div>
-      <p class="dl-desc">Colección de ilustraciones conceptuales de personajes, entornos y elementos de interfaz para <em>Fallen Souls</em>.</p>
-      <div class="dl-meta">
-        <span>📅 En progreso</span>
-        <span>🔒 Próximamente</span>
+      <div class="dl-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
       </div>
-      <button class="dl-btn unavailable" disabled>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Próximamente
-      </button>
+      <div class="dl-type">Documentacion</div>
+      <h3 class="dl-name">Game Design Document (GDD)</h3>
+      <p class="dl-desc">El documento maestro del proyecto Fallen Souls. Incluye la historia completa, descripcion de todas las mecanicas, diseno de jefes, analisis de la interfaz y la vision artistica.</p>
+      
+      <div class="dl-meta">
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Version</span>
+          <span class="dl-meta-val">1.0 Final</span>
+        </div>
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Formato</span>
+          <span class="dl-meta-val">PDF (2.4 MB)</span>
+        </div>
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Idioma</span>
+          <span class="dl-meta-val">Espanol</span>
+        </div>
+      </div>
+
+      <a href="#" class="dl-btn">Descargar PDF</a>
+      <a href="#" class="dl-btn dl-btn--secondary">Ver en el Navegador</a>
     </div>
 
     <!-- Build Jugable -->
     <div class="download-card fade-in">
-      <div class="dl-icon">🎮</div>
-      <div class="dl-type"><span class="tag red">Build</span></div>
-      <div class="dl-name">Build Jugable</div>
-      <p class="dl-desc">Versión jugable del prototipo de <em>Fallen Souls</em>. Requiere PC con Windows 10+.</p>
-      <div class="dl-meta">
-        <span>📅 Semana 11+</span>
-        <span>🔒 Próximamente</span>
+      <div class="dl-icon" style="color: var(--clr-bronze-lt); border-color: var(--clr-bronze-lt);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M12 12h.01"></path><path d="M17 12h.01"></path><path d="M7 12h.01"></path></svg>
       </div>
-      <button class="dl-btn unavailable" disabled>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Próximamente
-      </button>
-    </div>
-
-    <!-- Presentación PDF -->
-    <div class="download-card fade-in">
-      <div class="dl-icon">📊</div>
-      <div class="dl-type"><span class="tag">PPT</span></div>
-      <div class="dl-name">Presentación del Proyecto</div>
-      <p class="dl-desc">Diapositivas de la presentación final del proyecto con resumen ejecutivo, arte visual y demostración de mecánicas.</p>
+      <div class="dl-type" style="color: var(--clr-bronze-lt); text-shadow: none;">Juego Windows</div>
+      <h3 class="dl-name">Fallen Souls - Demo Pre-Alpha</h3>
+      <p class="dl-desc">Primera build jugable (Vertical Slice). Incluye el tutorial y el primer nivel ("El Jardin Marchito") junto con el enfrentamiento contra el Verdugo.</p>
+      
       <div class="dl-meta">
-        <span>📅 Semana 17</span>
-        <span>🔒 Próximamente</span>
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Version</span>
+          <span class="dl-meta-val">0.1.0 Alpha</span>
+        </div>
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Sistema</span>
+          <span class="dl-meta-val">Windows 10/11</span>
+        </div>
+        <div class="dl-meta-item">
+          <span class="dl-meta-key">Estado</span>
+          <span class="dl-meta-val" style="color: var(--clr-red-bright);">Proximamente</span>
+        </div>
       </div>
-      <button class="dl-btn unavailable" disabled>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Próximamente
-      </button>
-    </div>
 
-    <!-- Código Fuente en GitHub -->
-    <div class="download-card fade-in">
-      <div class="dl-icon">🌐</div>
-      <div class="dl-type"><span class="tag">GitHub</span></div>
-      <div class="dl-name">Código Fuente</div>
-      <p class="dl-desc">Repositorio del proyecto en GitHub con todo el código fuente del juego, herramientas y documentación técnica.</p>
-      <div class="dl-meta">
-        <span>📅 Disponible</span>
-        <span>💻 GitHub</span>
-      </div>
-      <a href="https://github.com/Juandavidsilva-hub/Fallen-Souls-jask" class="dl-btn" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        Ver en GitHub
-      </a>
-    </div>
-
-  </div><!-- /downloads-grid -->
-</div><!-- /page-wrapper -->
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="logo-title">Fallen Souls</div>
-      <p>Proyecto Final de Videojuegos 2026.<br/>Un roguelike sobre el duelo y la aceptación.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html">Desarrollo</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="descargas.html">Descargas</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Documentos</h4>
-      <ul>
-        <li><a href="PROPUESTA_PROYECTO_FINAL_DE_VIDEOJUEGOS__1_.pdf" download>Propuesta PDF</a></li>
-        <li><a href="#">GDD (Próximamente)</a></li>
-        <li><a href="#">Build Alpha (Próximamente)</a></li>
-      </ul>
+      <button class="dl-btn" style="opacity: 0.5; cursor: not-allowed; pointer-events: none;">No Disponible</button>
     </div>
   </div>
-  <!-- FOOTER: See footer.html for the structure -->
-  <!-- Include footer.html content here using your build tool or SSI -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-title">Fallen Souls</span>
-        <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptación.</p>
+
+  <!-- Aviso -->
+  <div class="dl-notice-wrap">
+    <div class="dl-notice fade-in">
+      <div class="dl-notice__icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
       </div>
-      <div class="footer-col">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="home.html">Inicio</a></li>
-          <li><a href="desarrollo.html">Desarrollo</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="descargas.html">Descargas</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Documentos</h4>
-        <ul>
-          <li><a href="PROPUESTA_PROYECTO_FINAL_DE_VIDEOJUEGOS__1_.pdf" download>Propuesta PDF</a></li>
-          <li><a href="#">GDD (Próximamente)</a></li>
-          <li><a href="#">Build Alpha (Próximamente)</a></li>
-        </ul>
-      </div>
+      <p class="dl-notice__text">
+        <strong>Nota Importante:</strong> Fallen Souls se encuentra actualmente en fase de pre-produccion y prototipado activo. El Game Design Document (GDD) adjunto representa la vision teorica y estructural del juego, pero sus mecanicas, valores numericos y disenos estan sujetos a cambios sustanciales durante el ciclo de desarrollo continuo.
+      </p>
     </div>
-    <div class="footer-bottom">
-      <span>Proyecto Final de Videojuegos 2026-01 · UAO</span>
-      <div class="esrb"><span class="esrb-badge">M 17+</span>Mature 17+</div>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="footer__brand">
+            <div class="footer__logo">FALLEN SOULS</div>
+            <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptacion.</p>
+        </div>
+        <div class="footer__nav">
+            <div class="footer__col">
+                <div class="footer__col-head">Navegacion</div>
+                <a href="home.html">Inicio</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="media.html">Media</a>
+                <a href="descargas.html">Descargas</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__col-head">Proyecto</div>
+                <a href="home.html#historia">Historia</a>
+                <a href="home.html#personajes">Personajes</a>
+                <a href="home.html#mecanicas">Mecanicas</a>
+                <a href="home.html#niveles">Niveles</a>
+                <a href="descargas.html">Descargar PDF</a>
+            </div>
+        </div>
     </div>
-  </footer>
+    <div class="footer__bottom">
+        <span>&copy; 2026 - Proyecto Final de Videojuegos - UAO</span>
+        <div class="footer__esrb">
+            <span class="esrb-badge esrb-badge--sm">M</span>
+            <span>MATURE 17+ - Violencia, Tematicas Oscuras</span>
+        </div>
+    </div>
+</footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const sp = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    if (sp) sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
-  }, {passive:true});
-  const nt = document.getElementById('navToggle');
-  const nl = document.getElementById('navLinks');
-  if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
-  const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); } }), {threshold:0.1});
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    const sp = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+        if (sp) sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
+    }, {passive:true});
+    const nt = document.getElementById('navToggle');
+    const nl = document.getElementById('navLinks');
+    if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
+    const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } }), {threshold:0.1});
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 });
 </script>
 </body>

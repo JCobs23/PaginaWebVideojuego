@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equipo — Fallen Souls</title>
+  <title>Equipo - Fallen Souls</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="footer.css" />
@@ -19,7 +19,7 @@
 <nav class="navbar">
   <a href="home.html" class="navbar-logo">
     <span class="logo-title">Fallen Souls</span>
-    <span class="logo-sub">Proyecto Final • 2026</span>
+    <span class="logo-sub">Proyecto Final 2026</span>
   </a>
   <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
   <ul class="navbar-links" id="navLinks">
@@ -33,195 +33,131 @@
 </nav>
 
 <div class="page-wrapper">
-  <div class="equipo-hero">
-    <p class="section-subtitle" style="text-align:center;">Detrás del Proyecto</p>
-    <h1 class="section-title" style="text-align:center;">Equipo</h1>
-    <div class="section-divider" style="margin: 0.75rem auto 1rem;"></div>
-    <p style="font-size:0.88rem; color: var(--white-dim); max-width:560px; margin: 0 auto;">
-      Las personas que dieron vida al mundo de <em>Fallen Souls</em>.
-    </p>
-  </div>
-
-  <div class="team-section">
-    <p class="section-subtitle fade-in">Creadores</p>
-    <h2 class="section-title fade-in">Miembros del Equipo</h2>
-    <div class="section-divider fade-in"></div>
-
-    <div class="team-grid">
-
-      <!-- Juan David Silva -->
-      <div class="team-card lead fade-in">
-        <div class="card-avatar" style="background: linear-gradient(135deg, var(--purple-neon), var(--blue-elec));">
-          <span class="lead-crown">👑</span>
-          JD
-        </div>
-        <div class="card-name">Juan David Silva</div>
-        <div class="card-role">Game Designer · Diseñador y Programador</div>
-        <p class="card-bio">
-          Diseñador principal de <em>Fallen Souls</em>. Responsable del concepto narrativo, el diseño de personajes y jefes, los sistemas de gameplay y la dirección estética del proyecto.
-        </p>
-        <div class="card-skills">
-          <span class="skill-tag">Game Design</span>
-          <span class="skill-tag">Narrativa</span>
-          <span class="skill-tag">Level Design</span>
-          <span class="skill-tag">Programación</span>
-          <span class="skill-tag">Dirección Artística</span>
-        </div>
+  <!-- Hero del Equipo -->
+  <header class="equipo-hero">
+    <div class="equipo-hero__inner">
+      <div class="equipo-hero__eyebrow">
+        <span class="equipo-hero__eyebrow-line"></span>
+        Detras del Proyecto
+        <span class="equipo-hero__eyebrow-line"></span>
       </div>
-
-      <!-- Joseph Zamora Cortes -->
-      <div class="team-card fade-in">
-        <div class="card-avatar" style="background: linear-gradient(135deg, #4a6bd6, #3a5bb6);">
-          JZ
-        </div>
-        <div class="card-name">Joseph Zamora Cortes</div>
-        <div class="card-role">Programación y Pruebas</div>
-        <p class="card-bio">
-          Encargado de la programación principal y de las pruebas asociadas con jugabilidad y experiencia de usuario. Responsable de validar mecánicas y optimizar el rendimiento.
-        </p>
-        <div class="card-skills">
-          <span class="skill-tag">Programación</span>
-          <span class="skill-tag">QA Testing</span>
-          <span class="skill-tag">Gameplay</span>
-          <span class="skill-tag">UX</span>
-        </div>
-      </div>
-
-      <!-- Juan David Alvarez -->
-      <div class="team-card fade-in">
-        <div class="card-avatar" style="background: linear-gradient(135deg, #b07a2a, #9a6a1a);">
-          JA
-        </div>
-        <div class="card-name">Juan David Alvarez</div>
-        <div class="card-role">Modelado 3D y Assets Visuales</div>
-        <p class="card-bio">
-          Encargado del modelado 3D y apoyo en la construcción visual de assets del proyecto. Responsable de crear personajes, enemigos, entornos y elementos visuales del juego.
-        </p>
-        <div class="card-skills">
-          <span class="skill-tag">Modelado 3D</span>
-          <span class="skill-tag">Blender</span>
-          <span class="skill-tag">Low Poly</span>
-          <span class="skill-tag">Texturizado</span>
-        </div>
-      </div>
-
-      <!-- Johan Sebastian Cobo -->
-      <div class="team-card fade-in">
-        <div class="card-avatar" style="background: linear-gradient(135deg, #6b4ad6, #5a3ab6);">
-          JS
-        </div>
-        <div class="card-name">Johan Sebastian Cobo</div>
-        <div class="card-role">Diseño 3D, Apoyo General y Programación Web</div>
-        <p class="card-bio">
-          Encargado de diseño 3D, apoyo en diseño general del proyecto y programación de la página web. Contribuye a múltiples áreas del desarrollo.
-        </p>
-        <div class="card-skills">
-          <span class="skill-tag">Diseño 3D</span>
-          <span class="skill-tag">Web Dev</span>
-          <span class="skill-tag">HTML/CSS/JS</span>
-          <span class="skill-tag">Diseño General</span>
-        </div>
-      </div>
-
+      <h1 class="equipo-hero__title">El <span>Equipo</span></h1>
+      <p class="equipo-hero__subtitle">Las mentes detras de la estetica, narrativa y mecanicas de Fallen Souls.</p>
     </div>
-  </div>
+  </header>
 
-  <!-- Herramientas -->
-  <div class="team-section" style="padding-top: 0;">
-    <p class="section-subtitle fade-in">Tecnología</p>
-    <h2 class="section-title fade-in">Herramientas Utilizadas</h2>
-    <div class="section-divider fade-in"></div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem;">
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🎮</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Motor</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">Unity / Unreal Engine</div>
+  <!-- Miembros -->
+  <section class="team-section section">
+    <div class="section__inner">
+      <div class="section__bg-ghost">CREADORES</div>
+      <div class="section-label">
+        <span class="label-line"></span> Equipo Principal
       </div>
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🎨</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Arte 3D</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">Blender · Low Poly</div>
-      </div>
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🖌️</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Texturas</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">Photoshop · Substance</div>
-      </div>
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">📐</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Diseño UI</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">Figma · Adobe XD</div>
-      </div>
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🌐</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Sitio Web</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">HTML5 · CSS3 · JS</div>
-      </div>
-      <div class="poly-card fade-in" style="text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🔊</div>
-        <div style="font-family: var(--font-title); color: var(--gold-oxidized); font-size:0.85rem; letter-spacing:0.12em; margin-bottom:0.3rem;">Audio</div>
-        <div style="font-size:0.8rem; color: var(--white-dim);">FMOD · Audacity</div>
+      <h2 class="section-heading"><em>Miembros</em> del Proyecto</h2>
+
+      <div class="team-grid">
+        <!-- Miembro 1 -->
+        <div class="team-card fade-in">
+          <div class="team-card__avatar" style="background: linear-gradient(135deg, rgba(200,16,46,0.8), rgba(139,115,85,0.8));">JD</div>
+          <h3 class="team-card__name">Juan David Silva</h3>
+          <div class="team-card__role">Game Designer  Lead Developer</div>
+          <p class="team-card__bio">Diseador principal de Fallen Souls. Responsable del concepto narrativo, el diseo de personajes y jefes, los sistemas de gameplay y la direccin esttica.</p>
+          <div class="team-card__skills">
+            <span class="team-skill">Game Design</span>
+            <span class="team-skill">Narrativa</span>
+            <span class="team-skill">Programacion</span>
+          </div>
+        </div>
+
+        <!-- Miembro 2 -->
+        <div class="team-card fade-in">
+          <div class="team-card__avatar" style="background: linear-gradient(135deg, rgba(20,40,80,0.8), rgba(40,60,100,0.8));">JZ</div>
+          <h3 class="team-card__name">Joseph Zamora Cortes</h3>
+          <div class="team-card__role">QA & Programador</div>
+          <p class="team-card__bio">Encargado de la programacin principal y pruebas asociadas a la jugabilidad y UX. Valida mecnicas y optimiza el rendimiento del juego.</p>
+          <div class="team-card__skills">
+            <span class="team-skill">Programacion</span>
+            <span class="team-skill">QA Testing</span>
+            <span class="team-skill">UX</span>
+          </div>
+        </div>
+
+        <!-- Miembro 3 -->
+        <div class="team-card fade-in">
+          <div class="team-card__avatar" style="background: linear-gradient(135deg, rgba(139,115,85,0.8), rgba(90,70,50,0.8));">JA</div>
+          <h3 class="team-card__name">Juan David Alvarez</h3>
+          <div class="team-card__role">Artista 3D</div>
+          <p class="team-card__bio">Modelador 3D encargado de la construccin visual. Crea personajes, enemigos, entornos y elementos con esttica dark fantasy low poly.</p>
+          <div class="team-card__skills">
+            <span class="team-skill">Modelado 3D</span>
+            <span class="team-skill">Texturizado</span>
+            <span class="team-skill">Low Poly</span>
+          </div>
+        </div>
+
+        <!-- Miembro 4 -->
+        <div class="team-card fade-in">
+          <div class="team-card__avatar" style="background: linear-gradient(135deg, rgba(80,30,100,0.8), rgba(60,20,80,0.8));">JC</div>
+          <h3 class="team-card__name">Johan Sebastian Cobo</h3>
+          <div class="team-card__role">3D & Web Developer</div>
+          <p class="team-card__bio">Encargado del diseo 3D de apoyo y del desarrollo general del sitio web. Aporta a mltiples reas de presentacin del proyecto.</p>
+          <div class="team-card__skills">
+            <span class="team-skill">Diseo 3D</span>
+            <span class="team-skill">Web Dev</span>
+            <span class="team-skill">UI/UX</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+</div>
 
-  <!-- Credits -->
-  <div class="credits-section">
-    <div class="credits-box fade-in">
-      <h3>Agradecimientos</h3>
-      <p>
-        A los profesores del curso de Proyecto Final de Videojuegos por su guía y retroalimentación constante. A los referentes del género — equipos de <em>Ultrakill</em>, <em>DOOM</em> y <em>Bloodborne</em> — cuya obra inspiró la visión de <em>Fallen Souls</em>. Y a todos los que crean videojuegos que no solo entretienen, sino que también sanan.
-      </p>
-    </div>
-  </div>
-</div><!-- /page-wrapper -->
-
-<!-- FOOTER: See footer.html for the structure -->
-<!-- Include footer.html content here using your build tool or SSI -->
 <footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="logo-title">Fallen Souls</div>
-      <p>Proyecto Final de Videojuegos 2026.<br/>Un roguelike sobre el duelo y la aceptación.</p>
+    <div class="footer__top">
+        <div class="footer__brand">
+            <div class="footer__logo">FALLEN SOULS</div>
+            <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptacion.</p>
+        </div>
+        <div class="footer__nav">
+            <div class="footer__col">
+                <div class="footer__col-head">Navegacion</div>
+                <a href="home.html">Inicio</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="media.html">Media</a>
+                <a href="descargas.html">Descargas</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__col-head">Proyecto</div>
+                <a href="home.html#historia">Historia</a>
+                <a href="home.html#personajes">Personajes</a>
+                <a href="home.html#mecanicas">Mecanicas</a>
+                <a href="home.html#niveles">Niveles</a>
+                <a href="descargas.html">Descargar PDF</a>
+            </div>
+        </div>
     </div>
-    <div class="footer-col">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="home.html">Inicio</a></li>
-        <li><a href="desarrollo.html">Desarrollo</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="descargas.html">Descargas</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+    <div class="footer__bottom">
+        <span>&copy; 2026 - Proyecto Final de Videojuegos - UAO</span>
+        <div class="footer__esrb">
+            <span class="esrb-badge esrb-badge--sm">M</span>
+            <span>MATURE 17+ - Violencia, Tematicas Oscuras</span>
+        </div>
     </div>
-    <div class="footer-col">
-      <h4>Proyecto</h4>
-      <ul>
-        <li><a href="home.html#historia">Historia</a></li>
-        <li><a href="home.html#personajes">Personajes</a></li>
-        <li><a href="home.html#mecanicas">Mecánicas</a></li>
-        <li><a href="descargas.html">Descargar PDF</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>Proyecto Final de Videojuegos 2026-01 · UAO</span>
-    <div class="esrb"><span class="esrb-badge">M 17+</span>Mature 17+</div>
-  </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const sp = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    if (sp) sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
-  }, {passive:true});
-  const nt = document.getElementById('navToggle');
-  const nl = document.getElementById('navLinks');
-  if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
-  const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } }), {threshold:0.1});
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    const sp = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+        if (sp) sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
+    }, {passive:true});
+    const nt = document.getElementById('navToggle');
+    const nl = document.getElementById('navLinks');
+    if (nt && nl) nt.addEventListener('click', () => { nt.classList.toggle('open'); nl.classList.toggle('open'); });
+    const obs = new IntersectionObserver(entries => entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } }), {threshold:0.1});
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 });
 </script>
 </body>
