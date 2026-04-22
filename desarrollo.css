@@ -3,8 +3,6 @@
    Dark Gothic · Game Devlog · AAA Aesthetic
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
-
 /* ── Design Tokens (idénticos al home) ──────── */
 :root {
     --clr-bg: #080608;
@@ -13,11 +11,15 @@
     --clr-surface3: #1f1020;
     --clr-red: #C8102E;
     --clr-red-glow: #FF2040;
-    --clr-red-bright: #ff5070;
+    --clr-red-bright: #FF3050;
+    --clr-red-ultra: #FF5070;
+    --clr-red-glow: #FF2040;
     --clr-bronze: #8B7355;
     --clr-bronze-lt: #B09070;
     --clr-text: #E8E0D5;
-    --clr-muted: rgba(200, 185, 175, 0.65);
+    --clr-muted: #7a7068;
+    --clr-muted-hi: rgba(200, 185, 175, 0.85);
+    --clr-muted-dim: rgba(180, 165, 155, 0.6);
     --clr-muted-dim: rgba(180, 165, 155, 0.45);
     --clr-border: rgba(200, 16, 46, 0.12);
     --clr-border-hi: rgba(200, 16, 46, 0.35);

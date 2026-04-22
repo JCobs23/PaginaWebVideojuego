@@ -1,122 +1,319 @@
 /* =============================================
-   FALLEN SOULS — DESCARGAS CSS
+   FALLEN SOULS - DESCARGAS CSS
+   Variante: La Ira del Capitan
    ============================================= */
 
+/* -- Descargas Hero ------------------------------------ */
 .descargas-hero {
-  padding: 4rem 2.5rem 3rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(106,74,214,0.2);
+    padding: 7rem 2.5rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-border-hi);
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-bg);
 }
 
+.descargas-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 50%, rgba(200,16,46,0.13) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 30%, rgba(139,115,85,0.07) 0%, transparent 45%);
+    z-index: 0;
+}
+
+.descargas-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(200,16,46,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,16,46,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: 0;
+}
+
+.descargas-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.descargas-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(200, 150, 150, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.descargas-hero__eyebrow-line {
+    display: inline-block;
+    width: 40px; height: 1px;
+    background: var(--clr-red-bright);
+    box-shadow: 0 0 8px rgba(255, 48, 80, 0.6);
+}
+
+.descargas-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    line-height: 0.95;
+    margin-bottom: 1.25rem;
+}
+
+.descargas-hero__title span {
+    color: var(--clr-red-bright);
+    text-shadow: 0 0 20px rgba(255,48,80,0.8), 0 0 40px rgba(200,16,46,0.5), 0 0 70px rgba(200,16,46,0.25);
+}
+
+.descargas-hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--clr-muted-hi);
+    line-height: 1.75;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* -- Downloads Grid ------------------------------------ */
 .downloads-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px 2.5rem;
+    background: var(--clr-bg);
 }
 
 .download-card {
-  background: linear-gradient(135deg, rgba(35,35,45,0.9), rgba(25,25,35,0.9));
-  border: 1px solid rgba(106,74,214,0.2);
-  border-radius: 4px;
-  padding: 2rem;
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    padding: 2.25rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
+
 .download-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold-oxidized), var(--red-intense));
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--clr-red-bright);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 16px rgba(255, 48, 80, 0.8);
 }
+
+.download-card:hover { background: var(--clr-surface2); border-color: var(--clr-border-hi); }
+.download-card:hover::before { transform: scaleX(1); }
+
+/* Glow de sangre en hover */
 .download-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(176,122,42,0.4);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 0 40px rgba(200, 16, 46, 0.08);
 }
 
 .dl-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    width: 48px; height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--clr-border-hi);
+    color: var(--clr-red-bright);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0 12px rgba(255, 48, 80, 0.2);
+    transition: box-shadow 0.3s ease;
 }
+
+.download-card:hover .dl-icon {
+    box-shadow: 0 0 20px rgba(255, 48, 80, 0.5), 0 0 40px rgba(200, 16, 46, 0.25);
+}
+
 .dl-type {
-  margin-bottom: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--clr-red-ultra);
+    text-shadow: 0 0 8px rgba(255, 80, 112, 0.4);
+    margin-bottom: 0.5rem;
 }
+
 .dl-name {
-  font-family: var(--font-title);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--gold-oxidized);
-  letter-spacing: 0.08em;
-  margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--clr-text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.65rem;
 }
+
 .dl-desc {
-  font-size: 0.82rem;
-  color: var(--white-dim);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.87rem;
+    color: var(--clr-muted-dim);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
+
+/* Meta row (version, tamanio) */
 .dl-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-  font-size: 0.73rem;
-  color: var(--white-dim);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--clr-border);
+    padding-top: 1rem;
 }
-.dl-meta span {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+
+.dl-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
+
+.dl-meta-key {
+    font-family: var(--font-mono);
+    font-size: 0.52rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(180, 165, 155, 0.4);
+}
+
+.dl-meta-val {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--clr-bronze-lt);
+    font-weight: 600;
+}
+
+/* Download Button */
 .dl-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  border: 1px solid var(--gold-oxidized);
-  color: var(--gold-oxidized);
-  font-family: var(--font-title);
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 0.7rem 1.5rem;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: all var(--transition);
-  width: 100%;
-  justify-content: center;
-  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    justify-content: center;
+    background: var(--clr-red);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.95rem 2rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px rgba(255,80,112,0.4), 0 0 20px rgba(200,16,46,0.35);
 }
+
+.dl-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
 .dl-btn:hover {
-  background: var(--gold-oxidized);
-  color: #0d0d14;
-}
-.dl-btn svg { width: 14px; height: 14px; }
-.dl-btn.unavailable {
-  opacity: 0.4;
-  cursor: not-allowed;
-  border-color: var(--white-dim);
-  color: var(--white-dim);
-}
-.dl-btn.unavailable:hover { background: transparent; color: var(--white-dim); }
-
-.dl-badge-new {
-  position: absolute;
-  top: 1rem; right: 1rem;
-  background: var(--red-intense);
-  color: var(--white-ink);
-  font-family: var(--font-title);
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border-radius: 2px;
+    background: #e01830;
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(255,80,112,0.6), 0 0 40px rgba(200,16,46,0.7);
 }
 
+.dl-btn:hover::before { opacity: 1; }
+
+.dl-btn--secondary {
+    background: transparent;
+    color: var(--clr-bronze-lt);
+    border: 1px solid var(--clr-border-hi);
+    box-shadow: none;
+    margin-top: 0.5rem;
+}
+
+.dl-btn--secondary:hover {
+    color: var(--clr-text);
+    background: transparent;
+    border-color: var(--clr-red-bright);
+    box-shadow: 0 0 20px rgba(255, 48, 80, 0.2);
+    transform: translateY(-2px);
+}
+
+/* -- Notice / Warning block ---------------------------- */
+.dl-notice {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2.5rem 60px;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(200, 16, 46, 0.06);
+    border: 1px solid var(--clr-border-hi);
+    padding: 1.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.dl-notice::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--clr-red-bright);
+    box-shadow: 0 0 10px rgba(255, 48, 80, 0.7);
+}
+
+.dl-notice__icon {
+    color: var(--clr-red-bright);
+    flex-shrink: 0;
+}
+
+.dl-notice__text {
+    font-family: var(--font-body);
+    font-size: 0.87rem;
+    color: var(--clr-muted-hi);
+    line-height: 1.7;
+}
+
+.dl-notice__text strong {
+    color: var(--clr-text);
+    font-weight: 600;
+}
+
+.dl-notice-wrap {
+    max-width: var(--max-width);
+    margin: 0 auto 80px;
+    padding: 0 2.5rem;
+}
+
+/* -- Responsive ---------------------------------------- */
 @media (max-width: 768px) {
-  .downloads-grid { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
+    .descargas-hero { padding: 6rem 1.5rem 3rem; }
+    .downloads-grid { padding: 60px 1.5rem; grid-template-columns: 1fr; }
+    .dl-notice-wrap { padding: 0 1.5rem; margin-bottom: 60px; }
+}
+
+@media (max-width: 480px) {
+    .descargas-hero { padding: 5.5rem 1rem 2.5rem; }
+    .downloads-grid { padding: 50px 1rem; }
+    .dl-notice-wrap { padding: 0 1rem; }
 }

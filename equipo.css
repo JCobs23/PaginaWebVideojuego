@@ -1,158 +1,205 @@
 /* =============================================
-   FALLEN SOULS — EQUIPO CSS
+   FALLEN SOULS - EQUIPO CSS
+   Variante: La Ira del Capitan
    ============================================= */
 
+/* -- Equipo Hero --------------------------------------- */
 .equipo-hero {
-  padding: 4rem 2.5rem 3rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(106,74,214,0.2);
+    padding: 7rem 2.5rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-border-hi);
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-bg);
 }
 
+.equipo-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 50%, rgba(200,16,46,0.13) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 30%, rgba(139,115,85,0.07) 0%, transparent 45%);
+    z-index: 0;
+}
+
+.equipo-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(200,16,46,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,16,46,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: 0;
+}
+
+.equipo-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.equipo-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(200, 150, 150, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.equipo-hero__eyebrow-line {
+    display: inline-block;
+    width: 40px; height: 1px;
+    background: var(--clr-red-bright);
+    box-shadow: 0 0 8px rgba(255, 48, 80, 0.6);
+}
+
+.equipo-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    line-height: 0.95;
+    margin-bottom: 1.25rem;
+}
+
+.equipo-hero__title span {
+    color: var(--clr-red-bright);
+    text-shadow: 0 0 20px rgba(255,48,80,0.8), 0 0 40px rgba(200,16,46,0.5), 0 0 70px rgba(200,16,46,0.25);
+}
+
+.equipo-hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--clr-muted-hi);
+    line-height: 1.75;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* -- Team Section -------------------------------------- */
 .team-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px 2.5rem;
+    background: var(--clr-bg);
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--clr-border-hi);
+    border: 1px solid var(--clr-border-hi);
+    margin-top: 2rem;
 }
 
 .team-card {
-  background: linear-gradient(145deg, rgba(35,28,50,0.95), rgba(22,18,35,0.95));
-  border: 1px solid rgba(176,122,42,0.2);
-  border-radius: 6px;
-  padding: 2.5rem 2rem 2rem;
-  text-align: center;
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
+    background: var(--clr-surface);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s ease;
+    border-radius: 0;
 }
+
 .team-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold-oxidized), var(--purple-neon));
-}
-.team-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(176,122,42,0.5);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 24px rgba(176,122,42,0.08);
-}
-.team-card.lead { border-color: rgba(176,122,42,0.4); }
-.team-card.lead::before {
-  background: linear-gradient(90deg, var(--gold-oxidized), var(--red-intense), var(--gold-oxidized));
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--clr-red-bright);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 16px rgba(255, 48, 80, 0.8);
 }
 
-.card-avatar {
-  width: 88px; height: 88px;
-  border-radius: 50%;
-  margin: 0 auto 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-title);
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--white-ink);
-  border: 2px solid rgba(176,122,42,0.4);
-  position: relative;
-}
-.lead .card-avatar {
-  width: 96px; height: 96px;
-  border-color: var(--gold-oxidized);
-  border-width: 2px;
-}
-.card-avatar img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.lead-crown {
-  position: absolute;
-  top: -14px;
-  font-size: 1.2rem;
-  filter: drop-shadow(0 0 6px rgba(176,122,42,0.8));
+.team-card:hover { background: var(--clr-surface2); }
+.team-card:hover::before { transform: scaleX(1); }
+
+/* Avatar hexagonal */
+.team-card__avatar {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: relative;
 }
 
-.card-name {
-  font-family: var(--font-title);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--gold-oxidized);
-  letter-spacing: 0.06em;
-  margin-bottom: 0.3rem;
-}
-.lead .card-name { font-size: 1.1rem; }
-
-.card-role {
-  font-size: 0.75rem;
-  color: var(--purple-neon);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: var(--font-title);
-  margin-bottom: 0.6rem;
+.team-card__name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: var(--clr-text);
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
 }
 
-.card-bio {
-  font-size: 0.82rem;
-  color: var(--white-dim);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
+.team-card__role {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--clr-red-ultra);
+    text-shadow: 0 0 10px rgba(255, 80, 112, 0.4);
+    margin-bottom: 1rem;
 }
 
-.card-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: center;
-}
-.skill-tag {
-  background: rgba(106,74,214,0.1);
-  border: 1px solid rgba(106,74,214,0.25);
-  color: var(--blue-elec);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.55rem;
-  border-radius: 2px;
-}
-.lead .skill-tag { background: rgba(176,122,42,0.1); border-color: rgba(176,122,42,0.25); color: var(--gold-oxidized); }
-
-/* ── Acknowledgments ─────────────────────── */
-.credits-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2.5rem 4rem;
-}
-.credits-box {
-  background: linear-gradient(135deg, rgba(20,18,28,0.9), rgba(15,14,22,0.9));
-  border: 1px solid rgba(106,74,214,0.2);
-  border-radius: 4px;
-  padding: 2.5rem;
-  text-align: center;
-}
-.credits-box h3 {
-  font-family: var(--font-title);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--gold-oxidized);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.credits-box p {
-  font-size: 0.85rem;
-  color: var(--white-dim);
-  line-height: 1.75;
-  max-width: 600px;
-  margin: 0 auto;
+.team-card__bio {
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    color: var(--clr-muted-dim);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
 }
 
+.team-card__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+}
+
+.team-skill {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.55rem;
+    background: rgba(200, 16, 46, 0.08);
+    border: 1px solid rgba(200, 16, 46, 0.25);
+    color: rgba(255, 80, 112, 0.8);
+    border-radius: 0;
+}
+
+/* -- Responsive ---------------------------------------- */
 @media (max-width: 768px) {
-  .team-section, .credits-section { padding: 2rem 1.25rem; }
+    .equipo-hero { padding: 6rem 1.5rem 3rem; }
+    .team-section { padding: 60px 1.5rem; }
+    .team-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .equipo-hero { padding: 5.5rem 1rem 2.5rem; }
+    .team-section { padding: 50px 1rem; }
 }
