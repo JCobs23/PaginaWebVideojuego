@@ -1,125 +1,176 @@
-// =============================================
-// FALLEN SOULS — MEDIA JS
+﻿// =============================================
+// FALLEN SOULS - MEDIA JS
 // =============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadHeader();
+  initHeaderUi();
+  initMediaUi();
+});
 
-  // Scroll + Nav
+async function loadHeader() {
+  const mount = document.getElementById('headerMount');
+  if (!mount) return;
+
+  try {
+    const response = await fetch('header.html', { cache: 'no-store' });
+    if (!response.ok) throw new Error('No se pudo cargar header.html');
+    mount.innerHTML = await response.text();
+  } catch (error) {
+    console.error('Error cargando el header:', error);
+  }
+}
+
+function initHeaderUi() {
   const scrollProgress = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    if (scrollProgress) {
-      const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      scrollProgress.style.width = pct + '%';
-    }
-  }, { passive: true });
+
+  function updateScrollProgress() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    if (scrollProgress) scrollProgress.style.width = pct + '%';
+  }
 
   const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navLinks');
+
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
+
+    navLinks.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    const currentPage = (window.location.pathname.split('/').pop() || 'home.html').toLowerCase();
+    navLinks.querySelectorAll('a').forEach((link) => {
+      const href = (link.getAttribute('href') || '').split('?')[0].toLowerCase();
+      link.classList.toggle('active', href === currentPage);
+    });
   }
 
-  // ── Filter ──────────────────────────────────
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const items = document.querySelectorAll('.gallery-item');
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+}
 
-  filterBtns.forEach(btn => {
+function initMediaUi() {
+  initFadeIn();
+  initFilters();
+  initModal();
+}
+
+function initFadeIn() {
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, idx) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), idx * 70);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+function initFilters() {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.gallery-card');
+
+  buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      const filter = btn.dataset.filter || 'all';
+
+      buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      items.forEach(item => {
-        const show = filter === 'all' || item.dataset.cat === filter;
-        item.style.display = show ? '' : 'none';
-        if (show) {
-          item.style.animation = 'none';
-          item.offsetHeight; // reflow
-          item.style.animation = '';
-        }
+
+      cards.forEach((card) => {
+        const cat = card.dataset.cat || '';
+        const show = filter === 'all' || cat === filter;
+        card.classList.toggle('is-hidden', !show);
       });
     });
   });
+}
 
-  // ── Fade-in ─────────────────────────────────
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 60);
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  fadeEls.forEach(el => observer.observe(el));
+function initModal() {
+  const modal = document.getElementById('mediaModal');
+  const closeBtn = document.getElementById('mediaModalClose');
+  const viewer = document.getElementById('mediaModalViewer');
+  const titleEl = document.getElementById('mediaModalTitle');
+  const descEl = document.getElementById('mediaModalDesc');
+  const tagEl = document.getElementById('mediaModalTag');
+  const externalEl = document.getElementById('mediaModalExternal');
+  const cards = document.querySelectorAll('.gallery-card');
 
-  // ── Lightbox ─────────────────────────────────
-  const lightbox = document.getElementById('lightbox');
-  const lightboxBody = document.getElementById('lightboxBody');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  const lightboxClose = document.getElementById('lightboxClose');
-  const lightboxPrev = document.getElementById('lightboxPrev');
-  const lightboxNext = document.getElementById('lightboxNext');
+  if (!modal || !viewer || !titleEl || !descEl || !tagEl || !externalEl) return;
 
-  let currentIndex = 0;
-  let visibleItems = [];
-
-  function getVisibleItems() {
-    return [...document.querySelectorAll('.gallery-item:not([style*="display: none"])')]
-      .filter(el => el.style.display !== 'none');
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    viewer.innerHTML = '';
   }
 
-  function openLightbox(item) {
-    visibleItems = getVisibleItems();
-    currentIndex = visibleItems.indexOf(item);
-    showItem(currentIndex);
-    lightbox.classList.add('open');
+  function openModal(card) {
+    const kind = card.dataset.kind || 'image';
+    const title = card.dataset.title || 'Contenido';
+    const desc = card.dataset.desc || '';
+    const cat = (card.dataset.cat || 'media').toUpperCase();
+
+    titleEl.textContent = title;
+    descEl.textContent = desc;
+    tagEl.textContent = cat;
+    viewer.innerHTML = '';
+
+    if (kind === 'video') {
+      const videoId = card.dataset.videoId;
+      const iframe = document.createElement('iframe');
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      iframe.title = title;
+      viewer.appendChild(iframe);
+
+      externalEl.href = `https://youtu.be/${videoId}`;
+      externalEl.classList.remove('is-hidden');
+    } else {
+      const src = card.dataset.src;
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = title;
+      viewer.appendChild(img);
+
+      externalEl.href = '#';
+      externalEl.classList.add('is-hidden');
+    }
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
-  function showItem(idx) {
-    const item = visibleItems[idx];
-    if (!item) return;
-    const cap = item.dataset.caption || '';
-    lightboxCaption.textContent = cap;
-    // Clone the placeholder content for display
-    const placeholder = item.querySelector('.item-placeholder');
-    if (placeholder) {
-      lightboxBody.innerHTML = '';
-      const clone = placeholder.cloneNode(true);
-      clone.style.cssText = 'width:100%;height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;font-size:4rem;border-radius:4px;border:1px solid rgba(106,74,214,0.3);';
-      lightboxBody.appendChild(clone);
+  cards.forEach((card) => {
+    card.addEventListener('click', () => openModal(card));
+  });
+
+  closeBtn?.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.dataset.close === 'true') {
+      closeModal();
     }
-    // Update nav visibility
-    lightboxPrev.style.visibility = idx > 0 ? 'visible' : 'hidden';
-    lightboxNext.style.visibility = idx < visibleItems.length - 1 ? 'visible' : 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  items.forEach(item => {
-    item.addEventListener('click', () => openLightbox(item));
   });
 
-  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  if (lightbox) {
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) closeLightbox();
-    });
-  }
-  if (lightboxPrev) lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); currentIndex--; showItem(currentIndex); });
-  if (lightboxNext) lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); currentIndex++; showItem(currentIndex); });
-
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft' && currentIndex > 0) { currentIndex--; showItem(currentIndex); }
-    if (e.key === 'ArrowRight' && currentIndex < visibleItems.length - 1) { currentIndex++; showItem(currentIndex); }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
   });
-
-});
+}

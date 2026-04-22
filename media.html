@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -14,223 +14,183 @@
 </head>
 <body>
 
-    <!-- Header loaded from header.html -->
-    <div id="headerMount"></div>
-<div class="page-wrapper">
-  <!-- Hero de Media -->
-  <header class="media-hero">
-    <div class="media-hero__inner">
-      <div class="media-hero__eyebrow">
-        <span class="media-hero__eyebrow-line"></span>
-        Galeria Visual
-        <span class="media-hero__eyebrow-line"></span>
-      </div>
-      <h1 class="media-hero__title"><span>Media</span></h1>
-      <p class="media-hero__subtitle">Explora el arte conceptual, capturas de pantalla y trailers del reino caido.</p>
-    </div>
-  </header>
+  <!-- Header loaded from header.html -->
+  <div id="headerMount"></div>
 
-  <!-- Filtros -->
-  <div class="filter-bar fade-in">
-    <button class="filter-btn active">Todo</button>
-    <button class="filter-btn">Screenshots</button>
-    <button class="filter-btn">Concept Art</button>
-    <button class="filter-btn">Videos</button>
+  <div class="page-wrapper">
+    <header class="media-hero">
+      <div class="media-hero__ghost" aria-hidden="true">ARCHIVO</div>
+      <div class="media-hero__inner">
+        <div class="media-hero__eyebrow">
+          <span class="media-hero__eyebrow-line"></span>
+          Archivo Visual del Proyecto
+          <span class="media-hero__eyebrow-line"></span>
+        </div>
+        <h1 class="media-hero__title">Media <span>Vault</span></h1>
+        <p class="media-hero__subtitle">Capturas, concept art y videos del desarrollo de <strong>Fallen Souls</strong>. Cada pieza abre en visor completo.</p>
+
+        <div class="media-hero__stats">
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__k">Contenido</span>
+            <span class="hero-stat-card__v">8 Assets</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__k">Highlight</span>
+            <span class="hero-stat-card__v">Teaser Oficial</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="media-content">
+      <div class="filter-bar fade-in">
+        <button class="filter-btn active" data-filter="all" type="button">Todo</button>
+        <button class="filter-btn" data-filter="teaser" type="button">Teaser</button>
+        <button class="filter-btn" data-filter="gameplay" type="button">Gameplay</button>
+        <button class="filter-btn" data-filter="concept" type="button">Concept Art</button>
+        <button class="filter-btn" data-filter="screenshot" type="button">Screenshots</button>
+      </div>
+
+      <div class="gallery" id="mediaGallery">
+        <button class="gallery-card gallery-card--wide fade-in" type="button"
+          data-cat="teaser" data-kind="video" data-video-id="EXjP1wLvdzY"
+          data-title="Teaser Oficial - Fallen Souls"
+          data-desc="Teaser publicado del proyecto, con ambientación y tono narrativo del reino en ruinas.">
+          <img src="https://img.youtube.com/vi/EXjP1wLvdzY/hqdefault.jpg" alt="Teaser oficial de Fallen Souls" loading="lazy">
+          <span class="gallery-card__type">TEASER</span>
+          <span class="gallery-card__corner">VIDEO</span>
+          <span class="gallery-card__play" aria-hidden="true">▶</span>
+          <div class="gallery-card__overlay">
+            <h3>Teaser Oficial</h3>
+            <p>Ver reproducción completa</p>
+          </div>
+        </button>
+
+        <button class="gallery-card fade-in" type="button"
+          data-cat="gameplay" data-kind="image"
+          data-src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80"
+          data-title="HUD y Arsenal"
+          data-desc="Exploración visual de interfaz, lectura de combate y ritmo del FPS roguelike.">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Captura gameplay con HUD" loading="lazy">
+          <span class="gallery-card__type">GAMEPLAY</span>
+          <span class="gallery-card__corner">SCREEN</span>
+          <div class="gallery-card__overlay">
+            <h3>HUD y Arsenal</h3>
+            <p>Abrir captura completa</p>
+          </div>
+        </button>
+
+        <button class="gallery-card gallery-card--tall fade-in" type="button"
+          data-cat="concept" data-kind="image"
+          data-src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1400&q=80"
+          data-title="Concepto del Castillo"
+          data-desc="Dirección artística general: arquitectura opresiva, contraste de bruma y acentos de sangre.">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80" alt="Concept art del castillo" loading="lazy">
+          <span class="gallery-card__type">CONCEPT</span>
+          <span class="gallery-card__corner">ART</span>
+          <div class="gallery-card__overlay">
+            <h3>Concepto del Castillo</h3>
+            <p>Abrir imagen</p>
+          </div>
+        </button>
+
+        <button class="gallery-card fade-in" type="button"
+          data-cat="screenshot" data-kind="image"
+          data-src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=1600&q=80"
+          data-title="Combate en Jardines"
+          data-desc="Encuentro temprano con ritmo alto de movimiento y lectura clara de enemigos.">
+          <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=900&q=80" alt="Combate en jardines" loading="lazy">
+          <span class="gallery-card__type">SCREENSHOT</span>
+          <span class="gallery-card__corner">INGAME</span>
+          <div class="gallery-card__overlay">
+            <h3>Combate en Jardines</h3>
+            <p>Ver detalle</p>
+          </div>
+        </button>
+
+        <button class="gallery-card fade-in" type="button"
+          data-cat="concept" data-kind="image"
+          data-src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80"
+          data-title="Diseño del Verdugo"
+          data-desc="Silueta y lectura del mentor/enemigo principal del prólogo del juego.">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80" alt="Concept art del Verdugo" loading="lazy">
+          <span class="gallery-card__type">CONCEPT</span>
+          <span class="gallery-card__corner">BOSS</span>
+          <div class="gallery-card__overlay">
+            <h3>Diseño del Verdugo</h3>
+            <p>Abrir imagen</p>
+          </div>
+        </button>
+
+        <button class="gallery-card fade-in" type="button"
+          data-cat="gameplay" data-kind="image"
+          data-src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80"
+          data-title="Build Pre-Alpha"
+          data-desc="Captura de prueba de iluminación, timing y ritmo visual en escena de acción.">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80" alt="Build pre-alpha" loading="lazy">
+          <span class="gallery-card__type">GAMEPLAY</span>
+          <span class="gallery-card__corner">ALPHA</span>
+          <div class="gallery-card__overlay">
+            <h3>Build Pre-Alpha</h3>
+            <p>Ver captura</p>
+          </div>
+        </button>
+      </div>
+    </section>
   </div>
 
-  <!-- Galeria -->
-  <div class="gallery">
-    <!-- Item 1: Trailer -->
-    <div class="gallery-item gallery-item--video fade-in">
-      <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trailer">
-      <div class="gallery-play-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-      </div>
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Video / Trailer</div>
-        <div class="gallery-item__title">Official Announcement Trailer</div>
-      </div>
-    </div>
+  <div class="media-modal" id="mediaModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de contenido">
+    <div class="media-modal__backdrop" data-close="true"></div>
+    <div class="media-modal__dialog">
+      <button class="media-modal__close" id="mediaModalClose" type="button" aria-label="Cerrar visor">✕</button>
 
-    <!-- Item 2: Concept Art -->
-    <div class="gallery-item fade-in">
-      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concept Art">
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Concept Art</div>
-        <div class="gallery-item__title">El Castillo del Duelo</div>
+      <div class="media-modal__meta">
+        <span class="media-modal__tag" id="mediaModalTag">MEDIA</span>
+        <h3 id="mediaModalTitle">Contenido</h3>
+        <p id="mediaModalDesc"></p>
       </div>
-    </div>
 
-    <!-- Item 3: Screenshot -->
-    <div class="gallery-item fade-in">
-      <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Screenshot Gameplay">
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Screenshot</div>
-        <div class="gallery-item__title">Combate en el Jardin</div>
-      </div>
-    </div>
-
-    <!-- Item 4: Concept Art -->
-    <div class="gallery-item fade-in">
-      <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boss Design">
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Concept Art</div>
-        <div class="gallery-item__title">Diseño del Verdugo</div>
-      </div>
-    </div>
-
-    <!-- Item 5: Screenshot -->
-    <div class="gallery-item fade-in">
-      <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gameplay HUD">
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Screenshot</div>
-        <div class="gallery-item__title">Interfaz y Armas</div>
-      </div>
-    </div>
-
-    <!-- Item 6: Video -->
-    <div class="gallery-item gallery-item--video fade-in">
-      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gameplay Teaser">
-      <div class="gallery-play-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-      </div>
-      <div class="gallery-item__overlay">
-        <div class="gallery-item__type">Video / Teaser</div>
-        <div class="gallery-item__title">Gameplay Teaser - Pre-Alpha</div>
-      </div>
+      <div class="media-modal__viewer" id="mediaModalViewer"></div>
+      <a class="media-modal__external" id="mediaModalExternal" href="#" target="_blank" rel="noopener noreferrer">Abrir en YouTube</a>
     </div>
   </div>
-</div>
 
-<footer class="footer">
+  <footer class="footer">
     <div class="footer__top">
-        <div class="footer__brand">
-            <div class="footer__logo">FALLEN SOULS</div>
-            <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptacion.</p>
+      <div class="footer__brand">
+        <div class="footer__logo">FALLEN SOULS</div>
+        <p>Proyecto Final de Videojuegos 2026.<br>Un roguelike sobre el duelo y la aceptación.</p>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__col">
+          <div class="footer__col-head">Navegación</div>
+          <a href="home.html">Inicio</a>
+          <a href="desarrollo.html">Desarrollo</a>
+          <a href="media.html" class="active">Media</a>
+          <a href="descargas.html">Descargas</a>
+          <a href="equipo.html">Equipo</a>
+          <a href="contacto.html">Contacto</a>
         </div>
-        <div class="footer__nav">
-            <div class="footer__col">
-                <div class="footer__col-head">Navegacion</div>
-                <a href="home.html">Inicio</a>
-                <a href="desarrollo.html">Desarrollo</a>
-                <a href="media.html" class="active">Media</a>
-                <a href="descargas.html">Descargas</a>
-                <a href="equipo.html">Equipo</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-            <div class="footer__col">
-                <div class="footer__col-head">Proyecto</div>
-                <a href="home.html#historia">Historia</a>
-                <a href="home.html#personajes">Personajes</a>
-                <a href="home.html#mecanicas">Mecanicas</a>
-                <a href="home.html#niveles">Niveles</a>
-                <a href="descargas.html">Descargar PDF</a>
-            </div>
+        <div class="footer__col">
+          <div class="footer__col-head">Proyecto</div>
+          <a href="home.html#historia">Historia</a>
+          <a href="home.html#personajes">Personajes</a>
+          <a href="home.html#mecanicas">Mecánicas</a>
+          <a href="home.html#niveles">Niveles</a>
+          <a href="descargas.html">Descargar PDF</a>
         </div>
+      </div>
     </div>
     <div class="footer__bottom">
-        <span>&copy; 2026 - Proyecto Final de Videojuegos - UAO</span>
-        <div class="footer__esrb">
-            <span class="esrb-badge esrb-badge--sm">M</span>
-            <span>MATURE 17+ - Violencia, Tematicas Oscuras</span>
-        </div>
+      <span>© 2026 - Proyecto Final de Videojuegos - UAO</span>
+      <div class="footer__esrb">
+        <span class="esrb-badge esrb-badge--sm">M</span>
+        <span>MATURE 17+ - Violencia, Temáticas Oscuras</span>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script>
-async function loadHeader() {
-  const mount = document.getElementById('headerMount');
-  if (!mount) return;
-  try {
-    const response = await fetch('header.html', { cache: 'no-store' });
-    if (!response.ok) throw new Error('No se pudo cargar header.html');
-    mount.innerHTML = await response.text();
-  } catch (error) {
-    console.error('Error cargando el header:', error);
-  }
-}
-
-function initHeaderUi() {
-  const sp = document.getElementById('scrollProgress');
-  function updateScrollProgress() {
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-    if (sp) sp.style.width = pct + '%';
-  }
-
-  const nt = document.getElementById('navToggle');
-  const nl = document.getElementById('navLinks');
-  if (nt && nl) {
-    nt.addEventListener('click', () => {
-      nt.classList.toggle('open');
-      nl.classList.toggle('open');
-    });
-
-    nl.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => {
-        nt.classList.remove('open');
-        nl.classList.remove('open');
-      });
-    });
-
-    const currentPage = (window.location.pathname.split('/').pop() || 'home.html').toLowerCase();
-    nl.querySelectorAll('a').forEach((link) => {
-      const href = (link.getAttribute('href') || '').split('?')[0].toLowerCase();
-      link.classList.toggle('active', href === currentPage);
-    });
-  }
-
-  window.addEventListener('scroll', updateScrollProgress, { passive: true });
-  updateScrollProgress();
-}
-
-function initMediaUi() {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach((el) => obs.observe(el));
-
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.textContent.trim().toLowerCase();
-
-      galleryItems.forEach((item) => {
-        const typeEl = item.querySelector('.gallery-item__type');
-        const itemType = typeEl ? typeEl.textContent.toLowerCase() : '';
-
-        if (filterValue === 'todo') {
-          item.style.display = 'block';
-        } else if (filterValue === 'screenshots' && itemType.includes('screenshot')) {
-          item.style.display = 'block';
-        } else if (filterValue === 'concept art' && itemType.includes('concept art')) {
-          item.style.display = 'block';
-        } else if (filterValue === 'videos' && itemType.includes('video')) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-  await loadHeader();
-  initHeaderUi();
-  initMediaUi();
-});
-</script>
+  <script src="js/media.js"></script>
 </body>
 </html>
 
