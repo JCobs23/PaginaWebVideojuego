@@ -746,6 +746,15 @@ body::before {
     );
 }
 
+.char-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+}
+
 .char-icon-svg { width: 52px; height: 52px; opacity: 0.5; position: relative; z-index: 1; }
 
 .char-portrait-label {
