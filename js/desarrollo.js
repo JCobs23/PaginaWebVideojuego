@@ -60,7 +60,7 @@ function initHeaderUi() {
 
 function initDesarrolloUi() {
   // Progress bar
-  const completedWeeks = [5, 6, 7, 8, 9, 10, 11];
+  const completedWeeks = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
   const totalWeeks = 13;
   const pct = Math.round((completedWeeks.length / totalWeeks) * 100);
 
