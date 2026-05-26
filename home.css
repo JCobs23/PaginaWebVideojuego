@@ -1071,6 +1071,17 @@ body::before {
     color: rgba(255,255,255,0.85);
     flex-shrink: 0;
     border-radius: 0;
+    overflow: hidden;
+    border: 1px solid var(--clr-border-hi);
+    background: var(--clr-surface2);
+}
+
+.team-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .team-card__info { flex: 1; }

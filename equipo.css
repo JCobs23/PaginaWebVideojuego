@@ -97,11 +97,15 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1px;
     background: var(--clr-border-hi);
     border: 1px solid var(--clr-border-hi);
     margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .team-card {
@@ -205,10 +209,11 @@
 @media (max-width: 768px) {
     .equipo-hero { padding: 6rem 1.5rem 3rem; }
     .team-section { padding: 60px 1.5rem; }
-    .team-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 480px) {
     .equipo-hero { padding: 5.5rem 1rem 2.5rem; }
     .team-section { padding: 50px 1rem; }
+    .team-grid { grid-template-columns: 1fr; }
 }
