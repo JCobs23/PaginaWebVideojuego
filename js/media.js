@@ -90,7 +90,8 @@ function initFilters() {
 
       cards.forEach((card) => {
         const cat = card.dataset.cat || '';
-        const show = filter === 'all' || cat === filter;
+        const kind = card.dataset.kind || '';
+        const show = filter === 'all' || cat === filter || (filter === 'video' && kind === 'video');
         card.classList.toggle('is-hidden', !show);
       });
     });
